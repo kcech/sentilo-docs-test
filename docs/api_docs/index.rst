@@ -3,11 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Sentilo Documentation
-=====================
+API Documentation
+=================
 
 .. toctree::
    :maxdepth: 1
-   :caption: Sentilo Documentation:
+   :caption: API Documentation:
    
-   api_docs/index
+   web_home
+   general_model
+   security
+   services
+	
