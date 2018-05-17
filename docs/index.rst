@@ -10,4 +10,14 @@ Sentilo Documentation
    :maxdepth: 1
    :caption: Sentilo Documentation:
    
+   setup
+   quick_start
    api_docs/index
+   architecture
+   extensions
+   catalog_and_maps
+   multitenant
+   tutorials
+   technical_faq
+   
+   
