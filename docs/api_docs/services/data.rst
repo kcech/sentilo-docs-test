@@ -21,10 +21,10 @@ Actions
 
 The available actions for this service are:
 
--  `Publish observations of a sensor <./publish_sensor_data>`__
+-  `Publish observations of a sensor <./data/publish_sensor_data>`__
 -  `Publish observations from sensors of a
-   provider <./publish_provider_sensor_data>`__
--  `Delete observations <./delete_sensor_data>`__
--  `Read observations from a sensor <./retrieve_sensor_data>`__
+   provider <./data/publish_provider_sensor_data>`__
+-  `Delete observations <./data/delete_sensor_data>`__
+-  `Read observations from a sensor <./data/retrieve_sensor_data>`__
 -  `Read observations from sensors of a
-   provider <./retrieve_provider_sensor_data>`__
+   provider <./data/retrieve_provider_sensor_data>`__

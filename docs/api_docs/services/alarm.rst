@@ -16,7 +16,7 @@ All requests for this service will have the following format:
 where id_alert identifies the alert for which you want to perform the
 action. The alert always should be defined before throwing the alarm
 using the Catalog or the through the
-`Alert <./services/alert/alert>`__ service.
+`Alert <./services/alert>`__ service.
 
 Actions
 -------
@@ -24,6 +24,6 @@ Actions
 The available actions for this service are:
 
 -  `Publish a new alarm associated with an
-   alert <./publish_alarm>`__
+   alert <./alarm/publish_alarm>`__
 -  `Retrieve the latest alarms associated with an
-   alert <./retrieve_alarms>`__
+   alert <./alarm/retrieve_alarms>`__

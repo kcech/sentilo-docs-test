@@ -29,11 +29,11 @@ Actions
 
 The available actions for this service are:
 
--  `Subscription to sensor data <./retrieve_sensor_observations>`__
--  `Subscription to orders <./retrieve_sensor_orders>`__
--  `Subscription to alerts <./retrieve_alerts>`__
--  `Retrieve active subscriptions <./retrieve_subscription_list>`__
--  `Cancel subscription <./cancel_subscription>`__
+-  `Subscription to sensor data <./subscription/retrieve_sensor_observations>`__
+-  `Subscription to orders <./subscription/retrieve_sensor_orders>`__
+-  `Subscription to alerts <./subscription/retrieve_alerts>`__
+-  `Retrieve active subscriptions <./subscription/retrieve_subscription_list>`__
+-  `Cancel subscription <./subscription/cancel_subscription>`__
 
 Notifications
 ~~~~~~~~~~~~~
