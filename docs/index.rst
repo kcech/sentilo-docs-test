@@ -1,21 +1,18 @@
-.. Sentilo documentation master file, created by
-   sphinx-quickstart on Tue May 15 14:20:10 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Index
+=====
 
-Sentilo API Docs
-================
+The Application Programming Interface (API) define a set of commands,
+functions and protocols that must be followed by who wants to interact
+with the platform from external systems, like sensors/actuators or
+applications.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: API Docs:
-   
-   api_docs/home
-   api_docs/general_model
-   api_docs/security
-   api_docs/services/alarm/alarm
-   api_docs/services/alert/alert
-   api_docs/services/catalog/catalog
-   api_docs/services/data/data
-   api_docs/services/order/order
-   api_docs/services/subscription/subscription
+The starting capacities of the platform related to its external
+interface are:
+
+-  Allow registering applications/modules and providers/sensors in the
+   platform (Catalog).
+-  Allow to applications/modules and sensors to subscribe to services
+   defined in the catalog as well as post events(Publish/Subscribe).
+-  Allow sending information from sensors to applications/modules
+   (Data).
+-  Allow sending orders from applications/modules to sensors (Order).
