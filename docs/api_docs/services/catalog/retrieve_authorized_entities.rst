@@ -317,7 +317,7 @@ Response data
 -------------
 
 As mentioned, this action, in addition to the `HTTP status
-code <../../general_model.html#reply>`__, returns the list of providers
+code <../../general_model#reply>`__, returns the list of providers
 for wich we have at least read permission.
 
 .. raw:: html

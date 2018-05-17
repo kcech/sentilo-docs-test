@@ -53,7 +53,7 @@ The platform only persists and transfers the information to recipients without i
 
 ## Response data
 
-This actions does not return additional data beyond the [HTTP status code](../../general_model.html#reply) associated with each request to the platform.
+This actions does not return additional data beyond the [HTTP status code](../../general_model#reply) associated with each request to the platform.
 
 ## Examples
 

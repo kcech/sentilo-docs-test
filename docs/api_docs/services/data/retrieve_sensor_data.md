@@ -66,7 +66,7 @@ Please, note the following:
 
 ## Response data
 
-As mentioned, in addition to [HTTP status code](../../general_model.html#reply), the observation data is returned in the body contents as a list of observations:
+As mentioned, in addition to [HTTP status code](../../general_model#reply), the observation data is returned in the body contents as a list of observations:
 
 <table>
 	<tbody>

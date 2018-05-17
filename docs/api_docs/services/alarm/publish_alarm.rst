@@ -245,7 +245,7 @@ Response data
 -------------
 
 This actions does not return additional data beyond the `HTTP status
-code <../../general_model.html#reply>`__ associated with each request to
+code <../../general_model#reply>`__ associated with each request to
 the platform.
 
 Examples

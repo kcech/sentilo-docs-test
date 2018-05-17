@@ -21,11 +21,11 @@ Actions
 
 The available actions for this service are:
 
--  `Adding components / sensors <./create_sensors.html>`__
--  `Update data components / sensors <./update_sensors.html>`__
+-  `Adding components / sensors <./create_sensors>`__
+-  `Update data components / sensors <./update_sensors>`__
 -  `Retrieve list of providers /
-   sensors <./retrieve_authorized_entities.html>`__
--  `Remove components / sensors <./delete_component_or_sensor.html>`__
+   sensors <./retrieve_authorized_entities>`__
+-  `Remove components / sensors <./delete_component_or_sensor>`__
 
 Component types
 ---------------

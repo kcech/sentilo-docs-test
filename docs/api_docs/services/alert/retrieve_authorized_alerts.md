@@ -57,12 +57,12 @@ The <em>entity_id</em> is optional and can be an Application or a Provider.
 
 Please, note the following observations:
 
-* The list of trigger's types available are defined by the platform: [Trigger types](../alert/alert.html#InternalTriggerTypes).  
+* The list of trigger's types available are defined by the platform: [Trigger types](../alert/alert#InternalTriggerTypes).  
 * The possible values ​​for the alert type is also defined by the platform and are: <em>INTERNAL</em>, <em>EXTERNAL</em>.
 
 ## Response data
 
-As commented before, this action, in addition to the [HTTP status code](../../general_model.html#reply), returns the list of alerts for which <em>entity_id</em> has at least read permission.
+As commented before, this action, in addition to the [HTTP status code](../../general_model#reply), returns the list of alerts for which <em>entity_id</em> has at least read permission.
 
 <table>
 	<tbody>

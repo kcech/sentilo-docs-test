@@ -375,7 +375,7 @@ Response data
 -------------
 
 This action does not return additional data beyond the `HTTP status
-code <../../general_model.html#reply>`__.
+code <../../general_model#reply>`__.
 
 Examples
 --------

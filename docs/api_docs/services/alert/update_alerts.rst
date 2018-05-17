@@ -523,14 +523,14 @@ Mandatory for internal, not applies for externals
 Please, note the following observations:
 
 -  The list of trigger’s types and expressions are defined in: `Trigger
-   types <../alert/alert.html#InternalTriggerTypes>`__.
+   types <../alert/alert#InternalTriggerTypes>`__.
 -  The possible values ​​for the alert type are: INTERNAL or EXTERNAL.
 
 Response data
 -------------
 
 This action doesn’t return additional data beyond the `HTTP status
-code <../../general_model.html#reply>`__.
+code <../../general_model#reply>`__.
 
 Examples
 --------

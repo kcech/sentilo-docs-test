@@ -66,7 +66,7 @@ Please note the following:
 
 ## Response data
 
-In addition to the appropriate [HTTP status code](../../general_model.html#reply), if the operation runs properly, it will return the  last alarms associated with the alert according to your search criteria.
+In addition to the appropriate [HTTP status code](../../general_model#reply), if the operation runs properly, it will return the  last alarms associated with the alert according to your search criteria.
 
 <table>
 	<tbody>

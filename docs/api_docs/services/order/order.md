@@ -17,5 +17,5 @@ The sensor identifier, **<sensor_id>**, is optional and should be informed depen
 
 The available actions for this service are:
 
-* [Publish orders](./publish_order.html)
-* [Retrieve orders](./get_orders.html)
+* [Publish orders](./publish_order)
+* [Retrieve orders](./get_orders)

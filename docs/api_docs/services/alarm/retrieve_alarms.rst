@@ -326,7 +326,7 @@ Response data
 -------------
 
 In addition to the appropriate `HTTP status
-code <../../general_model.html#reply>`__, if the operation runs
+code <../../general_model#reply>`__, if the operation runs
 properly, it will return the last alarms associated with the alert
 according to your search criteria.
 

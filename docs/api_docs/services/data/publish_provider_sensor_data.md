@@ -76,7 +76,7 @@ Each sensor will have the following structure:
 	</tbody>
 </table>
 
-Each observation will have the structure described on page [Publish observations of a sensor](./publish_sensor_data.html):
+Each observation will have the structure described on page [Publish observations of a sensor](./publish_sensor_data):
 
 <table>
 	<tbody>
@@ -105,7 +105,7 @@ Each observation will have the structure described on page [Publish observations
 
 ## Response Data
 
-This action does not return additional data beyond the [HTTP status code](../../general_model.html#reply).
+This action does not return additional data beyond the [HTTP status code](../../general_model#reply).
 
 ## Examples
 

@@ -406,7 +406,7 @@ Yes
    </table>
 
 Each observation will have the structure described on page `Publish
-observations of a sensor <./publish_sensor_data.html>`__:
+observations of a sensor <./publish_sensor_data>`__:
 
 .. raw:: html
 
@@ -582,7 +582,7 @@ Response Data
 -------------
 
 This action does not return additional data beyond the `HTTP status
-code <../../general_model.html#reply>`__.
+code <../../general_model#reply>`__.
 
 Examples
 --------

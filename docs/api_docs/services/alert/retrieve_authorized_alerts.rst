@@ -280,7 +280,7 @@ Yes
 Please, note the following observations:
 
 -  The list of trigger’s types available are defined by the platform:
-   `Trigger types <../alert/alert.html#InternalTriggerTypes>`__.
+   `Trigger types <../alert/alert#InternalTriggerTypes>`__.
 -  The possible values ​​for the alert type is also defined by the
    platform and are: INTERNAL, EXTERNAL.
 
@@ -288,7 +288,7 @@ Response data
 -------------
 
 As commented before, this action, in addition to the `HTTP status
-code <../../general_model.html#reply>`__, returns the list of alerts for
+code <../../general_model#reply>`__, returns the list of alerts for
 which entity_id has at least read permission.
 
 .. raw:: html

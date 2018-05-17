@@ -38,7 +38,7 @@ No additional parameters can be used.
 
 ## Response data
 
-This action, additionally to the [HTTP status code](../../general_model.html#reply), will return a list of our active subscriptions:
+This action, additionally to the [HTTP status code](../../general_model#reply), will return a list of our active subscriptions:
 
 <table>
 	<tbody>

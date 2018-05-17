@@ -17,10 +17,10 @@ where <em>provider_id</em> is optional and should be included depending on the o
 
 The available actions for this service are:
 
-* [Adding components / sensors](./create_sensors.html)
-* [Update data components / sensors](./update_sensors.html)
-* [Retrieve list of providers / sensors](./retrieve_authorized_entities.html)
-* [Remove components / sensors](./delete_component_or_sensor.html)
+* [Adding components / sensors](./create_sensors)
+* [Update data components / sensors](./update_sensors)
+* [Retrieve list of providers / sensors](./retrieve_authorized_entities)
+* [Remove components / sensors](./delete_component_or_sensor)
 
 ## Component types
 

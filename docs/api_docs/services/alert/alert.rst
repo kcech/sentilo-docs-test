@@ -37,10 +37,10 @@ Actions
 -------
 
 The available actions for this service are: \* `Adding
-alerts <./create_alerts.html>`__ \* `Update
-alerts <./update_alerts.html>`__ \* `Retrieve list of authorized
-alerts <./retrieve_authorized_alerts.html>`__ \* `Remove
-alerts <./delete_alerts.html>`__
+alerts <./create_alerts>`__ \* `Update
+alerts <./update_alerts>`__ \* `Retrieve list of authorized
+alerts <./retrieve_authorized_alerts>`__ \* `Remove
+alerts <./delete_alerts>`__
 
 Internal trigger types
 ----------------------

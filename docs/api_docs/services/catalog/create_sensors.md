@@ -230,7 +230,7 @@ Please, note the following observations:
 
 ## Response data
 
-This action doesn't return additional data beyond the [HTTP status code](../../general_model.html#reply) associated with each request to the platform.
+This action doesn't return additional data beyond the [HTTP status code](../../general_model#reply) associated with each request to the platform.
 
 ## Examples
 

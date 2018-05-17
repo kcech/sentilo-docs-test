@@ -38,7 +38,7 @@ No additional data can be sent.
 
 ## Response data
 
-This action does not return any additional data beyond the [HTTP status code](../../general_model.html#reply).
+This action does not return any additional data beyond the [HTTP status code](../../general_model#reply).
 
 ## Examples
 

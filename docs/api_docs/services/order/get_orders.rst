@@ -326,7 +326,7 @@ Response data
 -------------
 
 As mentioned, in addition to `HTTP status
-code <../../general_model.html#reply>`__, the requested data is returned
+code <../../general_model#reply>`__, the requested data is returned
 in the body contents as a list of orders.
 
 **The response structure depends on what we are retrieving, orders from

@@ -62,7 +62,7 @@ Each element of the list corresponds to an identifier to an alert to delete.
 
 ## Response data
 
-This action does not return additional data beyond the [HTTP status code](../../general_model.html#reply).
+This action does not return additional data beyond the [HTTP status code](../../general_model#reply).
 
 ## Examples
 

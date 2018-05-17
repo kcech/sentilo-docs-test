@@ -81,7 +81,7 @@ The total time used for the 5 retries would occur in 10+20+40+80+160=310 minutes
 
 ## Response data
 
-This action does not return additional data beyond the [HTTP status code](../../general_model.html#reply).
+This action does not return additional data beyond the [HTTP status code](../../general_model#reply).
 
 
 ## Examples

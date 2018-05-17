@@ -21,5 +21,5 @@ Actions
 
 The available actions for this service are:
 
--  `Publish orders <./publish_order.html>`__
--  `Retrieve orders <./get_orders.html>`__
+-  `Publish orders <./publish_order>`__
+-  `Retrieve orders <./get_orders>`__

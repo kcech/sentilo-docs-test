@@ -566,7 +566,7 @@ Yes
    </table>
 
 The constraints and validation for the parameters are the same as
-described in `Adding sensors or components <./create_sensors.html>`__.
+described in `Adding sensors or components <./create_sensors>`__.
 
 Update sensors
 ~~~~~~~~~~~~~~
@@ -1024,13 +1024,13 @@ Yes
    </table>
 
 The constraints and validation for the parameters are the same as
-described in `Adding sensors or components <./create_sensors.html>`__.
+described in `Adding sensors or components <./create_sensors>`__.
 
 Response data
 -------------
 
 This action doesn’t return additional data beyond the `HTTP status
-code <../../general_model.html#reply>`__.
+code <../../general_model#reply>`__.
 
 Examples
 --------

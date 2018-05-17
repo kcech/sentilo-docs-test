@@ -110,13 +110,13 @@ Please, note the following observations:
 
 * The ID must identify an univocal alert, e.g., 2 alerts may not have the same ID.
 * The ID must have only alphanumeric (i.e. letters and numbers) and dashes characters, with no embedded spaces.
-* The list of trigger's types and expressions are defined by the platform: [Trigger types](../alert/alert.html).  
+* The list of trigger's types and expressions are defined by the platform: [Trigger types](../alert/alert).  
 * The possible values ​​for the alert types are: <em>INTERNAL</em> or <em>EXTERNAL</em>.
 * Entity parameter is not mandatory, if empty the alert will be associated with the entity specified in the URL
 
 ## Response data
 
-This action doesn't return additional data beyond the [HTTP status code](../../general_model.html#reply). 
+This action doesn't return additional data beyond the [HTTP status code](../../general_model#reply). 
 
 ## Examples
 

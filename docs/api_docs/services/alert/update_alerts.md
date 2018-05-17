@@ -93,12 +93,12 @@ Every alert element has the following structure:
 
 Please, note the following observations:
 
-* The list of trigger's types and expressions are defined in: [Trigger types](../alert/alert.html#InternalTriggerTypes).  
+* The list of trigger's types and expressions are defined in: [Trigger types](../alert/alert#InternalTriggerTypes).  
 * The possible values ​​for the alert type are: <em>INTERNAL</em> or <em>EXTERNAL</em>.
 
 ## Response data
 
-This action doesn't return additional data beyond the [HTTP status code](../../general_model.html#reply).
+This action doesn't return additional data beyond the [HTTP status code](../../general_model#reply).
 
 ## Examples
 

@@ -26,10 +26,10 @@ For both cases, the Sentilo platform is responsible of publishing the alarm for 
 ## Actions
 
 The available actions for this service are:
-* [Adding alerts](./create_alerts.html)
-* [Update alerts](./update_alerts.html)
-* [Retrieve list of authorized alerts](./retrieve_authorized_alerts.html)
-* [Remove alerts](./delete_alerts.html)
+* [Adding alerts](./create_alerts)
+* [Update alerts](./update_alerts)
+* [Retrieve list of authorized alerts](./retrieve_authorized_alerts)
+* [Remove alerts](./delete_alerts)
 
 ## <a name="InternalTriggerTypes"></a>Internal trigger types
 

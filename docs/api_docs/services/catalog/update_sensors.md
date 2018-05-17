@@ -100,7 +100,7 @@ Each element **component** has the following structure:
 	</tbody>
 </table>
 
-The constraints and validation for the parameters are the same as described in [Adding sensors or components](./create_sensors.html).
+The constraints and validation for the parameters are the same as described in [Adding sensors or components](./create_sensors).
 
 ### Update sensors
 
@@ -171,11 +171,11 @@ Each **sensor** element has the following structure:
 	</tbody>
 </table>
 
-The constraints and validation for the parameters are the same as described in [Adding sensors or components](./create_sensors.html).
+The constraints and validation for the parameters are the same as described in [Adding sensors or components](./create_sensors).
 
 ## Response data
 
-This action doesn't return additional data beyond the [HTTP status code](../../general_model.html#reply).
+This action doesn't return additional data beyond the [HTTP status code](../../general_model#reply).
 
 ## Examples
 

@@ -55,7 +55,7 @@ This mechanisms guarantees:
 
 As hash algorithm the system uses [SHA-512](http://en.wikipedia.org/wiki/SHA-2). It accepts keys of any size, and produces a hash sequence of length 512 bits.
 
-The target system should activate the security for callbacks when creates the subscription specifying the secret key ([see more](./services/subscription/subscription.html)). This subscription **should be done using HTTPs protocol** to avoid compromising the key.
+The target system should activate the security for callbacks when creates the subscription specifying the secret key ([see more](./services/subscription/subscription)). This subscription **should be done using HTTPs protocol** to avoid compromising the key.
 
 After the subscription has been created, all the related requests will include two new headers, one with the hash (**Sentilo-Content-Hmac**) and another with the timestamp (**Sentilo-Date**), as the following sample shows:
 

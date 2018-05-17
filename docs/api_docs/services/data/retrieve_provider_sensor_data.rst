@@ -331,7 +331,7 @@ Response data
 -------------
 
 In addition to the `HTTP status
-code <../../general_model.html#reply>`__, the observation data is
+code <../../general_model#reply>`__, the observation data is
 returned in the body contents as a list of observations:
 
 .. raw:: html

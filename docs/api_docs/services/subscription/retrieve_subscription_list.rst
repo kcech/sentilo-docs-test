@@ -150,7 +150,7 @@ Response data
 -------------
 
 This action, additionally to the `HTTP status
-code <../../general_model.html#reply>`__, will return a list of our
+code <../../general_model#reply>`__, will return a list of our
 active subscriptions:
 
 .. raw:: html

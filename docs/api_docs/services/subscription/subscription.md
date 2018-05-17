@@ -23,11 +23,11 @@ where **<resource_id>** identifies the system resource to which the request appl
 
 The available actions for this service are:
 
-* [Subscription to sensor data](./retrieve_sensor_observations.html)
-* [Subscription to orders](./retrieve_sensor_orders.html)
-* [Subscription to alerts](./retrieve_alerts.html)
-* [Retrieve active subscriptions](./retrieve_subscription_list.html)
-* [Cancel subscription](./cancel_subscription.html)
+* [Subscription to sensor data](./retrieve_sensor_observations)
+* [Subscription to orders](./retrieve_sensor_orders)
+* [Subscription to alerts](./retrieve_alerts)
+* [Retrieve active subscriptions](./retrieve_subscription_list)
+* [Cancel subscription](./cancel_subscription)
 
 ### Notifications
 
@@ -70,7 +70,7 @@ and the following are optional and depend on the event type:
 * <strike>sender</strike>:  this field has been removed in version 1.6. See _publisher_ field.
 * alert: only added in alarm notifications. Contains the alert identifier related to the alarm.
 * alertType: only added in alarm notifications. Contains the alert type: INTERNAL or EXTERNAL.
-* retryAttempt: if the delivery of the message fails, this number indicates a number of the retries. See for example [how to define retries in data subscription](./retrieve_sensor_observations.html).
+* retryAttempt: if the delivery of the message fails, this number indicates a number of the retries. See for example [how to define retries in data subscription](./retrieve_sensor_observations).
 * publisher: identifies the entity who has published the event.
 * publishedAt: this field differs from _time_ field in that it always stores the time when the event was published on Sentilo.
 * tenant: only added in multitenant instances. This field identifies the tenant to which the event belongs.
@@ -121,7 +121,7 @@ Here are three different examples of notification:
 }
 ```
 
-If the subscription has included a secret key, the following messages will include the **security headers** ([see more](../../security.html#securityCallbacks)). 
+If the subscription has included a secret key, the following messages will include the **security headers** ([see more](../../security#securityCallbacks)). 
 
 
 ### Notifications to untrusted HTTPS

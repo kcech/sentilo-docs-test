@@ -12,12 +12,12 @@ All requests for this service will have the following format:
 ```
 
 where <em>id_alert</em> identifies the alert for which you want to perform the action. 
-The alert always should be defined before throwing the alarm using the Catalog or the through the [Alert](./services/alert/alert.html) service.
+The alert always should be defined before throwing the alarm using the Catalog or the through the [Alert](./services/alert/alert) service.
 
 
 ## Actions
 
 The available actions for this service are:
 
-* [Publish a new alarm associated with an alert](./publish_alarm.html)
-* [Retrieve the latest alarms associated with an alert](./retrieve_alarms.html)
+* [Publish a new alarm associated with an alert](./publish_alarm)
+* [Retrieve the latest alarms associated with an alert](./retrieve_alarms)

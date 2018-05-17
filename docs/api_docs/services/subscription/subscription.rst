@@ -29,11 +29,11 @@ Actions
 
 The available actions for this service are:
 
--  `Subscription to sensor data <./retrieve_sensor_observations.html>`__
--  `Subscription to orders <./retrieve_sensor_orders.html>`__
--  `Subscription to alerts <./retrieve_alerts.html>`__
--  `Retrieve active subscriptions <./retrieve_subscription_list.html>`__
--  `Cancel subscription <./cancel_subscription.html>`__
+-  `Subscription to sensor data <./retrieve_sensor_observations>`__
+-  `Subscription to orders <./retrieve_sensor_orders>`__
+-  `Subscription to alerts <./retrieve_alerts>`__
+-  `Retrieve active subscriptions <./retrieve_subscription_list>`__
+-  `Cancel subscription <./cancel_subscription>`__
 
 Notifications
 ~~~~~~~~~~~~~
@@ -87,7 +87,7 @@ and the following are optional and depend on the event type:
 -  retryAttempt: if the delivery of the message fails, this number
    indicates a number of the retries. See for example `how to define
    retries in data
-   subscription <./retrieve_sensor_observations.html>`__.
+   subscription <./retrieve_sensor_observations>`__.
 -  publisher: identifies the entity who has published the event.
 -  publishedAt: this field differs from *time* field in that it always
    stores the time when the event was published on Sentilo.
@@ -143,7 +143,7 @@ Here are three different examples of notification:
 
 If the subscription has included a secret key, the following messages
 will include the **security headers** (`see
-more <../../security.html#securityCallbacks>`__).
+more <../../security#securityCallbacks>`__).
 
 Notifications to untrusted HTTPS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

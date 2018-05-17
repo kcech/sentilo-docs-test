@@ -59,7 +59,7 @@ This resource returns a list of providers and sensors for which you have at leas
 
 ## Response data
 
-As mentioned, this action, in addition to the [HTTP status code](../../general_model.html#reply), returns the list of providers for wich we have at least read permission.
+As mentioned, this action, in addition to the [HTTP status code](../../general_model#reply), returns the list of providers for wich we have at least read permission.
 
 <table>
 	<tbody>
