@@ -8,7 +8,6 @@ API Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: API Documentation:
    
    web_home
    general_model
