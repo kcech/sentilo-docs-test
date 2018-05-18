@@ -9,7 +9,7 @@ Sentilo Documentation
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
    
    setup
@@ -21,11 +21,3 @@ Contents:
    multitenant
    tutorials
    technical_faq
-   
-   
-Indices and Tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
