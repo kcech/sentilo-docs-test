@@ -6,7 +6,7 @@ the last version of Sentilo in your own runtime environment**. Moreover,
 it details which are the infraestructure elements necessary for running
 Sentilo and how should be their default configuration settings. It’s
 assumed you have the skils to configure and install the necessary
-sofware base(Operating System, Maven,JDK, Mongo DB, Redis, etc).
+sofware base (Operating System, Maven, JDK, Mongo DB, Redis, etc).
 
 The main topics are:
 
@@ -80,15 +80,13 @@ be done manually by different reasons, for example:
 -  it’s not required to install all the components, like the relational
    database agent.
 
-Changing default settings
-                         
+**Changing default settings**
 
 If you want modify the code before to build it, you should import it
 into an Eclipse workspace with maven plug-in installed. Below we explain
 how to do it by using the M2E plugin.
 
-For M2E plugin version lower than 1.0.0
-                                       
+**For M2E plugin version lower than 1.0.0**
 
 Go to the root directoy (./sentilo) and execute:
 
@@ -126,16 +124,15 @@ to explain how to configure each element of the infrastructure.
 Sentilo uses the following infrastructure elements (they are grouped
 into two categories):
 
--  Mandatory \*\* Redis 2.6.11 + (Sentilo has been tested on versions
-   2.6.11 and 2.8.6) \*\* MongoDB 2.2.x or 2.4.x (Sentilo has been
-   tested on versions 2.2.3, 2.4.8 and 2.4.13) \*\* Tomcat 7.0.37 +
+-  Mandatory 
+    - **Redis 2.6.11 +**: Sentilo has been tested on versions 2.6.11 and 2.8.6
+    - **MongoDB 2.2.x or 2.4.x**: Sentilo has been tested on versions 2.2.3, 2.4.8 and 2.4.13
+    - **Tomcat 7.0.37 +**
 
--  Optional \*\* MySQL 5.5.x (Sentilo has been tested on MySQL 5.5.34
-   but you could use your favourite RDBMS). **It is only necessary if
-   you want to install the relational agent**. \*\* Elasticsearch 2.3.x
-   **It is only necessary if you want to install the activity-monitor
-   agent**. \*\* openTSDB 2.2.0 **It is only necessary if you want to
-   install the historian agent**.
+-  Optional 
+    - **MySQL 5.5.x**: Sentilo has been tested on MySQL 5.5.34 but you could use your favourite RDBMS. It is only necessary if you want to install the relational agent.
+    - **Elasticsearch 2.3.x**: It is only necessary if you want to install the activity-monitor agent. 
+    - **openTSDB 2.2.0** : It is only necessary if you want to install the historian agent.
 
 You must ensure that you have all these elements installed properly (you
 can find information on how to install them in each provider site).
@@ -166,7 +163,7 @@ Redis settings
 
 Sentilo default settings consider Redis will be listening on port 6379,
 host 127.0.0.1, and with the parameter
-[[requirepass>>url:http://redis.io/commands/AUTH]]enabled and with value
+`requirepass <http://redis.io/commands/AUTH>`__ enabled and with value
 sentilo.
 
 If you change this behaviour, you need to modify the following
@@ -192,14 +189,14 @@ MongoDB settings
 
 Sentilo default settings consider MongoDB will be listening on
 127.0.0.1:27017, and requires an existing database named sentilo,
-created before starting the platform, with [[authentication
-enabled>>url:http://docs.mongodb.org/v2.4/core/access-control/]] and
+created before starting the platform, with `authentication
+enabled <http://docs.mongodb.org/v2.4/core/access-control>`__ and
 with login credentials preconfigured as sentilo/sentilo
 (username~:sentilo, password~:sentilo).
 
 If you change this behaviour, you need to modify following properties:
 
-::
+.. code:: properties
 
    catalog.mongodb.host=127.0.0.1
    catalog.mongodb.port=27017
@@ -214,7 +211,6 @@ configured in the following files:
    sentilo-catalog-web/src/main/resources/properties/catalog-config.properties
 
 Data load
-         
 
 Moreover, you need to load on sentilo database the basic set of data
 needed to run the platform. The data include, among other things:
@@ -268,8 +264,7 @@ configured in the following files:
    sentilo-catalog-web/src/main/resources/properties/catalog-config.properties
    sentilo-platform/sentilo-platform-service/src/main/resources/properties/integration.properties
 
-Test data load
-              
+**Test data load**              
 
 In order to validate the correct installation of the platform, we could
 load a set of test data. These data includes, among other things: sensor
@@ -293,8 +288,8 @@ MySQL settings
 
 **Remember**: **This software is mandatory only if you want to export
 the published events to a relational database using the specific agent.
-Otherwise, you can skip this step.** Please, check [[this
->>doc:Extensions||rel="__blank"]] out for more info.
+Otherwise, you can skip this step.** Please, check `this 
+<./extensions.html>`__ out for more info.
 
 Sentilo default settings consider MySQL server will be listening on
 127.0.0.1:3306, and requires an existing database named sentilo, created
@@ -305,7 +300,7 @@ password~:sentilo_pwd).
 If you change this behaviour, you need to modify the following
 properties:
 
-::
+.. code:: properties
 
    sentiloDs.jdbc.driverClassName=com.mysql.jdbc.Driver
    sentiloDs.url=jdbc:mysql://127.0.0.1:3306/sentilo
@@ -318,8 +313,7 @@ configured in the file:
 
    sentilo-agent-relational/src/main/resources/properties/relational-config.properties
 
-Creating the tables
-                   
+**Creating the tables**
 
 Once we have MySQL configured, and the database sentilo created, the
 next step is to create the database tables required to persist
@@ -365,8 +359,8 @@ Elastisearch settings
 
 **Remember**: **It is only necessary if you want to index into
 Elasticsearch all the published events using the specific agent.
-Otherwise, you can skip this step.** Please, check [[this
->>doc:Monitorization||rel="__blank"]] out for more info.
+Otherwise, you can skip this step.** Please, check `this
+<./monitorization.html>`__ out for more info.
 
 Sentilo default settings consider Elasticsearch server will be listening
 on localhost:9200. If you change this behaviour, you need to modify the
@@ -387,8 +381,8 @@ openTSDB settings
 
 **Remember**: **It is only necessary if you want to store into openTSDB
 all the published events using the specific agent. Otherwise, you can
-skip this step.** Please, check [[this >>doc:Historian
-Agent||rel="__blank"]] out for more info.
+skip this step.** Please, check `this <./historian_agent.html>`__
+out for more info.
 
 Sentilo default settings consider openTSDB server will be listening on
 127.0.0.1:4242. If you change this behaviour, you need to modify the
@@ -445,8 +439,10 @@ artifacts:
 
 -  Web Application Catalog (is **mandatory**)
 -  Server publication and subscription (is **mandatory**)
--  Internal agents (are **optional**): \*\* alarms agent \*\* relational
-   database agent \*\* location updater agent
+-  Internal agents (are **optional**): 
+    - **alarms agent**
+    - **relational database agent**
+    - **location updater agent**
 
 Installing the Web App Catalog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -492,8 +488,7 @@ As have been mentioned previously, all agents are optional and you are
 free to choose which of them will be deployed, depending on your
 specific needs. Agents are internal modules oriented to expand the
 platform functionality without having to alter its core. You will find
-more information about them in the [[Extensions
->>doc:WebHome||rel="__blank"]] section of our documentation.
+more information about them in the `Extensions <./extensions.html>`__ section of our documentation.
 
 We have currently five core agents:
 
@@ -729,7 +724,7 @@ c. Once copied, for starting the process you just need to run the
 
 In order to enable multi-tenant feature you need to ensure that your
 Sentilo version is at least 1.5.0. Otherwise you will have to
-[[upgrade>>url:https://github.com/sentilo/sentilo/wiki/How-to-upgrade-Sentilo||rel="__blank"]]
+`upgrade <https://github.com/sentilo/sentilo/wiki/How-to-upgrade-Sentilo>`__
 your Sentilo instance.
 
 Once the above requirement is fulfilled, you only need to do the
@@ -799,7 +794,7 @@ Once you have uncomment the above lines, you should recompile the
 Catalog webapp module and redeploy it into your Tomcat server.
 
 You will find more information about this feature in the
-[[Multi-Tenant>>doc:Multi Tenant||rel="__blank"]] section of our
+`Multi-Tenant <./ulti_tenant.html>`__ section of our
 documentation.
 
 5. Enable anonymous access to REST API
@@ -807,7 +802,7 @@ documentation.
 
 By default, anonymous access to REST API is disabled which means that
 all requests to REST API must be identified with the
-[[identity_key>>doc:APIDocs.Security||rel="__blank"]] header.
+`identity_key <./security>`__ header.
 
 From version 1.5, we provide a new feature that allows anonymous access
 to REST API but only for read authorized data of your Sentilo instance
@@ -840,5 +835,5 @@ requests performed by this client application.
 6. What next?
 -------------
 
-Check the [[Quick Start Page>>doc:Quickstart]] or [[Platform
-Testing>>doc:Platform Testing]] page.
+Check the `Quick Start Page <./quickstart.html>`__ or `Platform
+Testing <platform_esting>`__ page.
