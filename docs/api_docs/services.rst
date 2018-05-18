@@ -4,8 +4,7 @@ Services
 Index of differents services.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Services:
+   :maxdepth: 1
    
    services/alarm/alarm
    services/alert/alert
