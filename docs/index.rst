@@ -8,7 +8,6 @@ Sentilo Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Sentilo Documentation:
    
    setup
    quick_start

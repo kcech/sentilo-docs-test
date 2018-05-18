@@ -1,3 +1,10 @@
+.. toctree::
+   :maxdepth: 1
+   
+   publish_alarm
+   retrieve_alarms
+	
+	
 Alarm
 =====
 
