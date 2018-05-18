@@ -10,11 +10,10 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :glob:
    
    setup
    quick_start
-   api_docs/*
+   api_docs/index
    architecture
    extensions
    catalog_and_maps
