@@ -1,12 +1,3 @@
-.. toctree::
-   :maxdepth: 1
-   
-   create_alerts
-   update_alerts
-   retrieve_authorized_alerts
-   delete_alerts
-	
-	
 Alert
 =====
 

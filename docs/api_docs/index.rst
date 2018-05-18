@@ -9,10 +9,9 @@ API Documentation
 .. toctree::
    :maxdepth: 1
    :caption: API Documentation:
-   :glob:
    
    web_home
    general_model
    security
-   services/*
+   services
 	
