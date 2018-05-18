@@ -6,12 +6,15 @@
 Sentilo Documentation
 =====================
 
+Contents:
+
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :blob:
    
    setup
    quick_start
-   api_docs/index
+   api_docs/*
    architecture
    extensions
    catalog_and_maps
@@ -20,3 +23,9 @@ Sentilo Documentation
    technical_faq
    
    
+Indices and Tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
