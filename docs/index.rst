@@ -10,7 +10,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :blob:
+   :glob:
    
    setup
    quick_start
