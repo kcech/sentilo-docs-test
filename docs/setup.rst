@@ -6,7 +6,7 @@ the last version of Sentilo in your own runtime environment**. Moreover,
 it details which are the infraestructure elements necessary for running
 Sentilo and how should be their default configuration settings. It’s
 assumed you have the skils to configure and install the necessary
-sofware base (Operating System, Maven, JDK, Mongo DB, Redis, etc).
+sofware base(Operating System, Maven,JDK, Mongo DB, Redis, etc).
 
 The main topics are:
 
@@ -20,8 +20,8 @@ The main topics are:
 -  **Deploy the artifacts**: describes the necessary steps to deploy all
    the Sentilo modules
 
-0. Prerequisites
-----------------
+Prerequisites
+-------------
 
 Sentilo uses Maven as a mechanism for building and managing the
 dependencies of the platform. In order to build **Sentilo**, it is
@@ -34,41 +34,41 @@ necessary to ensure the next set of prerequisites:
 -  Ensure that the the Java SDK and Maven executables are accessible
    using your PATH environment variable.
 
-1. Download and build code
---------------------------
+Download and build code
+-----------------------
 
 The Sentilo code must be downloaded from Github. Once downloaded, you
-can build it using a script named buildSentilo.shwhich constructs the
+can build it using a script named *buildSentilo.sh* which constructs the
 Sentilo artifacts “out-of-the-box”.
 
 Download the source code from Github
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The source code of the project can be obtained from git, cloning the
-remote project in a local directory named sentilo:
+remote project in a local directory named *sentilo*:
 
 ::
 
-   $ git clone https://github.com/sentilo/sentilo.git sentilo
+   git clone https://github.com/sentilo/sentilo.git sentilo
 
 An alternative method is to download a ZIP file from github repository
-and decompress it in a folder named sentilo:
+and decompress it in a folder named *sentilo*:
 
 https://github.com/sentilo/sentilo/archive/master.zip
 
-In both cases, we will finally have a new directory named sentilo with
+In both cases, we will finally have a new directory named *sentilo* with
 the source code.
 
 Compiling and build artifacts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Without changing the default configuration
-                                          
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to build Sentilo out-of-the-box (i.e. build all artifacts
 that define the Sentilo platform without changing any of the default
 settings that are defined), we distribute a script named
-./scripts/buildSentilo.sh which can be used to build Sentilo from the
+*./scripts/buildSentilo.sh* which can be used to build Sentilo from the
 command line.
 
 This script compiles the code and build the artifacts from scratch, but
@@ -80,7 +80,8 @@ be done manually by different reasons, for example:
 -  it’s not required to install all the components, like the relational
    database agent.
 
-**Changing default settings**
+Changing default settings
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want modify the code before to build it, you should import it
 into an Eclipse workspace with maven plug-in installed. Below we explain
@@ -97,26 +98,26 @@ Go to the root directoy (./sentilo) and execute:
 
 Open the Eclipse workspace to import the code:
 
--  Go to **File > Import > Existing Maven Projects**.
--  Select **./sentilo** as the root directory.
--  Select all projects and import.
+-  Go to **File > Import > Existing Maven Projects**
+-  Select **./sentilo** as the root directory
+-  Select all projects and import
 
-For M2E plugin version equal/greather than 1.0.0
-                                                
+**For M2E plugin version equal/greather than 1.0.0**
 
 -  Open the Eclipse workspace to import the code:
--  Go to **File> Import> Existing Maven Projects**
--  Select **./sentilo** as the root directory.
--  Select all projects and import.
+
+   -  Go to **File> Import> Existing Maven Projects**
+   -  Select **./sentilo** as the root directory
+   -  Select all projects and import
 
 **Warning**: be sure that JDK 1.6, or later, is correctly configured in
 your Eclipse environment.
 
 After modifying the code, to compile and build the artifacts, our
-recommendation is to use the above mentioned buildSentilo script.
+recommendation is to use the abovementioned\* buildSentilo\* script.
 
-2. Platform infrastructure
---------------------------
+Platform infrastructure
+-----------------------
 
 Before describing how to install all the Sentilo components, we’re going
 to explain how to configure each element of the infrastructure.
@@ -124,15 +125,23 @@ to explain how to configure each element of the infrastructure.
 Sentilo uses the following infrastructure elements (they are grouped
 into two categories):
 
--  Mandatory 
-    - **Redis 2.6.11 +**: Sentilo has been tested on versions 2.6.11 and 2.8.6
-    - **MongoDB 2.2.x or 2.4.x**: Sentilo has been tested on versions 2.2.3, 2.4.8 and 2.4.13
-    - **Tomcat 7.0.37 +**
+-  Mandatory
 
--  Optional 
-    - **MySQL 5.5.x**: Sentilo has been tested on MySQL 5.5.34 but you could use your favourite RDBMS. It is only necessary if you want to install the relational agent.
-    - **Elasticsearch 2.3.x**: It is only necessary if you want to install the activity-monitor agent. 
-    - **openTSDB 2.2.0** : It is only necessary if you want to install the historian agent.
+   -  Redis 2.6.11 + (Sentilo has been tested on versions 2.6.11 and
+      2.8.6)
+   -  MongoDB 2.2.x or 2.4.x (Sentilo has been tested on versions 2.2.3,
+      2.4.8 and 2.4.13)
+   -  Tomcat 7.0.37 +
+
+-  Optional
+
+   -  MySQL 5.5.x (Sentilo has been tested on MySQL 5.5.34 but you could
+      use your favourite RDBMS) **It is only necessary if you want to
+      install the relational agent**
+   -  Elasticsearch 2.3.x **It is only necessary if you want to install
+      the activity-monitor agent**.
+   -  openTSDB 2.2.0 **It is only necessary if you want to install the
+      historian agent**
 
 You must ensure that you have all these elements installed properly (you
 can find information on how to install them in each provider site).
@@ -140,7 +149,7 @@ can find information on how to install them in each provider site).
 Below we explain the default settings for each Sentilo module.
 
 Default settings
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Sentilo configuration uses the Spring and Maven profiles to allow its
 customization depending on the runtime environment. By default, the
@@ -159,12 +168,12 @@ All these settings can be found in the subdirectory
 **/src/main/resources/properties** of each platform’s module.
 
 Redis settings
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 Sentilo default settings consider Redis will be listening on port 6379,
 host 127.0.0.1, and with the parameter
 `requirepass <http://redis.io/commands/AUTH>`__ enabled and with value
-sentilo.
+**sentilo**.
 
 If you change this behaviour, you need to modify the following
 properties:
@@ -185,14 +194,14 @@ which are configured in the following files:
    sentilo-agent-location-updater/src/main/resources/properties/jedis-config.properties
 
 MongoDB settings
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Sentilo default settings consider MongoDB will be listening on
-127.0.0.1:27017, and requires an existing database named sentilo,
+127.0.0.1:27017, and requires an existing database named *sentilo*,
 created before starting the platform, with `authentication
-enabled <http://docs.mongodb.org/v2.4/core/access-control>`__ and
-with login credentials preconfigured as sentilo/sentilo
-(username~:sentilo, password~:sentilo).
+enabled <http://docs.mongodb.org/v2.4/core/access-control/>`__ and with
+login credentials preconfigured as sentilo/sentilo (username~:*sentilo*,
+password~:\ *sentilo*).
 
 If you change this behaviour, you need to modify following properties:
 
@@ -211,8 +220,9 @@ configured in the following files:
    sentilo-catalog-web/src/main/resources/properties/catalog-config.properties
 
 Data load
+^^^^^^^^^
 
-Moreover, you need to load on sentilo database the basic set of data
+Moreover, you need to load on *sentilo* database the basic set of data
 needed to run the platform. The data include, among other things:
 
 -  An user **admin**: user for log in into the catalog webapp as
@@ -239,7 +249,7 @@ command from the directory where the file is located:
 
    mongo -u sentilo -p sentilo sentilo init_data.js
 
-**Remember**
+**Remember:**
 
 Please keep in mind that data defined in the previous file contains
 default passwords and tokens (which are recommended for run Sentilo in a
@@ -247,9 +257,9 @@ test environment). In order to avoid compromissing your platform, **we
 recommend to change them before installing Sentilo in a production
 environment**.
 
-After change their values in the init_data.js and load them on MongoDB,
-and before compiling and building Sentilo, you will have to modify the
-following properties:
+After change their values in the *init_data.js* and load them on
+MongoDB, and before compiling and building Sentilo, you will have to
+modify the following properties:
 
 .. code:: properties
 
@@ -264,7 +274,8 @@ configured in the following files:
    sentilo-catalog-web/src/main/resources/properties/catalog-config.properties
    sentilo-platform/sentilo-platform-service/src/main/resources/properties/integration.properties
 
-**Test data load**              
+Test data load
+^^^^^^^^^^^^^^
 
 In order to validate the correct installation of the platform, we could
 load a set of test data. These data includes, among other things: sensor
@@ -284,18 +295,20 @@ it:
    mongo -u sentilo -p sentilo sentilo init_test_data.js
 
 MySQL settings
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
-**Remember**: **This software is mandatory only if you want to export
-the published events to a relational database using the specific agent.
-Otherwise, you can skip this step.** Please, check `this 
-<./extensions.html>`__ out for more info.
+**Remember**:
+
+**This software is mandatory only if you want to export the published
+events to a relational database using the specific agent. Otherwise, you
+can skip this step.** Please, check `this <./extensions.html>`__ out for
+more info.
 
 Sentilo default settings consider MySQL server will be listening on
-127.0.0.1:3306, and requires an existing database named sentilo, created
-before starting the platform, with authentication enabled and accessible
-using credentials sentilo_user/sentilo_pwd (username~:sentilo_user,
-password~:sentilo_pwd).
+127.0.0.1:3306, and requires an existing database named *sentilo*,
+created before starting the platform, with authentication enabled and
+accessible using credentials *sentilo_user/sentilo_pwd*
+(username~:*sentilo_user*, password~:\ *sentilo_pwd*).
 
 If you change this behaviour, you need to modify the following
 properties:
@@ -313,9 +326,10 @@ configured in the file:
 
    sentilo-agent-relational/src/main/resources/properties/relational-config.properties
 
-**Creating the tables**
+Creating the tables
+^^^^^^^^^^^^^^^^^^^
 
-Once we have MySQL configured, and the database sentilo created, the
+Once we have MySQL configured, and the database *sentilo* created, the
 next step is to create the database tables required to persist
 historical platform data.
 
@@ -328,14 +342,14 @@ At the following directory of your Sentilo installation:
 you’ll find the script to create these tables.
 
 Tomcat settings
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 Sentilo default settings consider Tomcat will be listening on
 127.0.0.1:8080.
 
 If you change this behaviour, you need to modify the following property:
 
-::
+.. code:: properties
 
    catalog.rest.endpoint=http://127.0.0.1:8080/sentilo-catalog-web/
 
@@ -348,19 +362,22 @@ configured in the following files:
 
 Your Tomcat should also be started with the user timezone environment
 variable set as UTC. To set Timezone in Tomcat, the startup script (e.g.
-catalina.sh or setup.sh) must be modified to include the following code:
+*catalina.sh* or *setup.sh*) must be modified to include the following
+code:
 
 ::
 
    -Duser.timezone=UTC
 
 Elastisearch settings
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
-**Remember**: **It is only necessary if you want to index into
-Elasticsearch all the published events using the specific agent.
-Otherwise, you can skip this step.** Please, check `this
-<./monitorization.html>`__ out for more info.
+**Remember**:
+
+**It is only necessary if you want to index into Elasticsearch all the
+published events using the specific agent. Otherwise, you can skip this
+step.** Please, check `this <./monitorization.html>`__ out for more
+info.
 
 Sentilo default settings consider Elasticsearch server will be listening
 on localhost:9200. If you change this behaviour, you need to modify the
@@ -377,12 +394,14 @@ configured in the following file:
    sentilo-agent-activity-monitor/src/main/resources/properties/monitor-config.properties
 
 openTSDB settings
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
-**Remember**: **It is only necessary if you want to store into openTSDB
-all the published events using the specific agent. Otherwise, you can
-skip this step.** Please, check `this <./historian_agent.html>`__
-out for more info.
+**Remember**:
+
+**It is only necessary if you want to store into openTSDB all the
+published events using the specific agent. Otherwise, you can skip this
+step.** Please, check `this <./historian_agent.html>`__ out for more
+info.
 
 Sentilo default settings consider openTSDB server will be listening on
 127.0.0.1:4242. If you change this behaviour, you need to modify the
@@ -399,10 +418,10 @@ configured in the following file:
    sentilo-agent-historian/src/main/resources/properties/historian-config.properties
 
 Subscription/publication platform settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sentilo default settings consider subscription/publication server
-(a.k.a. PubSub server) will be listening on 127.0.0.1:8081
+(a.k.a. *PubSub* server) will be listening on 127.0.0.1:8081
 
 If you change this behaviour, you need to modify the following
 properties:
@@ -420,7 +439,7 @@ configured in the following files:
    sentilo-catalog-web/src/main/resources/properties/catalog-config.properties
 
 Configuring logs
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Sentilo uses **slf4j** and **logback** as trace frameworks. The
 configuration can be found in **logback.xml** file, located in the
@@ -428,10 +447,10 @@ subdirectory **src/main/resources** of sentilo-common module of the
 platform.
 
 By default, all platform logs are stored in the directory
-\ **/var/log/sentilo**\ 
+**/var/log/sentilo**
 
-3. Platform installation
-------------------------
+Platform installation
+---------------------
 
 Once you have downloaded the code and you have modify, compile and built
 it, the next step is to deploy Sentilo artifacts. The platform has five
@@ -439,17 +458,18 @@ artifacts:
 
 -  Web Application Catalog (is **mandatory**)
 -  Server publication and subscription (is **mandatory**)
--  Internal agents (are **optional**): 
-    - **alarms agent**
-    - **relational database agent**
-    - **location updater agent**
+-  Internal agents (are **optional**):
+
+   -  alarms agent
+   -  relational database agent
+   -  location updater agent
 
 Installing the Web App Catalog
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After build Sentilo, to install the Web App, you just need to deploy the
 WAR artifact in your Tomcat server, i.e., copy the WAR artifact into the
-webapps subdirectory of your Tomcat server.
+*webapps* subdirectory of your Tomcat server.
 
 You will find the WAR artifact at the following subdirectory:
 
@@ -458,60 +478,62 @@ You will find the WAR artifact at the following subdirectory:
    ./sentilo-catalog-web/target/sentilo-catalog-web.war
 
 Installing subscription/publication server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After build Sentilo, to install the PubSub server, you need to follow
 the following steps:
 
 a. Into the directory
-   ./sentilo-platform/sentilo-platform-server/target/appassembler you’ll
-   find two subdirectories named \ **repo**\  and \ **bin**\ :
+   *./sentilo-platform/sentilo-platform-server/target/appassembler*
+   you’ll find two subdirectories named **repo** and **bin**:
 
--  **repo** directory contains all libraries needed to run the process .
--  **bin** directory contains the script (sentilo-server) needed to
+-  **repo** directory contains all libraries needed to run the process
+-  **bin** directory contains the script (*sentilo-server*) needed to
    initialize the process (there are two scripts, one for Linux systems
-   and one for Windows).
+   and one for Windows)
 
 b. Copy these two directories in the root directory where you want to
    install this component (for example: /opt/sentilo-server).
+
 c. Once copied, for starting the process you just need to run the
    script:
 
 ::
 
-   $sentilo-server/bin/sentilo-server
+     $sentilo-server/bin/sentilo-server
 
 Installing agents
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 As have been mentioned previously, all agents are optional and you are
 free to choose which of them will be deployed, depending on your
 specific needs. Agents are internal modules oriented to expand the
 platform functionality without having to alter its core. You will find
-more information about them in the `Extensions <./extensions.html>`__ section of our documentation.
+more information about them in the `Extensions <./extensions.html>`__
+section of our documentation.
 
-We have currently five core agents:
+We have currently *five core* agents:
 
--  \ **Alarms agent**\  is responsible for processing each internal
-   alert defined in the catalog and publish a notification (a.k.a.
-   alarm) when any of the configured integrity rules are not met. You
-   need this agent if you want to make use of the internal alerts
-   functionality provided by Sentilo.
--  \ **Relational agent**\  is responsible for store all information
+-  **Alarms agent** is responsible for processing each internal alert
+   defined in the catalog and publish a notification (a.k.a. *alarm*)
+   when any of the configured integrity rules are not met. You need this
+   agent if you want to make use of the internal alerts functionality
+   provided by Sentilo.
+-  **Relational agent** is responsible for store all information
    received from the PubSub server into a set of relational databases.
    You need this agent if you want to persist data published in Sentilo
    in a relational database too.
--  \ **Location updater agent**\  is responsible for updating
-   automatically the component location according to the location of the
-   published observations.
--  \ **Historian agent**\  is responsible for store all information
-   received from the PubSub server into a time series database. You need
-   this agent if you want to persist data published in Sentilo in
-   openTSDB too.
--  \ **Activity monitor agent**\  is responsible for index all
-   information received from the PubSub server into a search engine
-   server. You need this agent if you want to store data published in
-   Sentilo into Elasticsearch too.
+-  **Location updater agent** is responsible for updating automatically
+   the component location according to the location of the published
+   observations.
+-  **Historian agent** is responsible for store all information received
+   from the PubSub server into a time series database. You need this
+   agent if you want to persist data published in Sentilo in openTSDB
+   too.
+-  **Activity monitor agent** is responsible for index all information
+   received from the PubSub server into a search engine server. You need
+   this agent if you want to store data published in Sentilo into
+   Elasticsearch too.
 
 **Remember:** As mentioned before, Sentilo always store all published
 events into Redis.
@@ -520,33 +542,35 @@ All the agents are installed in a similar manner to the PubSub server,
 as described below.
 
 Installing alarms agent
-                       
+^^^^^^^^^^^^^^^^^^^^^^^
 
 After build Sentilo, to install the alarms agent, you need to follow the
 following steps:
 
-a. Into the directory ./sentilo-agent-alert/target/appassembler you’ll
-   find two subdirectories named \ **repo**\  and \ **bin**\ :
+a. Into the directory *./sentilo-agent-alert/target/appassembler* you’ll
+   find two subdirectories named **repo** and **bin**:
 
--  **repo** directory contains all libraries needed to run the process .
--  **bin** directory contains the script (sentilo-agent-alert-server)
+-  **repo** directory contains all libraries needed to run the process
+-  **bin** directory contains the script (*sentilo-agent-alert-server*)
    needed to initialize the process (there are two scripts, one for
-   Linux systems and one for Windows).
+   Linux systems and one for Windows)
 
 b. Copy these two directories in the root directory where you want to
    install this component (for example: /opt/sentilo-agent-alert).
+
 c. Once copied, for starting the process you just need to run the
    following script:
 
 ::
 
-   $sentilo-agent-alert/bin/sentilo-agent-alert-server
+     $sentilo-agent-alert/bin/sentilo-agent-alert-server
 
 Installing relational agent
-                           
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As mentioned before, this agent exports all the received data, orders
-and alarms to a database named sentilo and located in the MySQL server.
+and alarms to a database named *sentilo* and located in the MySQL
+server.
 
 These configuration settings are defined in the files:
 
@@ -559,9 +583,9 @@ To modify this behavior, just follow the instructions given in the
 properties files.
 
 Additionally, with the purpose of optimizing the persistence process,
-insert process is done in batch mode and uses a retries parameter aimed
-to minimize any error. By default, the batch size is fixed to 10 records
-and the retries parameter is defined to 1.
+insert process is done in batch mode and uses a *retries* parameter
+aimed to minimize any error. By default, the *batch size* is fixed to 10
+records and the *retries* parameter is defined to 1.
 
 This behaviour can be changed editing the file:
 
@@ -573,7 +597,7 @@ and updating the following lines:
 
 .. code:: properties
 
-   ## Properties to configure the batch update process
+   # Properties to configure the batch update process
    relational.batch.size=10
    relational.batch.workers.size=3
    relational.batch.max.retries=1
@@ -581,59 +605,61 @@ and updating the following lines:
 After building Sentilo, to install the relational agent, you only need
 to follow the following steps:
 
-a. Into the directory ./sentilo-agent-relational/target/appassembler
-   you’ll find two subdirectories named \ **repo**\  and \ **bin**\ :
+a. Into the directory *./sentilo-agent-relational/target/appassembler*
+   you’ll find two subdirectories named **repo** and **bin**:
 
--  **repo** directory contains all libraries needed to run the process .
+-  **repo** directory contains all libraries needed to run the process
 -  **bin** directory contains the script
-   (sentilo-agent-relational-server) needed to initialize the process
-   (there are two scripts, one for Linux systems and one for Windows).
+   (*sentilo-agent-relational-server*) needed to initialize the process
+   (there are two scripts, one for Linux systems and one for Windows)
 
 b. Copy these two directories in the root directory where you want to
    install this component (for example: /opt/sentilo-agent-relational).
+
 c. Once copied, for starting the process you just need to run the
    script:
 
 ::
 
-   $sentilo-agent-relational/bin/sentilo-agent-relational-server
+     $sentilo-agent-relational/bin/sentilo-agent-relational-server
 
 Installing location updater agent
-                                 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After building Sentilo, to install the location updater agent, you need
 to follow the following steps:
 
 a. Into the directory
-   ./sentilo-agent-location-updater/target/appassembler you’ll find two
-   subdirectories named \ **repo**\  and \ **bin**\ :
+   *./sentilo-agent-location-updater/target/appassembler* you’ll find
+   two subdirectories named **repo** and **bin**:
 
--  **repo** directory contains all libraries needed to run the process .
+-  **repo** directory contains all libraries needed to run the process
 -  **bin** directory contains the script
-   (sentilo-agent-location-updater-server) needed to initialize the
+   (*sentilo-agent-location-updater-server*) needed to initialize the
    process (there are two scripts, one for Linux systems and one for
-   Windows).
+   Windows)
 
 b. Copy these two directories in the root directory where you want to
    install this component (for example:
    /opt/sentilo-agent-location-updater).
+
 c. Once copied, for starting the process you just need to run the
    script:
 
 ::
 
-   $sentilo-agent-location-updater/bin/sentilo-agent-location-updater-server
+     $sentilo-agent-location-updater/bin/sentilo-agent-location-updater-server
 
 Installing historian agent
-                          
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As mentioned before, this agent exports all the received events to a
 openTSDB server.
 
 This agent works in a similar way to the relational agent: insert
-process is done in batch mode and uses a retries parameter aimed to
-minimize any error. By default, the batch size is fixed to 10 records
-and the retries parameter is defined to 1.
+process is done in batch mode and uses a *retries* parameter aimed to
+minimize any error. By default, the *batch size* is fixed to 10 records
+and the *retries* parameter is defined to 1.
 
 This behaviour can be changed editing the file:
 
@@ -645,7 +671,7 @@ and updating the following lines:
 
 .. code:: properties
 
-   ## Properties to configure the batch update process
+   # Properties to configure the batch update process
    batch.size=10
    batch.workers.size=3
    batch.max.retries=1
@@ -653,33 +679,34 @@ and updating the following lines:
 After building Sentilo, to install the historian agent, you only need to
 follow the following steps:
 
-a. Into the directory ./sentilo-agent-historian/target/appassembler
-   you’ll find two subdirectories named \ **repo**\  and \ **bin**\ :
+a. Into the directory *./sentilo-agent-historian/target/appassembler*
+   you’ll find two subdirectories named **repo** and **bin**:
 
--  **repo** directory contains all libraries needed to run the process .
+-  **repo** directory contains all libraries needed to run the process
 -  **bin** directory contains the script
-   (sentilo-agent-historian-server) needed to initialize the process
-   (there are two scripts, one for Linux systems and one for Windows).
+   (*sentilo-agent-historian-server*) needed to initialize the process
+   (there are two scripts, one for Linux systems and one for Windows)
 
 b. Copy these two directories in the root directory where you want to
    install this component (for example: /opt/sentilo-agent-historian).
+
 c. Once copied, for starting the process you just need to run the
    script:
 
 ::
 
-   $sentilo-agent-historian/bin/sentilo-agent-historian-server
+     $sentilo-agent-historian/bin/sentilo-agent-historian-server
 
 Installing activity-monitor agent
-                                 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As mentioned before, this agent exports all the received events to
 elasticsearch server.
 
 This agent works in a similar way to the relational agent: insert
-process is done in batch mode and uses a retries parameter aimed to
-minimize any error. By default, the batch size is fixed to 10 records
-and the retries parameter is defined to 1.
+process is done in batch mode and uses a *retries* parameter aimed to
+minimize any error. By default, the *batch size* is fixed to 10 records
+and the *retries* parameter is defined to 1.
 
 This behaviour can be changed editing the file:
 
@@ -691,7 +718,7 @@ and updating the following lines:
 
 .. code:: properties
 
-   ## Properties to configure the batch update process
+   # Properties to configure the batch update process
    batch.size=10
    batch.workers.size=3
    batch.max.retries=1
@@ -700,27 +727,28 @@ After building Sentilo, to install the activity-monitor agent, you only
 need to follow the following steps:
 
 a. Into the directory
-   ./sentilo-agent-activity-monitor/target/appassembler you’ll find two
-   subdirectories named \ **repo**\  and \ **bin**\ :
+   *./sentilo-agent-activity-monitor/target/appassembler* you’ll find
+   two subdirectories named **repo** and **bin**:
 
--  **repo** directory contains all libraries needed to run the process .
+-  **repo** directory contains all libraries needed to run the process
 -  **bin** directory contains the script
-   (sentilo-agent-activity-monitor-server) needed to initialize the
+   (*sentilo-agent-activity-monitor-server*) needed to initialize the
    process (there are two scripts, one for Linux systems and one for
-   Windows).
+   Windows)
 
 b. Copy these two directories in the root directory where you want to
    install this component (for example:
    /opt/sentilo-agent-activity-monitor).
+
 c. Once copied, for starting the process you just need to run the
    script:
 
 ::
 
-   $sentilo-agent-activity-monitor/bin/sentilo-agent-activity-monitor-server
+     $sentilo-agent-activity-monitor/bin/sentilo-agent-activity-monitor-server
 
-4. Enable multi-tenant instance
--------------------------------
+Enable multi-tenant instance
+----------------------------
 
 In order to enable multi-tenant feature you need to ensure that your
 Sentilo version is at least 1.5.0. Otherwise you will have to
@@ -731,11 +759,11 @@ Once the above requirement is fulfilled, you only need to do the
 following steps:
 
 Modify your Tomcat startup script
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should modify your Tomcat startup script (e.g
-%TOMCAT_HOME%/bin/catalina.sh or %TOMCAT_HOME%/bin/setenv.sh) to add a
-new JVM property:
+*%TOMCAT_HOME%/bin/catalina.sh* or *%TOMCAT_HOME%/bin/setenv.sh*) to add
+a new JVM property:
 
 ::
 
@@ -745,9 +773,9 @@ Once you have added the JVM property, you must restart your Tomcat
 server.
 
 Edit the Catalog web.xml file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The next step is to edit the Catalog file web.xml located at:
+The next step is to edit the Catalog file *web.xml* located at:
 
 ::
 
@@ -794,27 +822,26 @@ Once you have uncomment the above lines, you should recompile the
 Catalog webapp module and redeploy it into your Tomcat server.
 
 You will find more information about this feature in the
-`Multi-Tenant <./ulti_tenant.html>`__ section of our
-documentation.
+`Multi-Tenant <./multi_tenant.html>`__ section of our documentation.
 
-5. Enable anonymous access to REST API
---------------------------------------
+Enable anonymous access to REST API
+-----------------------------------
 
 By default, anonymous access to REST API is disabled which means that
 all requests to REST API must be identified with the
-`identity_key <./security>`__ header.
+`identity_key <./api_docs/security.hml>`__ header.
 
 From version 1.5, we provide a new feature that allows anonymous access
-to REST API but only for read authorized data of your Sentilo instance
-(here authorized means that you should configure your Catalog to define
-which data could be accessed anonymously from REST requests).
+to REST API but only for read *authorized* data of your Sentilo instance
+(here *authorized* means that you should configure your Catalog to
+define which data could be accessed anonymously from REST requests).
 
 In order to enable anonymous access you should modify the following
 properties:
 
 .. code:: properties
 
-   ## Properties to configure the anonymous access to Sentilo
+   # Properties to configure the anonymous access to Sentilo
    enableAnonymousAccess=false
    anonymousAppClientId=
 
@@ -825,15 +852,15 @@ configured in the following file:
    sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties
 
 This configuration has not mystery: if anonymous access is enabled
-(enableAnonymousAccess=true) then all anonymous requests to REST API are
-internally considered as is they have been performed by the application
-client identified by the anonymousAppClientId property value (this
-application client should exists into your Sentilo Catalog), and
-therefore these requests will have the same data restrictions as the
+(*enableAnonymousAccess=true*) then all anonymous requests to REST API
+are internally considered as is they have been performed by the
+application client identified by the *anonymousAppClientId* property
+value (this application client should exists into your Sentilo Catalog),
+and therefore these requests will have the same data restrictions as the
 requests performed by this client application.
 
-6. What next?
--------------
+What next?
+----------
 
 Check the `Quick Start Page <./quickstart.html>`__ or `Platform
-Testing <platform_esting>`__ page.
+Testing <./platform_testing.html>`__ page.
