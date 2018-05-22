@@ -12,11 +12,6 @@ Contents:
    :maxdepth: 1
    
    setup
-   quick_start
+   quickstart
    api_docs/index
-   architecture
-   extensions
-   catalog_and_maps
-   multitenant
-   tutorials
-   technical_faq
+   
