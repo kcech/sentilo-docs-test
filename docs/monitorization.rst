@@ -139,7 +139,7 @@ Examples of configuration:
 
    <p>
 
-/alarm/*,/data/*,/order/\*
+/alarm/&#42;, /data/&#42;, /order/&#42;
 
 .. raw:: html
 
