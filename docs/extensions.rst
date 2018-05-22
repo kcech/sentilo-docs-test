@@ -134,8 +134,8 @@ NodeJS node_modules.
 
 Then, following nodes should appear in the nodes palette:
 
-.. image:: _static/images/architecture/sentilo-nodered.png
+.. image:: _static/images/extensions/sentilo-nodered.png
 
 Now, you should be able to use Sentilo from Node-RED:
 
-.. image:: _static/images/architecture/sentilo-nodered2.png
+.. image:: _static/images/extensions/sentilo-nodered2.png
