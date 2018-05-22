@@ -15,4 +15,4 @@ Contents:
    quickstart
    api_docs/index
    architecture
-   
+   extensions
