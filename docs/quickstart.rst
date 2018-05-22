@@ -4,7 +4,7 @@ Quickstart
 Prequisites
 -----------
 
-After checking the [[Sentilo Setup>>doc:Setup]]. No need to setup any
+After checking the [Sentilo Setup](./setup.html). No need to setup any
 agents, Elastic Search nor OpenTSDB.
 
 You should have 4 components up & running:
