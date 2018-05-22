@@ -16,3 +16,4 @@ Contents:
    api_docs/index
    architecture
    extensions
+   monitorization
