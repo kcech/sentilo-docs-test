@@ -139,7 +139,7 @@ Examples of configuration:
 
    <p>
 
-/alarm/&#42;, /data/&#42;, /order/&#42;
+/alarm/\*, /data/\*, /order/\*
 
 .. raw:: html
 
@@ -159,7 +159,7 @@ Subscribes to all events
 
    <p>
 
-/data/PROVIDER1/*,/data/PROVIDER2/*
+/data/PROVIDER1/\*, /data/PROVIDER2/\*
 
 .. raw:: html
 
