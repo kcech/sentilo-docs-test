@@ -460,9 +460,9 @@ named **My Application** with identifier **myapp_identifier**.
 Providers
 ~~~~~~~~~
 
-{{{For the providers, we would be facing the same case as for the
+For the providers, we would be facing the same case as for the
 Applications. Therefore, you can choose the desired identifier,
-regardless of the tenant you are managing.}}}
+regardless of the tenant you are managing.
 
 .. image:: _static/images/multitenant/providers_170_001.jpg
 

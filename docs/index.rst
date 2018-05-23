@@ -19,3 +19,4 @@ Contents:
    monitorization
    catalog_and_maps
    multitenant
+   tutorials
