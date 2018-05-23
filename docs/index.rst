@@ -20,3 +20,6 @@ Contents:
    catalog_and_maps
    multitenant
    tutorials
+   technical_faq
+   platform_testing
+   use_a_virtual_machine
