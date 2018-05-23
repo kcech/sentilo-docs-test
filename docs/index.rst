@@ -18,3 +18,4 @@ Contents:
    extensions
    monitorization
    catalog_and_maps
+   multitenant
