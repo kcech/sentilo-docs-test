@@ -1,6 +1,17 @@
 Data
 ====
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   
+   publish_sensor_data
+   publish_provider_sensor_data
+   delete_sensor_data
+   retrieve_sensor_data
+   retrieve_provider_sensor_data
+   
+
 Description
 -----------
 

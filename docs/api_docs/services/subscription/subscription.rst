@@ -1,6 +1,17 @@
 Subscription
 ============
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   
+   retrieve_sensor_observations
+   retrieve_sensor_orders
+   retrieve_alerts
+   retrieve_subscription_list
+   cancel_subscription
+   
+
 Description
 -----------
 

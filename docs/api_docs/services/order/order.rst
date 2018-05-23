@@ -1,6 +1,14 @@
 Order
 =====
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   
+   publish_order
+   get_orders
+   
+
 Description
 -----------
 
