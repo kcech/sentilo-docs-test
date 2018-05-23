@@ -17,3 +17,4 @@ Contents:
    architecture
    extensions
    monitorization
+   catalog_and_maps
