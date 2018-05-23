@@ -637,11 +637,6 @@ The main properties of the *Details* tab are the following:
 |                       |                       | checked, the Sentilo  |
 |                       |                       | Server expects the    |
 |                       |                       | standard header       |
-|                       |                       |                       |
-|                       |                       | .. raw:: html         |
-|                       |                       |                       |
-|                       |                       |    <div>              |
-|                       |                       |                       |
 |                       |                       | ::                    |
 |                       |                       |                       |
 |                       |                       |    X-Forwarded-Proto  |
@@ -654,16 +649,12 @@ The main properties of the *Details* tab are the following:
 |                       |                       | ::                    |
 |                       |                       |                       |
 |                       |                       |    underscores_in_hea |
-|                       |                       | ders on;              |
+|                       |                       |    ders on;           |
 |                       |                       |                       |
 |                       |                       | so Nginx would        |
 |                       |                       | forward sentilo       |
 |                       |                       | headers to the        |
 |                       |                       | Sentilo Server.       |
-|                       |                       |                       |
-|                       |                       | .. raw:: html         |
-|                       |                       |                       |
-|                       |                       |    </div>             |
 +-----------------------+-----------------------+-----------------------+
 | Contact name          | Name of the person    | Mandatory             |
 |                       | responsible for the   |                       |
