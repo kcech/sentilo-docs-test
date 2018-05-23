@@ -746,42 +746,18 @@ The main properties of the *Details* tab are the following:
 |                       |                       | checked, the Sentilo  |
 |                       |                       | Server expects the    |
 |                       |                       | standard header       |
-|                       |                       |                       |
-|                       |                       | .. raw:: html         |
-|                       |                       |                       |
-|                       |                       |    <pre>              |
-|                       |                       |                       |
 |                       |                       | ::                    |
 |                       |                       |                       |
 |                       |                       |    X-Forwarded-Proto  |
-|                       |                       |                       |
-|                       |                       | .. raw:: html         |
-|                       |                       |                       |
-|                       |                       |    </pre>             |
-|                       |                       |                       |
-|                       |                       | ::                    |
 |                       |                       |                       |
 |                       |                       | Please note that when |
 |                       |                       | configuring Nginx,    |
 |                       |                       | you should also use   |
 |                       |                       | the parameter         |
-|                       |                       |                       |
-|                       |                       | ::                    |
-|                       |                       |                       |
-|                       |                       | .. raw:: html         |
-|                       |                       |                       |
-|                       |                       |    <pre>              |
-|                       |                       |                       |
 |                       |                       | ::                    |
 |                       |                       |                       |
 |                       |                       |    underscores_in_hea |
-|                       |                       | ders on;              |
-|                       |                       |                       |
-|                       |                       | .. raw:: html         |
-|                       |                       |                       |
-|                       |                       |    </pre>             |
-|                       |                       |                       |
-|                       |                       | ::                    |
+|                       |                       |    ders on;           |
 |                       |                       |                       |
 |                       |                       | so Nginx would        |
 |                       |                       | forward sentilo       |
