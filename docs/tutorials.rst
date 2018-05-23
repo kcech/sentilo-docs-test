@@ -1,6 +1,15 @@
 Tutorials
 =========
 
+Contents:
+
+.. toctree::
+   :maxdepth: 1
+   
+   tutorials/java_client
+   tutorials/raspberrypi_client
+   tutorials/arduino_client
+
 On this page you will find several tutorials about how to connect to
 Sentilo using various existing platforms and languages.
 
