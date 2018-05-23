@@ -3,7 +3,7 @@ Alarm
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 1
    
    publish_alarm
    retrieve_alarms

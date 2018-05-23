@@ -3,7 +3,7 @@ Alert
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 1
    
    create_alerts
    update_alerts

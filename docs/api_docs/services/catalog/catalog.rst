@@ -3,7 +3,7 @@ Catalog
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 1
    
    create_sensors
    update_sensors
