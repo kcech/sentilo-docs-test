@@ -282,361 +282,67 @@ These params will apply to the entire catalog application visual
 customization, and how the user will see the data. Note that time zone &
 date format are directly relationated.
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Property
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Comments
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Time zone
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Defines the time zone of the organization, and modifies the way to
-display data on screen, such as dates
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-You can define hourly difference or time zone abbreviations: CET, UTC,
-+001…
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Date format
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Defines the date format with which the data will be displayed in the
-application (lists, details…)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Example: dd/MM/yyyy HH:mm:ss = 30/11/2017 15:34:56 See all possible
-formats as Java Date Format, at: Java Date Format
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Chart values number
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Number of observations displayed on chart
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-It must be a positive integer number greater or equals to 10. If blank,
-it will be a default value of 10.This value will be overwritten by
-sensor’s configuration one.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++=======================+=======================+=======================+
+| Time zone             | Defines the time zone | You can define hourly |
+|                       | of the organization,  | difference or time    |
+|                       | and modifies the way  | zone abbreviations:   |
+|                       | to display data on    | CET, UTC, +001...     |
+|                       | screen, such as dates |                       |
++-----------------------+-----------------------+-----------------------+
+| Date format           | Defines the date      | Example: dd/MM/yyyy   |
+|                       | format with which the | HH:mm:ss = 30/11/2017 |
+|                       | data will be          | 15:34:56              |
+|                       | displayed in the      | See all possible      |
+|                       | application (lists,   | formats as Java Date  |
+|                       | details...)           | Format, at: `Java     |
+|                       |                       | Date Format`_         |
++-----------------------+-----------------------+-----------------------+
+| Chart values number   | Number of             | It must be a positive |
+|                       | observations          | integer number        |
+|                       | displayed on chart    | greater or equals to  |
+|                       |                       | 10. If blank, it will |
+|                       |                       | be a default value of |
+|                       |                       | 10.                   |
+|                       |                       | This value will be    |
+|                       |                       | overwritten by        |
+|                       |                       | sensor's              |
+|                       |                       | configuration one.    |
++-----------------------+-----------------------+-----------------------+
+
+.. _Java Date Format: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 Map configuration
 '''''''''''''''''
 
 These params configure the universal map visualization.
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Property
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Comments
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Zoom level
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Zoom level of the universal map
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Default value is 14. And you can define a value between 1 and 20.See
-possible values in:
-https://developers.google.com/maps/documentation/static-maps/intro#Zoomlevels
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Latitude / Longitude
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Defines the map center in latitude & longitude values format
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Map background color
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Define the background color of the map
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Possible values applies with the colorpicker, or input a valid css /
-html color value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++=======================+=======================+=======================+
+| Zoom level            | Zoom level of the     | Default value is 14.  |
+|                       | universal map         | And you can define a  |
+|                       |                       | value between 1 and   |
+|                       |                       | 20.                   |
+|                       |                       | See possible values   |
+|                       |                       | in:                   |
+|                       |                       | https://developers.go |
+|                       |                       | ogle.com/maps/documen |
+|                       |                       | tation/static-maps/in |
+|                       |                       | tro#Zoomlevels        |
++-----------------------+-----------------------+-----------------------+
+| Latitude / Longitude  | Defines the map       |                       |
+|                       | center in latitude &  |                       |
+|                       | longitude values      |                       |
+|                       | format                |                       |
++-----------------------+-----------------------+-----------------------+
+| Map background color  | Define the background | Possible values       |
+|                       | color of the map      | applies with the      |
+|                       |                       | colorpicker, or input |
+|                       |                       | a valid css / html    |
+|                       |                       | color value           |
++-----------------------+-----------------------+-----------------------+
 
 For example, set the map background color to #ffc900:
 
@@ -884,271 +590,89 @@ where
 
 The main properties of the *Details* tab are the following:
 
-.. raw:: html
-
-   <table cols="4" frame="VOID" rules="NONE" cellspacing="0" border="0">
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Property
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Comments
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Provider identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory. After its creation can’t be modified. It is the identifier
- used in the API calls.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Display name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-If not filled in by the user, its default value will be the Id.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Authorization Token
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Access key
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated by the system when application is created. It is
-the identity_key value used in the API calls. NOTE: only users with
-ADMIN role will show the entire token chain, other user roles only will
-see obfuscated text at this place (see below)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description  
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Optional. The provider description text.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-HTTPS API REST
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Provider sends data over HTTPS
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The Sentilo Server itself does not support SSL at the moment, however
-you can put a reverse proxy such as Nginx in front of the Sentilo
-Server. If this option is checked, the Sentilo Server expects the
-standard header
-
-.. raw:: html
-
-   <div>
-
-::
-
-                   <pre>X-Forwarded-Proto</pre>
-                   <p>Please note that when configuring Nginx, you should also use
-                       the parameter</p>
-                   <pre>underscores_in_headers on;</pre>
-                   <p>so Nginx would forward sentilo headers to the Sentilo
-                       Server.</p>
-               </div>
-           </td>
-       </tr>
-       <tr>
-           <td>Contact name</td>
-           <td>Name of the person responsible for the provider</td>
-           <td>Mandatory</td>
-       </tr>
-       <tr>
-           <td>Contact email&nbsp;</td>
-           <td>Email address of the person responsible for the application</td>
-           <td>Mandatory.<br></td>
-       </tr>
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++=======================+=======================+=======================+
+| Identifier            | Provider identifier   | Mandatory. After its  |
+|                       |                       | creation can't be     |
+|                       |                       | modified. It is the   |
+|                       |                       | identifier  used in   |
+|                       |                       | the API calls.        |
++-----------------------+-----------------------+-----------------------+
+| Name                  | Display name          | If not filled in by   |
+|                       |                       | the user, its default |
+|                       |                       | value will be the     |
+|                       |                       | *Id*.                 |
++-----------------------+-----------------------+-----------------------+
+| Authorization Token   | Access key            | Automatically         |
+|                       |                       | generated by the      |
+|                       |                       | system when           |
+|                       |                       | application is        |
+|                       |                       | created. It is        |
+|                       |                       | the\ * identity_key*  |
+|                       |                       | value used in the API |
+|                       |                       | calls.                |
+|                       |                       | *NOTE: only users     |
+|                       |                       | with ADMIN role will  |
+|                       |                       | show the entire token |
+|                       |                       | chain, other user     |
+|                       |                       | roles only will see   |
+|                       |                       | obfuscated text at    |
+|                       |                       | this place (see       |
+|                       |                       | below)*               |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           | Optional. The         |
+|                       |                       | provider description  |
+|                       |                       | text.                 |
++-----------------------+-----------------------+-----------------------+
+| HTTPS API REST        | Provider sends data   | The Sentilo Server    |
+|                       | over HTTPS            | itself does not       |
+|                       |                       | support SSL at the    |
+|                       |                       | moment, however you   |
+|                       |                       | can put a reverse     |
+|                       |                       | proxy such as Nginx   |
+|                       |                       | in front of the       |
+|                       |                       | Sentilo Server. If    |
+|                       |                       | this option is        |
+|                       |                       | checked, the Sentilo  |
+|                       |                       | Server expects the    |
+|                       |                       | standard header       |
+|                       |                       |                       |
+|                       |                       | .. raw:: html         |
+|                       |                       |                       |
+|                       |                       |    <div>              |
+|                       |                       |                       |
+|                       |                       | ::                    |
+|                       |                       |                       |
+|                       |                       |    X-Forwarded-Proto  |
+|                       |                       |                       |
+|                       |                       | Please note that when |
+|                       |                       | configuring Nginx,    |
+|                       |                       | you should also use   |
+|                       |                       | the parameter         |
+|                       |                       |                       |
+|                       |                       | ::                    |
+|                       |                       |                       |
+|                       |                       |    underscores_in_hea |
+|                       |                       | ders on;              |
+|                       |                       |                       |
+|                       |                       | so Nginx would        |
+|                       |                       | forward sentilo       |
+|                       |                       | headers to the        |
+|                       |                       | Sentilo Server.       |
+|                       |                       |                       |
+|                       |                       | .. raw:: html         |
+|                       |                       |                       |
+|                       |                       |    </div>             |
++-----------------------+-----------------------+-----------------------+
+| Contact name          | Name of the person    | Mandatory             |
+|                       | responsible for the   |                       |
+|                       | provider              |                       |
++-----------------------+-----------------------+-----------------------+
+| Contact email         | Email address of the  | Mandatory.            |
+|                       | person responsible    |                       |
+|                       | for the application   |                       |
++-----------------------+-----------------------+-----------------------+
 
 How users that has not ADMIN role see the detail section:
 
@@ -1266,597 +790,73 @@ where:
 
 The main properties of the *Details* tab are the following:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Property
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Comments
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Name 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Display name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory. After its creation can’t be modified. It is the identifier
- used in the API calls.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Type 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Component type. 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory. Select from a list of available types.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Optional. The component description text.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Provider 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Component owner
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Photo 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-URL of the component photography 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-It could be defined for each component or it will be inherited using the
-defined one for the component type.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Access type 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Checkbox to set the component visibility as public or private in the
-viewer
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
- 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Creation date 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Creation date 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Update date 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Last update date 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Tags 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related custom tags of the component 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Are displayed at the public page
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Static or Mobile 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-To mark the component as static or mobile 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-If the component is static then location is mandatory
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Address 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Address where the component is located 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The address, longitude and latitude fields work together with the
-location list field. It’s possible to use the map to set the points
-adding new locations.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Latitude 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Latitude in decimal format 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
- 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Longitude 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Longitude in decimal format 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
- 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Locations List 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Location/s of the component 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-You can configure the component as a POI, a polyline or a polygon
-(future feature) depending the location composition.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++=======================+=======================+=======================+
+| Name                  | Display name          | Mandatory. After its  |
+|                       |                       | creation can't be     |
+|                       |                       | modified. It is the   |
+|                       |                       | identifier  used in   |
+|                       |                       | the API calls.        |
++-----------------------+-----------------------+-----------------------+
+| Type                  | Component type.       | Mandatory. Select     |
+|                       |                       | from a list of        |
+|                       |                       | available types.      |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           | Optional. The         |
+|                       |                       | component description |
+|                       |                       | text.                 |
++-----------------------+-----------------------+-----------------------+
+| Provider              | Component owner       | Mandatory.            |
++-----------------------+-----------------------+-----------------------+
+| Photo                 | URL of the component  | It could be defined   |
+|                       | photography           | for each component or |
+|                       |                       | it will be inherited  |
+|                       |                       | using the defined one |
+|                       |                       | for the component     |
+|                       |                       | type.                 |
++-----------------------+-----------------------+-----------------------+
+| Access type           | Checkbox to set the   |                       |
+|                       | component visibility  |                       |
+|                       | as public or private  |                       |
+|                       | in the viewer         |                       |
++-----------------------+-----------------------+-----------------------+
+| Creation date         | Creation date         | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Update date           | Last update date      | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Tags                  | Related custom tags   | Are displayed at the  |
+|                       | of the component      | public page           |
++-----------------------+-----------------------+-----------------------+
+| Static or Mobile      | To mark the component | If the component is   |
+|                       | as static or mobile   | static then location  |
+|                       |                       | is mandatory          |
++-----------------------+-----------------------+-----------------------+
+| Address               | Address where the     | The address,          |
+|                       | component is located  | longitude and         |
+|                       |                       | latitude fields work  |
+|                       |                       | together with the     |
+|                       |                       | location list field.  |
+|                       |                       | It's possible to use  |
+|                       |                       | the map to set the    |
+|                       |                       | points adding new     |
+|                       |                       | locations.            |
++-----------------------+-----------------------+-----------------------+
+| Latitude              | Latitude in decimal   |                       |
+|                       | format                |                       |
++-----------------------+-----------------------+-----------------------+
+| Longitude             | Longitude in decimal  |                       |
+|                       | format                |                       |
++-----------------------+-----------------------+-----------------------+
+| Locations List        | Location/s of the     | You can configure the |
+|                       | component             | component as a POI, a |
+|                       |                       | polyline or a polygon |
+|                       |                       | (*future feature*)    |
+|                       |                       | depending the         |
+|                       |                       | location composition. |
++-----------------------+-----------------------+-----------------------+
 
 Technical details
 ^^^^^^^^^^^^^^^^^
@@ -1869,279 +869,26 @@ technical details of the component such as manufacturer, serial number,
 
 where:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Property
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-Comments
-
-.. raw:: html
-
-   <th>
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Producer
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Manufacturer
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Model
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Component model
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Serial number
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Serial number
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-MAC
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mac address of the device
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Power type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Energy type used by the device
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Select from a list of available values (see the API for details)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Connectivity type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Connection type used by the device
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Select from a list of available values (see the API for details)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++=======================+=======================+=======================+
+| Producer              | Manufacturer          |                       |
++-----------------------+-----------------------+-----------------------+
+| Model                 | Component model       |                       |
++-----------------------+-----------------------+-----------------------+
+| Serial number         | Serial number         |                       |
++-----------------------+-----------------------+-----------------------+
+| MAC                   | Mac address of the    |                       |
+|                       | device                |                       |
++-----------------------+-----------------------+-----------------------+
+| Power type            | Energy type used by   | Select from a list of |
+|                       | the device            | available values (see |
+|                       |                       | the API for details)  |
++-----------------------+-----------------------+-----------------------+
+| Connectivity type     | Connection type used  | Select from a list of |
+|                       | by the device         | available values (see |
+|                       |                       | the API for details)  |
++-----------------------+-----------------------+-----------------------+
 
 Additional information
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2225,589 +972,79 @@ where
 
 The main properties of the *Details* tab are the following:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Property
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Comments
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Sensor / Actuator
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Name of the sensor/actuator.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory. After its creation can’t be modified. It is the identifier
-used in the API calls.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Provider
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Sensor provider owner
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Component
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Component to which the sensor belongs
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Access type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Checkbox to set the sensor visibility to public or private
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Last update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Sensor type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory. Select from a list of available types
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Data type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Type of data published by the sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Mandatory. Numeric, text or boolean
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Unit
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Measurement unit
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Time zone
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Time zone for the data sent by the sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Tags
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related custom tags of the sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-State
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-State of the sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Possible values: online \| offline. If the sensor is configured as
-offline the API will reject any data publication, the alerts will be
-disabled and the sensor won’t be visible in the map. Likewise, offline
-sensors are excluded from the /catalog GET request. Default value is
-online.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Substate
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Substate of the sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The list of possible values that that have informational purpose and are
-specific for every deployment. You can customize the list of possible
-substate values editing the contents of table sensorSubstate in mongoDB.
-No default value.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++=======================+=======================+=======================+
+| Sensor / Actuator     | Name of the           | Mandatory. After its  |
+|                       | sensor/actuator.      | creation can't be     |
+|                       |                       | modified. It is the   |
+|                       |                       | identifier used in    |
+|                       |                       | the API calls.        |
++-----------------------+-----------------------+-----------------------+
+| Provider              | Sensor provider owner | Mandatory             |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           |                       |
++-----------------------+-----------------------+-----------------------+
+| Component             | Component to which    | Mandatory             |
+|                       | the sensor belongs    |                       |
++-----------------------+-----------------------+-----------------------+
+| Access type           | Checkbox to set the   |                       |
+|                       | sensor visibility to  |                       |
+|                       | public or private     |                       |
++-----------------------+-----------------------+-----------------------+
+| Creation date         | Creation date         | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Update date           | Last update date      | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Type                  | Sensor type           | Mandatory. Select     |
+|                       |                       | from a list of        |
+|                       |                       | available types       |
++-----------------------+-----------------------+-----------------------+
+| Data type             | Type of data          | Mandatory. Numeric,   |
+|                       | published by the      | text or boolean       |
+|                       | sensor                |                       |
++-----------------------+-----------------------+-----------------------+
+| Unit                  | Measurement unit      |                       |
++-----------------------+-----------------------+-----------------------+
+| Time zone             | Time zone for the     |                       |
+|                       | data sent by the      |                       |
+|                       | sensor                |                       |
++-----------------------+-----------------------+-----------------------+
+| Tags                  | Related custom tags   |                       |
+|                       | of the sensor         |                       |
++-----------------------+-----------------------+-----------------------+
+| State                 | State of the sensor   | Possible values:      |
+|                       |                       | online \| offline. If |
+|                       |                       | the sensor is         |
+|                       |                       | configured as offline |
+|                       |                       | the API will reject   |
+|                       |                       | any data publication, |
+|                       |                       | the alerts will be    |
+|                       |                       | disabled and the      |
+|                       |                       | sensor won't be       |
+|                       |                       | visible in the map.   |
+|                       |                       | Likewise, offline     |
+|                       |                       | sensors are excluded  |
+|                       |                       | from the /catalog GET |
+|                       |                       | request. Default      |
+|                       |                       | value is online.      |
++-----------------------+-----------------------+-----------------------+
+| Substate              | Substate of the       | The list of possible  |
+|                       | sensor                | values that that have |
+|                       |                       | informational purpose |
+|                       |                       | and are specific for  |
+|                       |                       | every deployment. You |
+|                       |                       | can customize the     |
+|                       |                       | list of possible      |
+|                       |                       | substate values       |
+|                       |                       | editing the contents  |
+|                       |                       | of table              |
+|                       |                       | sensorSubstate in     |
+|                       |                       | mongoDB. No default   |
+|                       |                       | value.                |
++-----------------------+-----------------------+-----------------------+
 
 .. _technical-details-1:
 
@@ -2904,552 +1141,58 @@ It’s also possible to delete the items massively from the alerts list.
 
 **Properties**
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Id
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Name
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-ID
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Alert identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-After its creation can’t be modified
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Display name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Active
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates whether the alert is activated or not
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-When a sensor goes into the offline state, the associated alerts are
-also automatically deactivated.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Last update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Alert type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Internal/External
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Provider
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related provider
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-For external alerts, a provider which will generate the associated
-alarms. For internal alerts, the related data provider.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Application
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related provider
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Only for external alerts, application which will generate the associated
-alarms
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Component
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related component
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Only for internal alerts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Only for internal alerts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Trigger type
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Type of trigger that will be applied
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Only for internal alerts. Value list, see the API for details
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Expression
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Expression to be evaluated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Only for internal alerts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Id                    | Name                  | Description           |
++=======================+=======================+=======================+
+| ID                    | Alert identifier      | After its creation    |
+|                       |                       | can't be modified     |
++-----------------------+-----------------------+-----------------------+
+| Name                  | Display name          |                       |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           |                       |
++-----------------------+-----------------------+-----------------------+
+| Active                | Indicates whether the | When a sensor goes    |
+|                       | alert is activated or | into the offline      |
+|                       | not                   | state, the associated |
+|                       |                       | alerts are also       |
+|                       |                       | automatically         |
+|                       |                       | deactivated.          |
++-----------------------+-----------------------+-----------------------+
+| Creation date         | Creation date         | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Update date           | Last update date      | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Type                  | Alert type            | Internal/External     |
++-----------------------+-----------------------+-----------------------+
+| Provider              | Related provider      | For external alerts,  |
+|                       |                       | a provider which will |
+|                       |                       | generate the          |
+|                       |                       | associated alarms.    |
+|                       |                       | For internal alerts,  |
+|                       |                       | the related data      |
+|                       |                       | provider.             |
++-----------------------+-----------------------+-----------------------+
+| Application           | Related provider      | Only for external     |
+|                       |                       | alerts, application   |
+|                       |                       | which will generate   |
+|                       |                       | the associated alarms |
++-----------------------+-----------------------+-----------------------+
+| Component             | Related component     | Only for internal     |
+|                       |                       | alerts                |
++-----------------------+-----------------------+-----------------------+
+| Sensor                | Related sensor        | Only for internal     |
+|                       |                       | alerts                |
++-----------------------+-----------------------+-----------------------+
+| Trigger type          | Type of trigger that  | Only for internal     |
+|                       | will be applied       | alerts. Value list,   |
+|                       |                       | see the API for       |
+|                       |                       | details               |
++-----------------------+-----------------------+-----------------------+
+| Expression            | Expression to be      | Only for internal     |
+|                       | evaluated             | alerts                |
++-----------------------+-----------------------+-----------------------+
 
 .. _list-4:
 
@@ -3551,427 +1294,33 @@ available roles:
 
 **Properties**
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Id
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Name
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Id
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-User identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-After its creation can’t be modified
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Password
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Password
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Repeat
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Password check
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-User name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Last update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-E-Mail
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-User e-mail
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Active
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Checkbox for removing access
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Role
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related role
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Value list
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Id                    | Name                  | Description           |
++=======================+=======================+=======================+
+| Id                    | User identifier       | After its creation    |
+|                       |                       | can't be modified     |
++-----------------------+-----------------------+-----------------------+
+| Password              | Password              |                       |
++-----------------------+-----------------------+-----------------------+
+| Repeat                | Password check        |                       |
++-----------------------+-----------------------+-----------------------+
+| Name                  | User name             |                       |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           |                       |
++-----------------------+-----------------------+-----------------------+
+| Creation date         | Creation date         | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Update date           | Last update date      | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| E-Mail                | User e-mail           |                       |
++-----------------------+-----------------------+-----------------------+
+| Active                | Checkbox for removing |                       |
+|                       | access                |                       |
++-----------------------+-----------------------+-----------------------+
+| Role                  | Related role          | Value list            |
++-----------------------+-----------------------+-----------------------+
 
 .. _list-6:
 
@@ -3993,245 +1342,19 @@ It’s possible to delete elements massively through the sensor list.
 
 **Properties**
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Id
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Name
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Id
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Type identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-After its creation can’t be modified
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Display name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Last update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++---------------+------------------+--------------------------------------+
+| Id            | Name             | Description                          |
++===============+==================+======================================+
+| Id            | Type identifier  | After its creation can't be modified |
++---------------+------------------+--------------------------------------+
+| Name          | Display name     |                                      |
++---------------+------------------+--------------------------------------+
+| Description   | Description      |                                      |
++---------------+------------------+--------------------------------------+
+| Creation date | Creation date    | Automatically generated              |
++---------------+------------------+--------------------------------------+
+| Update date   | Last update date | Automatically generated              |
++---------------+------------------+--------------------------------------+
 
 .. _list-7:
 
@@ -4276,323 +1399,35 @@ It’s possible to delete elements massively through the component list.
 
 **Properties**
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Id
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Name
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Id
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Type identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-After its creation can’t be modified
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Display name
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Creation date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Last update date
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Automatically generated
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Photo
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related photo
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Generic picture for the component type, will be used if there isn’t any
-specified for the component itself
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Icon
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Related icon
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Value list from the deployed icon list. Used in the maps for
-representing the component
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Id                    | Name                  | Description           |
++=======================+=======================+=======================+
+| Id                    | Type identifier       | After its creation    |
+|                       |                       | can't be modified     |
++-----------------------+-----------------------+-----------------------+
+| Name                  | Display name          |                       |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           |                       |
++-----------------------+-----------------------+-----------------------+
+| Creation date         | Creation date         | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Update date           | Last update date      | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Photo                 | Related photo         | Generic picture for   |
+|                       |                       | the component type,   |
+|                       |                       | will be used if there |
+|                       |                       | isn't any specified   |
+|                       |                       | for the component     |
+|                       |                       | itself                |
++-----------------------+-----------------------+-----------------------+
+| Icon                  | Related icon          | Value list from the   |
+|                       |                       | deployed icon list.   |
+|                       |                       | Used in the maps for  |
+|                       |                       | representing the      |
+|                       |                       | component             |
++-----------------------+-----------------------+-----------------------+
 
 .. _list-8:
 
