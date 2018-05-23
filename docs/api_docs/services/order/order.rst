@@ -3,6 +3,7 @@ Order
 
 .. toctree::
    :hidden:
+   :titlesonly:
    :maxdepth: 1
    
    publish_order

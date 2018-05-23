@@ -3,6 +3,7 @@ Subscription
 
 .. toctree::
    :hidden:
+   :titlesonly:
    :maxdepth: 1
    
    retrieve_sensor_observations

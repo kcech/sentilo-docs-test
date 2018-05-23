@@ -3,6 +3,7 @@ Data
 
 .. toctree::
    :hidden:
+   :titlesonly:
    :maxdepth: 1
    
    publish_sensor_data
@@ -24,8 +25,8 @@ All requests for this service will have the following format:
 
     http://<your_api_server.com>/data/<provider_id>/<sensor_id>
 
-where **** and **** correspond to the sensor and provider identifiers on
-which we want to perform the requested action.
+where **<provider_id>** and **<sensor_id>** correspond to the sensor and 
+provider identifiers on which we want to perform the requested action.
 
 Actions
 -------
