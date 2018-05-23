@@ -13,7 +13,7 @@ Contents:
    
    setup
    quickstart
-   api_docs/index
+   api_docs
    architecture
    extensions
    monitorization

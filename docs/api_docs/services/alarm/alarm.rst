@@ -1,6 +1,14 @@
 Alarm
 =====
 
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   
+   publish_alarm
+   retrieve_alarms
+   
+
 Description
 -----------
 

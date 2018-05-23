@@ -1,6 +1,16 @@
 Alert
 =====
 
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   
+   create_alerts
+   update_alerts
+   retrieve_authorized_alerts
+   delete_alerts
+   
+
 Description
 -----------
 
@@ -36,11 +46,11 @@ alarm for all entities subscribed to the related alert.
 Actions
 -------
 
-The available actions for this service are: \* `Adding
-alerts <./create_alerts.html>`__ \* `Update
-alerts <./update_alerts.html>`__ \* `Retrieve list of authorized
-alerts <./retrieve_authorized_alerts.html>`__ \* `Remove
-alerts <./delete_alerts.html>`__
+The available actions for this service are: 
+- `Adding alerts <./create_alerts.html>`__ 
+- `Update alerts <./update_alerts.html>`__ 
+- `Retrieve list of authorized alerts <./retrieve_authorized_alerts.html>`__ 
+- `Remove alerts <./delete_alerts.html>`__
 
 Internal trigger types
 ----------------------

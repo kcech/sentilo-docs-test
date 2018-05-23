@@ -1,6 +1,17 @@
 Catalog
 =======
 
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   
+   create_sensors
+   update_sensors
+   retrieve_authorized_entities
+   delete_component_or_sensor
+
+
+
 Description
 -----------
 

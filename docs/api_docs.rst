@@ -1,6 +1,15 @@
-Abstract
+API Docs
 ========
 
+Contents:
+
+.. toctree::
+   :maxdepth: 1
+
+   api_docs/general_model
+   api_docs/security
+   api_docs/services
+	
 The Application Programming Interface (API) define a set of commands,
 functions and protocols that must be followed by who wants to interact
 with the platform from external systems, like sensors/actuators or
