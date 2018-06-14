@@ -48,10 +48,10 @@ Actions
 -------
 
 The available actions for this service are: 
-- `Adding alerts <./create_alerts.html>`__ 
-- `Update alerts <./update_alerts.html>`__ 
-- `Retrieve list of authorized alerts <./retrieve_authorized_alerts.html>`__ 
-- `Remove alerts <./delete_alerts.html>`__
+   - `Adding alerts <./create_alerts.html>`__ 
+   - `Update alerts <./update_alerts.html>`__ 
+   - `Retrieve list of authorized alerts <./retrieve_authorized_alerts.html>`__ 
+   - `Remove alerts <./delete_alerts.html>`__
 
 Internal trigger types
 ----------------------
@@ -59,362 +59,32 @@ Internal trigger types
 The list of trigger types accepted by Sentilo (and their associated
 expressions) are:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Id
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Expression value
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-GT
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Greater than <expression>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any numerical value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-GTE
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Greater than or equal <expression>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any numerical value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-LT
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Less than <expression>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any numerical value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-LTE
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Less than or equal <expression>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any numerical value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-EQ
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Equal <expression>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-CHANGE
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Any change
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Not apply here
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-CHANGE_DELTA
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Any variation greater to delta <expression>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any numerical value between 0 and 100
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-FROZEN
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No data received in <expression>minutes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Any numerical value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Id                    | Description           | Expression value      |
++=======================+=======================+=======================+
+| **GT**                | Greater than          | Any numerical value   |
+|                       | *<expression>*        |                       |
++-----------------------+-----------------------+-----------------------+
+| **GTE**               | Greater than or equal | Any numerical value   |
+|                       | *<expression>*        |                       |
++-----------------------+-----------------------+-----------------------+
+| **LT**                | Less than             | Any numerical value   |
+|                       | *<expression>*        |                       |
++-----------------------+-----------------------+-----------------------+
+| **LTE**               | Less than or equal    | Any numerical value   |
+|                       | *<expression>*        |                       |
++-----------------------+-----------------------+-----------------------+
+| **EQ**                | Equal *<expression>*  | Any value             |
++-----------------------+-----------------------+-----------------------+
+| **CHANGE**            | Any change            | Not apply here        |
++-----------------------+-----------------------+-----------------------+
+| **CHANGE_DELTA**      | Any variation greater | Any numerical value   |
+|                       | to delta              | between 0 and 100     |
+|                       | *<expression>*        |                       |
++-----------------------+-----------------------+-----------------------+
+| **FROZEN**            | No data received in   | Any numerical value   |
+|                       | *<expression>*\ minut |                       |
+|                       | es                    |                       |
++-----------------------+-----------------------+-----------------------+
 
 The trigger types only apply for the internal alerts.

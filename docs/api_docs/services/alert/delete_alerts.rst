@@ -15,133 +15,15 @@ entity’s owner token.
 
 Remember, the entity_id can be also an Application or a Provider too.
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-DELETE, PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Writing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No output data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++----------------+----------------+
+| **Format**     | json           |
++----------------+----------------+
+| **Method**     | DELETE, PUT    |
++----------------+----------------+
+| **Permission** | Writing        |
++----------------+----------------+
+| **Return**     | No output data |
++----------------+----------------+
 
 Note that this action can be invoked using two HTTP methods: PUT and
 DELETE.
@@ -157,97 +39,11 @@ Parameters
 
 The structure of input message if we want to delete a group is:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-alertsIds
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Array of the alerts identifiers to delete
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------+-------------------------------------------+----------+
+| Key       | Description                               | Optional |
++===========+===========================================+==========+
+| alertsIds | Array of the alerts identifiers to delete | Yes      |
++-----------+-------------------------------------------+----------+
 
 Each element of the list corresponds to an identifier to an alert to
 delete.

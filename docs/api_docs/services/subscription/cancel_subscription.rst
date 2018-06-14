@@ -10,135 +10,18 @@ This action allows to cancel any or a set of our active subscriptions.
 
    http://<your_api_server.com>/subscribe/<event_type>/<resource_id>
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-DELETE
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Write
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Returns
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No additional data returned
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
-
-**** and **** are optional and allow to filter the subscription to
++----------------+-----------------------------+
+| **Format**     | json                        |
++----------------+-----------------------------+
+| **Method**     | DELETE                      |
++----------------+-----------------------------+
+| **Permission** | Write                       |
++----------------+-----------------------------+
+| **Returns**    | No additional data returned |
++----------------+-----------------------------+
+
+
+**<event_type>** and **<resource_id>** are optional and allow to filter the subscription to
 cancel by event type or related resource.
 
 Parameters

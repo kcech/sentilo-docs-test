@@ -58,7 +58,7 @@ and, by default, every entity is administrable by its owner.
 If an action on a resource is done without the appropiate permission,
 platform will return an error 403.
 
- Securing Callbacks
+Securing Callbacks
 -------------------
 
 If it’s necessary to secure the push requests sent by the platform,

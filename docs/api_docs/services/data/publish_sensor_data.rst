@@ -11,439 +11,55 @@ its sensors.
 
    http://<your_api_server.com>/data/<provider_id>/<sensor_id>
 
-.. raw:: html
++----------------+----------------+
+| **Formats**    | json           |
++----------------+----------------+
+| **Method**     | PUT            |
++----------------+----------------+
+| **Permission** | Writing        |
++----------------+----------------+
+| **Retorna**    | No output data |
++----------------+----------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Formats
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Writing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Retorna
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No output data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Parameters
 ----------
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-observations
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Observations list to publish.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-location
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Geolocation coordinates in which the sensor got the
-observations(latitude longitude format).
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| observations          | Observations list to  | No                    |
+|                       | publish.              |                       |
++-----------------------+-----------------------+-----------------------+
+| location              | Geolocation           | Yes                   |
+|                       | coordinates in which  |                       |
+|                       | the sensor got the    |                       |
+|                       | observations(latitude |                       |
+|                       | longitude format).    |                       |
++-----------------------+-----------------------+-----------------------+
 
 Each observation will have the following structure:
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| value                 | Observation value to  | No                    |
+|                       | register              |                       |
++-----------------------+-----------------------+-----------------------+
+| timestamp             | Date and time when    | Yes                   |
+|                       | the observation was   |                       |
+|                       | made (format          |                       |
+|                       | dd/MM/yyyyTHH:mm:ssZ) |                       |
++-----------------------+-----------------------+-----------------------+
+| location              | Geolocation           | Yes                   |
+|                       | coordinates, in       |                       |
+|                       | decimal degrees, in   |                       |
+|                       | which the sensor got  |                       |
+|                       | the                   |                       |
+|                       | observations(latitude |                       |
+|                       | longitude format)     |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Observation value to register
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timestamp
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Date and time when the observation was made (format
-dd/MM/yyyyTHH:mm:ssZ)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-location
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Geolocation coordinates, in decimal degrees, in which the sensor got the
-observations(latitude longitude format)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Please note the following:
 

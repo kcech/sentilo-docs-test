@@ -14,133 +14,16 @@ this action cannot be undone.**
 
    http://<your_api_server.com>/catalog/<provider_id>?<parameter>=<value>
 
-.. raw:: html
++----------------+----------------+
+| **Format**     | json           |
++----------------+----------------+
+| **Method**     | DELETE, PUT    |
++----------------+----------------+
+| **Permission** | Writing        |
++----------------+----------------+
+| **Return**     | No output data |
++----------------+----------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-DELETE, PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Writing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No output data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Note that his action can be invoked using two HTTP methods: PUT and
 DELETE.
@@ -163,97 +46,12 @@ The following describes the structure of the input in each case:
 Delete components
 ~~~~~~~~~~~~~~~~~
 
-.. raw:: html
++------------+------------------------------------------+----------+
+| Key        | Description                              | Optional |
++============+==========================================+==========+
+| components | Array of component identifiers to delete | Yes      |
++------------+------------------------------------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-components
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Array of component identifiers to delete
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each element of the list corresponds to an identifier of a component to
 delete.
@@ -261,97 +59,12 @@ delete.
 Delete sensors
 ~~~~~~~~~~~~~~
 
-.. raw:: html
++---------+---------------------------------------+----------+
+| Key     | Description                           | Optional |
++=========+=======================================+==========+
+| sensors | Array of sensor identifiers to delete | Yes      |
++---------+---------------------------------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensors
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Array of sensor identifiers to delete
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each element of the list corresponds to an identifier of a sensor to
 delete.

@@ -14,345 +14,46 @@ over we own read permission.**
 
    http://<your_api_server.com>/subscribe/data/<provider_id>/<sensor_id>
 
-.. raw:: html
++----------------+-----------------------------+
+| **Format**     | json                        |
++----------------+-----------------------------+
+| **Method**     | PUT                         |
++----------------+-----------------------------+
+| **Permission** | Read                        |
++----------------+-----------------------------+
+| **Returns**    | No additional data returned |
++----------------+-----------------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th scope="row">
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th scope="row">
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Read
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th scope="row">
-
-Returns
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No additional data returned
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Parameters
 ----------
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-endpoint
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-URL where the platform will send a HTTP request with the observation
-data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-secretCallbackKey
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Secret key for callbacks
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-retries
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Maximum number of retries
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-retries_delay
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Delay parameter in minutes. Delays are spaced exponentially according to
-following equation: delay (N) = delay \* 2^(N-1) Where N is the current
-entry turn. More detailed explanation follows.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| endpoint              | URL where the         | No                    |
+|                       | platform will send a  |                       |
+|                       | HTTP request with the |                       |
+|                       | observation data      |                       |
++-----------------------+-----------------------+-----------------------+
+| secretCallbackKey     | Secret key for        | Yes                   |
+|                       | callbacks             |                       |
++-----------------------+-----------------------+-----------------------+
+| retries               | Maximum number of     | Yes                   |
+|                       | retries               |                       |
++-----------------------+-----------------------+-----------------------+
+| retries_delay         | Delay parameter in    | Yes                   |
+|                       | minutes. Delays are   |                       |
+|                       | spaced exponentially  |                       |
+|                       | according to          |                       |
+|                       | following equation:   |                       |
+|                       | delay (N) = delay \*  |                       |
+|                       | 2^(N-1)               |                       |
+|                       | Where N is the        |                       |
+|                       | current entry turn.   |                       |
+|                       | More detailed         |                       |
+|                       | explanation follows.  |                       |
++-----------------------+-----------------------+-----------------------+
 
 **Retries**
 

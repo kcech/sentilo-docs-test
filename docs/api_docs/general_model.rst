@@ -141,249 +141,27 @@ Reply
 The response to a request to the platform is managed through the
 response **HTTP status codes.**
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Error Code
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-HTTP
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-200
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Success
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Request accepted and processed correctly
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-4xx
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Client Error
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Error in request (Wrong format, forbidden mandatory parameters, …)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-401
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Unauthorized
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Unauthorized request: empty or invalid credential
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-403
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Forbidden
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Not authorized for the requested action
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-5xx
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Server Error
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Error processing the request
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Error Code            | HTTP                  | Description           |
++=======================+=======================+=======================+
+| 200                   | Success               | Request accepted and  |
+|                       |                       | processed correctly   |
++-----------------------+-----------------------+-----------------------+
+| 4xx                   | Client Error          | Error in request      |
+|                       |                       | (Wrong format,        |
+|                       |                       | forbidden mandatory   |
+|                       |                       | parameters, ...)      |
++-----------------------+-----------------------+-----------------------+
+| 401                   | Unauthorized          | Unauthorized request: |
+|                       |                       | empty or invalid      |
+|                       |                       | credential            |
++-----------------------+-----------------------+-----------------------+
+| 403                   | Forbidden             | Not authorized for    |
+|                       |                       | the requested action  |
++-----------------------+-----------------------+-----------------------+
+| 5xx                   | Server Error          | Error processing the  |
+|                       |                       | request               |
++-----------------------+-----------------------+-----------------------+
 
 In case of error the response body will include a description of the
 problem detected, as shown in the following examples:

@@ -275,7 +275,7 @@ the unique user role that can create additional Super Admin users.
 In a multi tenant instance, except for Super Admin users, when creating
 users, it’s mandatory to specify the related organization.
 
-.. _list-1:
+.. _user-admin-list-1:
 
 List
 ^^^^
@@ -285,7 +285,7 @@ List
 New user
 ^^^^^^^^
 
-.. _details-1:
+.. _multitenant-new-user-details-1:
 
 Details
 '''''''

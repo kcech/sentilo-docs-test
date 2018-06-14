@@ -33,7 +33,7 @@ All requests for this service will have the following format:
 
    http://<your_api_server.com>/subscribe/<event_type>/<resource_id>
 
-where **** identifies the system resource to which the request applies
+where **<resource_id>** identifies the system resource to which the request applies
 (providers, sensors or alerts).
 
 Actions

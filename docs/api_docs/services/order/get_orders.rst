@@ -13,306 +13,39 @@ maximum number of orders that you want to retrieve.
 
    http://<your_api_server.com>/order/<provider_id>/<sensor_id>?<parameter>=<value>
 
-.. raw:: html
++----------------+------------------------------------------------------+
+| **Format**     | json                                                 |
++----------------+------------------------------------------------------+
+| **Method**     | GET                                                  |
++----------------+------------------------------------------------------+
+| **Permission** | Read                                                 |
++----------------+------------------------------------------------------+
+| **Retorns**    | List of orders destined to sensor or provider listed |
++----------------+------------------------------------------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-GET
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Read
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Retorns
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-List of orders destined to sensor or provider listed
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Parameters
 ----------
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| from                  | Indicates the         | Yes                   |
+|                       | beginning of the time |                       |
+|                       | period for which you  |                       |
+|                       | want to retrieve      |                       |
+|                       | orders.               |                       |
++-----------------------+-----------------------+-----------------------+
+| to                    | Indicates the ending  | Yes                   |
+|                       | of the time period    |                       |
+|                       | for which you want to |                       |
+|                       | retrieve orders.      |                       |
++-----------------------+-----------------------+-----------------------+
+| limit                 | Specifies the maximum | Yes                   |
+|                       | number of orders to   |                       |
+|                       | retrieve.             |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-from
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates the beginning of the time period for which you want to
-retrieve orders.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-to
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates the ending of the time period for which you want to retrieve
-orders.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-limit
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Specifies the maximum number of orders to retrieve.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Please, note the following:
 
@@ -335,703 +68,79 @@ a sensor or a provider.**
 Last orders for a sensor
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
++--------+-----------------------------------+----------+
+| Key    | Description                       | Optional |
++========+===================================+==========+
+| orders | List with the last sensor's order | No       |
++--------+-----------------------------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-orders
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-List with the last sensor’s order
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each order will have the following structure:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-order
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Order message recorded at the time the order was published
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timestamp
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time when the order was made (dd/MM/yyyyTHH:mm:ss format)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sender
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Entity identifier that issued the order.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-time
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time when the observation was made in milliseconds
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| order                 | Order message         | No                    |
+|                       | recorded at the time  |                       |
+|                       | the order was         |                       |
+|                       | published             |                       |
++-----------------------+-----------------------+-----------------------+
+| timestamp             | The time when the     | No                    |
+|                       | order was made        |                       |
+|                       | (dd/MM/yyyyTHH:mm:ss  |                       |
+|                       | format)               |                       |
++-----------------------+-----------------------+-----------------------+
+| sender                | Entity identifier     | No                    |
+|                       | that issued the       |                       |
+|                       | order.                |                       |
++-----------------------+-----------------------+-----------------------+
+| time                  | The time when the     | No                    |
+|                       | observation was made  |                       |
+|                       | in milliseconds       |                       |
++-----------------------+-----------------------+-----------------------+
 
 Last orders for provider
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
++---------+----------------------------+----------+
+| Key     | Description                | Optional |
++=========+============================+==========+
+| sensors | List with sensors (sensor) | No       |
++---------+----------------------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensors
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-List with sensors (sensor)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each **(sensor)** will have the following structure:
 
-.. raw:: html
++--------+------------------------------------------+----------+
+| Key    | Description                              | Optional |
++========+==========================================+==========+
+| sensor | Sensor identifier                        | No       |
++--------+------------------------------------------+----------+
+| orders | List with the last orders for the sensor | No       |
++--------+------------------------------------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Sensor identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-orders
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-List with the last orders for the sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Finally, each command **(order)** will have the structure that we have
 defined previously.
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| order                 | Order message         | No                    |
+|                       | recorded at the time  |                       |
+|                       | the order was         |                       |
+|                       | published             |                       |
++-----------------------+-----------------------+-----------------------+
+| timestamp             | The time when the     | No                    |
+|                       | order was made        |                       |
+|                       | (dd/MM/yyyyTHH:mm:ss  |                       |
+|                       | format)               |                       |
++-----------------------+-----------------------+-----------------------+
+| sender                | Entity identifier     | No                    |
+|                       | that issued the       |                       |
+|                       | order.                |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-order
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Order message recorded at the time the order was published
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timestamp
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time when the order was made (dd/MM/yyyyTHH:mm:ss format)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sender
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Entity identifier that issued the order.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Examples
 --------

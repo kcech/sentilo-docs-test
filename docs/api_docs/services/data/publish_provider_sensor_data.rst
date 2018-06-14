@@ -11,572 +11,72 @@ made ​​by more than one sensor in a single message.
 
     http://<your_api_server.com>/data/<provider_id>
 
-.. raw:: html
++----------------+----------------+
+| **Format**     | json           |
++----------------+----------------+
+| **Method**     | PUT            |
++----------------+----------------+
+| **Permission** | Writing        |
++----------------+----------------+
+| **Return**     | No output data |
++----------------+----------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Writing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No output data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Parameters
 ----------
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| sensors               | List of sensors       | No                    |
+|                       | (sensor) for which we |                       |
+|                       | publish at least one  |                       |
+|                       | observation           |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensors
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-List of sensors (sensor) for which we publish at least one observation
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each sensor will have the following structure:
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| sensor                | Sensor identifier     | No                    |
++-----------------------+-----------------------+-----------------------+
+| observations          | Observations list     | No                    |
+|                       | (*observation*) to    |                       |
+|                       | publish               |                       |
++-----------------------+-----------------------+-----------------------+
+| location              | Geolocation           | Yes                   |
+|                       | coordinates in which  |                       |
+|                       | the sensor            |                       |
+|                       | observations are      |                       |
+|                       | obtained (latitude    |                       |
+|                       | longitude format)     |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Sensor identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-observations
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Observations list (observation) to publish
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-location
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Geolocation coordinates in which the sensor observations are obtained
-(latitude longitude format)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each observation will have the structure described on page `Publish
 observations of a sensor <./publish_sensor_data.html>`__:
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| value                 | Observation value     | No                    |
++-----------------------+-----------------------+-----------------------+
+| timestamp             | Date and time at      | Yes                   |
+|                       | which the observation |                       |
+|                       | was made              |                       |
+|                       | (dd/MM/yyyyTHH:mm:ssZ |                       |
+|                       | format)               |                       |
++-----------------------+-----------------------+-----------------------+
+| location              | Geolocation           | Yes                   |
+|                       | coordinates in which  |                       |
+|                       | the sensor has        |                       |
+|                       | achieved this         |                       |
+|                       | observation (latitude |                       |
+|                       | longitude format).    |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Observation value 
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timestamp
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Date and time at which the observation was made (dd/MM/yyyyTHH:mm:ssZ
-format)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-location
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Geolocation coordinates in which the sensor has achieved this
-observation (latitude longitude format).
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Response Data
 -------------

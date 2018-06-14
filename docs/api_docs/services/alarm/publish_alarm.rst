@@ -12,133 +12,15 @@ all who are subscribed to alarms alert.
 
     http://<your_api_server.com>/alarm/<alert_id> 
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Formats
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Writing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No additional data is returned
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++----------------+--------------------------------+
+| **Formats**    | json                           |
++----------------+--------------------------------+
+| **Method**     | PUT                            |
++----------------+--------------------------------+
+| **Permission** | Writing                        |
++----------------+--------------------------------+
+| **Return**     | No additional data is returned |
++----------------+--------------------------------+
 
 Parameters
 ----------
@@ -149,97 +31,11 @@ the generic format (JSON).
 The platform only persists and transfers the information to recipients
 without interpreting its contents.
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-message
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Free field
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Not
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++---------+-------------+----------+
+| Key     | Description | Optional |
++=========+=============+==========+
+| message | Free field  | Not      |
++---------+-------------+----------+
 
 Response data
 -------------

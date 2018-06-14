@@ -47,361 +47,52 @@ Activity Monitor Agent is configured with a set of .properties files in
 
 **subsription.properties**
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Property
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Comments
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-topics-to-index
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Regexp pattern on event name that enables including/excluding events
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <p>
-
-Examples of configuration:
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-/alarm/\*, /data/\*, /order/\*
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-Subscribes to all events
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-/data/PROVIDER1/\*, /data/PROVIDER2/\*
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-Subsribe only to data of 2 providers
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------------------------+
+| Property              | Description           | Comments                                |
++-----------------------+-----------------------+-----------------------------------------+
+| topics-to-index       | Regexp pattern on     | Examples of configuration:              |
+|                       | event name that       | ::                                      |
+|                       | enables               |                                         |
+|                       | including/excluding   |                                         |
+|                       | events                |    /alarm/*,/data/*,/order/*            |
+|                       |                       |                                         |
+|                       |                       | Subscribes to all events                |
+|                       |                       | ::                                      |
+|                       |                       |                                         |
+|                       |                       |    /data/PROVIDER1/*, /data/PROVIDER2/* |
+|                       |                       |                                         |
+|                       |                       |                                         |
+|                       |                       | Subsribe only to data of 2 providers    |
+|                       |                       |                                         |
++-----------------------+-----------------------+-----------------------------------------+ 
 
 **monitor-config.properties**
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Property              | Description           | Comments              |
++-----------------------+-----------------------+-----------------------+
+| elasticsearch.url     | URL of the ES         |                       |
+|                       | instance              |                       |
++-----------------------+-----------------------+-----------------------+
+| batch.size            | How many evens are    | Every HTTP request    |
+|                       | sent to ES at once.   | consumes certain      |
+|                       |                       | amount of resources,  |
+|                       |                       | thus is convenient to |
+|                       |                       | use a ES bulk API.    |
+|                       |                       | The agent won't send  |
+|                       |                       | events to ES until    |
+|                       |                       | batch.size events     |
+|                       |                       | occurred.             |
++-----------------------+-----------------------+-----------------------+
+| batch.workers.size    | Number of threads the | Determines how many   |
+|                       | agent                 | parallel threads      |
+|                       |                       | communicate with ES.  |
++-----------------------+-----------------------+-----------------------+
+| batch.max.retries     | Number of retries     | Number of intents for |
+|                       | when ES is            | upload to ES          |
+|                       | unavailable           | instance.             |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-Property
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Description
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Comments
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-elasticsearch.url
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-URL of the ES instance
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-batch.size
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-How many evens are sent to ES at once.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Every HTTP request consumes certain amount of resources, thus is
-convenient to use a ES bulk API. The agent won’t send events to ES until
-batch.size events occurred.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-batch.workers.size
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Number of threads the agent
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Determines how many parallel threads communicate with ES.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-batch.max.retries
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Number of retries when ES is unavailable
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Number of intents for upload to ES instance.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 The agent will create index(es) called sentilo-YYYY-MM.
 

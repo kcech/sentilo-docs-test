@@ -13,133 +13,16 @@ indicate the maximum number of observations to be recovered.
 
     http://<your_api_server.com>/data/<provider_id>?<parameter>=<value>
 
-.. raw:: html
++----------------+----------------------------------------------------+
+| **Format**     | json                                               |
++----------------+----------------------------------------------------+
+| **Method**     | GET                                                |
++----------------+----------------------------------------------------+
+| **Permission** | Reading                                            |
++----------------+----------------------------------------------------+
+| **Return**     | List with the observations from provider's sensors |
++----------------+----------------------------------------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-GET
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Reading
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-List with the observations from provider’s sensors
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 **Because the number of sensors from a supplier can be very high, and
 therefore the amount of information returned can be very large, be
@@ -148,175 +31,27 @@ careful using this operations due to performance reasons.**
 Parameteres
 -----------
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| from                  | Indicates the         | Yes                   |
+|                       | beginning of the time |                       |
+|                       | period for which you  |                       |
+|                       | want to retrieve the  |                       |
+|                       | observations.         |                       |
++-----------------------+-----------------------+-----------------------+
+| to                    | Indicates the end of  | Yes                   |
+|                       | the time period for   |                       |
+|                       | which you want to     |                       |
+|                       | retrieve the          |                       |
+|                       | observations.         |                       |
++-----------------------+-----------------------+-----------------------+
+| limit                 | Specifies the maximum | Yes                   |
+|                       | number of             |                       |
+|                       | observations for each |                       |
+|                       | sensor to recover.    |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-from
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates the beginning of the time period for which you want to
-retrieve the observations.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-to
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates the end of the time period for which you want to retrieve the
-observations.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-limit
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Specifies the maximum number of observations for each sensor to recover.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Please note the following:
 
@@ -334,437 +69,49 @@ In addition to the `HTTP status
 code <../../general_model.html#reply>`__, the observation data is
 returned in the body contents as a list of observations:
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| sensor                | List of sensors       | No                    |
+|                       | (sensor) for the      |                       |
+|                       | observations that     |                       |
+|                       | have been retrieved   |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-List of sensors (sensor) for the observations that have been retrieved
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Each sensor has the following structure:
 
-.. raw:: html
++--------------+----------------------------------------+----------+
+| Key          | Description                            | Optional |
++==============+========================================+==========+
+| sensor       | Sensor identifier                      | No       |
++--------------+----------------------------------------+----------+
+| observations | List of the latest sensor observations | No       |
++--------------+----------------------------------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sensor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Sensor identifier
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-observations
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-List of the latest sensor observations
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Finally, each observation (observation) has the following structure:
 
-.. raw:: html
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Opional               |
++=======================+=======================+=======================+
+| value                 | Observation value     | No                    |
++-----------------------+-----------------------+-----------------------+
+| timestamp             | The time at which the | No                    |
+|                       | observation was made  |                       |
+|                       | (dd/MM/yyyyTHH:mm:ss  |                       |
+|                       | format)               |                       |
++-----------------------+-----------------------+-----------------------+
+| time                  | The time when the     | No                    |
+|                       | observation was made  |                       |
+|                       | in milliseconds       |                       |
++-----------------------+-----------------------+-----------------------+
+| location              | Geolocation           | Yes                   |
+|                       | coordinates in which  |                       |
+|                       | the sensor was        |                       |
+|                       | recorded observation  |                       |
++-----------------------+-----------------------+-----------------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Opional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Observation value
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timestamp
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time at which the observation was made (dd/MM/yyyyTHH:mm:ss format)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-time
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time when the observation was made in milliseconds
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-location
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Geolocation coordinates in which the sensor was recorded observation
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Examples
 --------

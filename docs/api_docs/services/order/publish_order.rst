@@ -12,133 +12,16 @@ notification to all its subscribers.
 
    http://<your_api_server.com>/order/<provider_id>/<sensor_id>
 
-.. raw:: html
++----------------+----------------+
+| **Format**     | json           |
++----------------+----------------+
+| **Method**     | PUT            |
++----------------+----------------+
+| **Permission** | Writing        |
++----------------+----------------+
+| **Return**     | No output data |
++----------------+----------------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-PUT
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Writing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-No output data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Parameters
 ----------
@@ -149,97 +32,12 @@ information in the defined format (JSON).
 The platform will only transfer the information to the subscribers,
 without checking its contents nor reading into it.
 
-.. raw:: html
++-------+---------------+----------+
+| Key   | Description   | Optional |
++=======+===============+==========+
+| order | Orden content | Not      |
++-------+---------------+----------+
 
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-order
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Orden content
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Not
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
 
 Response data
 -------------

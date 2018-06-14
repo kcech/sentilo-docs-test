@@ -17,6 +17,7 @@ Contents:
    architecture
    extensions
    monitorization
+   historian_agent
    catalog_and_maps
    multitenant
    tutorials

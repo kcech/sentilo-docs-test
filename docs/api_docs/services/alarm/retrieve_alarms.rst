@@ -13,306 +13,37 @@ of alarms to be retrieved.
 
    http://<your_api_server.com>/alarm/<alarm_id>?<parameter>=<value>
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Format
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-json
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Method
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-GET
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Permission
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Reading
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Return
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <td>
-
-Alarms associated with the alert
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++----------------+----------------------------------+
+| **Format**     | json                             |
++----------------+----------------------------------+
+| **Method**     | GET                              |
++----------------+----------------------------------+
+| **Permission** | Reading                          |
++----------------+----------------------------------+
+| **Return**     | Alarms associated with the alert |
++----------------+----------------------------------+
 
 Parameters
 ----------
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-from
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates the starting of the time period for which you want to retrieve
-alarms.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-to
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Indicates the end of the time period for which you want to retrieve
-alarms..
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-limit
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Specifies the maximum number of alarms to recover.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Yes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Optional              |
++=======================+=======================+=======================+
+| from                  | Indicates the         | Yes                   |
+|                       | starting of the time  |                       |
+|                       | period for which you  |                       |
+|                       | want to retrieve      |                       |
+|                       | alarms.               |                       |
++-----------------------+-----------------------+-----------------------+
+| to                    | Indicates the end of  | Yes                   |
+|                       | the time period for   |                       |
+|                       | which you want to     |                       |
+|                       | retrieve alarms..     |                       |
++-----------------------+-----------------------+-----------------------+
+| limit                 | Specifies the maximum | Yes                   |
+|                       | number of alarms to   |                       |
+|                       | recover.              |                       |
++-----------------------+-----------------------+-----------------------+
 
 Please note the following:
 
@@ -330,305 +61,33 @@ code <../../general_model.html#reply>`__, if the operation runs
 properly, it will return the last alarms associated with the alert
 according to your search criteria.
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Optional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-alarms
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Alarms list (message) of the alert
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Not
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++--------+--------------------------------------+----------+
+| Key    | Description                          | Optional |
++========+======================================+==========+
+| alarms | Alarms list (*message*) of the alert | Not      |
++--------+--------------------------------------+----------+
 
 Each alarm (message) will be composed by the following attributes:
 
-.. raw:: html
-
-   <table>
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th>
-
-Key
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Description
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   <th>
-
-Opcional
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-message
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Message recorded when the alarm was fired
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timestamp
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time in which system received the alarm (format dd/MM/yyyyTHH:mm:ss)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-time
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-The time when the observation was made in milliseconds
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-sender
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Identifier of the entity that issued the alarm
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-No
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
++-----------------------+-----------------------+-----------------------+
+| Key                   | Description           | Opcional              |
++=======================+=======================+=======================+
+| message               | Message recorded when | No                    |
+|                       | the alarm was fired   |                       |
++-----------------------+-----------------------+-----------------------+
+| timestamp             | The time in which     | No                    |
+|                       | system received the   |                       |
+|                       | alarm (format         |                       |
+|                       | dd/MM/yyyyTHH:mm:ss)  |                       |
++-----------------------+-----------------------+-----------------------+
+| time                  | The time when the     | No                    |
+|                       | observation was made  |                       |
+|                       | in milliseconds       |                       |
++-----------------------+-----------------------+-----------------------+
+| sender                | Identifier of the     | No                    |
+|                       | entity that issued    |                       |
+|                       | the alarm             |                       |
++-----------------------+-----------------------+-----------------------+
 
 Examples
 --------
