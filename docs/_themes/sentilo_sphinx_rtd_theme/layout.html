@@ -39,6 +39,7 @@
     {% endif %}
 
   {% endif %}
+  <link rel="stylesheet" href="http://www.sentilo.io/wordpress/wp-content/themes/arona/css/custom.css?ver=4.9.8" type="text/css" />
 
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
   <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
@@ -82,7 +83,13 @@
 
 <body class="wy-body-for-nav">
 
-{% block extrabody %} <div><section><h1>SENTILO EXTRA HEADERR</h1></section></div> {% endblock %}
+{% block extrabody %}
+
+<header class="met_content clearfix">
+  <a href="http://www.sentilo.io/wordpress/" class="met_logo"><img src="https://www.sentilo.io/wordpress/wp-content/uploads/2013/11/sentilo_logo.png" data-retina="https://www.sentilo.io/wordpress/wp-content/uploads/2013/11/sentilo_logo_2x.png" alt="Sentilo" height="34px"></a>
+
+</header>
+{% endblock %}
 
   <div class="wy-grid-for-nav">
 
