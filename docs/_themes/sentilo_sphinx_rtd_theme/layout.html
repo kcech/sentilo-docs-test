@@ -73,7 +73,7 @@
     <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
     {%- endif %}
   {%- endblock %}
-  {%- block extrahead %} <h1>SENTILO EXTRA HEADERR</h1> {% endblock %}
+  {%- block extrahead %} {% endblock %}
 
   {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
   <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
@@ -82,7 +82,7 @@
 
 <body class="wy-body-for-nav">
 
-{% block extrabody %} {% endblock %}
+{% block extrabody %} <h1>SENTILO EXTRA HEADERR</h1> {% endblock %}
   <div class="wy-grid-for-nav">
 
     {# SIDE NAV, TOGGLES ON MOBILE #}
