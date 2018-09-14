@@ -10,7 +10,7 @@ Plug & Play: they are recognized by the system and started automatically
 to be up and running.
 
 Every agent is a process that acts as a subscriber for the
-Publish/Subcribe platform. These processes will subscribe directly to
+publish/subcribe platform. These processes will subscribe directly to
 Redis as a independent clients. This subscription will provide the input
 data to do the underlying business logic (store in a relational
 database, process alarms, generate statistics, …)
