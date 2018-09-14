@@ -82,7 +82,9 @@
 
 <body class="wy-body-for-nav">
 
-{% block extrabody %} <h1>SENTILO EXTRA HEADER</h1>h1>{% endblock %}
+{%- block extrahead %} <h1>SENTILO EXTRA HEADER</h1> {% endblock %}
+
+{% block extrabody %} {% endblock %}
   <div class="wy-grid-for-nav">
 
     {# SIDE NAV, TOGGLES ON MOBILE #}
