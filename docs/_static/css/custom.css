@@ -304,8 +304,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .met_header_wrap.met_header_1 + div{
-	position: relative;
-	top: 70px;
+	/*position: relative;
+	top: 70px;*/
 	z-index: 1;
 }
 
