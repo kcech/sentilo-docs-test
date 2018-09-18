@@ -20,6 +20,6 @@ header {
     font-family: 'Open Sans', sans-serif;
 }
 
-section {
+section, .section {
     margin-top: 70px:
 }
