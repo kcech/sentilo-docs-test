@@ -20,10 +20,6 @@ header {
     font-family: 'Open Sans', sans-serif;
 }
 
-section {
-    padding-top: -70px;
-}
-
 .section {
-    padding-top: 70px;
+    padding-top: 30px;
 }
