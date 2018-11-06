@@ -343,7 +343,7 @@ document and can be easily followed on their respective web pages.
 **Compatible versions**
 
 
-Federation agent
+Kafka agent
 ~~~~~~~~~~~~~~~
 
 **Description**
