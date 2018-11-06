@@ -294,6 +294,63 @@ Sentilo has been successfully used in with these versions:
 -  Grafana 3.0.4
 
 
+
+Federation agent
+~~~~~~~~~~~~~~~
+
+**Description**
+
+The federation agent is a module that allows to synchronize two independent instances on Sentilo.
+
+
+**Configuration**
+
+Federation Agent's configuration is in file
+sentilo/sentilo-agent-federation/src/main/resources/properties/app.properties.
+
++---------------------------------------------+----------+----------+
+| Property                                    | Property | Comments |
++---------------------------------------------+----------+----------+
+| server.port                                 |          |          |
++---------------------------------------------+----------+----------+
+| rest.client.local.host                      |          |          |
++---------------------------------------------+----------+----------+
+| sentilo.master.application.id               |          |          |
++---------------------------------------------+----------+----------+
+| catalog.mongodb.host                        |          |          |
++---------------------------------------------+----------+----------+
+| catalog.mongodb.port                        |          |          |
++---------------------------------------------+----------+----------+
+| catalog.mongodb.database                    |          |          |
++---------------------------------------------+----------+----------+
+| catalog.mongodb.user                        |          |          |
++---------------------------------------------+----------+----------+
+| catalog.mongodb.password                    |          |          |
++---------------------------------------------+----------+----------+
+| federation.subscription.endpoint            |          |          |
++---------------------------------------------+----------+----------+
+| federation.subscription.secret.key.callback |          |          |
++---------------------------------------------+----------+----------+
+| federation.subscription.max.retries         |          |          |
++---------------------------------------------+----------+----------+
+| federation.subscription.max.delay           |          |          |
++---------------------------------------------+----------+----------+
+
+
+Configuration of HDFS, HBase, OpenTSDB and is beyond the scope of this
+document and can be easily followed on their respective web pages.
+
+**Compatible versions**
+
+
+Federation agent
+~~~~~~~~~~~~~~~
+
+**Description**
+
+The Kafka agent publishes Sentilo events to Kafka.
+
+
 Node-red
 --------
 
