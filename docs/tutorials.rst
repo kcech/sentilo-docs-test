@@ -14,7 +14,7 @@ On this page you will find several tutorials about how to connect to
 Sentilo using various existing platforms and languages.
 
 .. table:: tutorials
-   :widths: auto
+   :widths: 40 60
 +---------------------------------------------------------------+-----------------------------------+
 |                                                               | `Java Client`_                    |
 |  .. image:: _static/images/tutorials/java_logo.jpg            | Java 1.6 library that allows      |
