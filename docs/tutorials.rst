@@ -13,6 +13,8 @@ Contents:
 On this page you will find several tutorials about how to connect to
 Sentilo using various existing platforms and languages.
 
+.. table:: tutorials
+   :widths: auto
 +---------------------------------------------------------------+-----------------------------------+
 |                                                               | `Java Client`_                    |
 |  .. image:: _static/images/tutorials/java_logo.jpg            | Java 1.6 library that allows      |
@@ -29,8 +31,8 @@ Sentilo using various existing platforms and languages.
 +---------------------------------------------------------------+-----------------------------------+
 |                                                               | `Arduino Client`_                 |
 |  .. image:: _static/images/tutorials/arduino-mega-2560-r3.jpg | A simple Arduino library that     |
-|     :width: 216p                                              | allows connect with the Official  |
-|     :height: 157p                                             | Ethernet Shield to the Sentilo    |
+|     :width: 216px                                             | allows connect with the Official  |
+|     :height: 157px                                            | Ethernet Shield to the Sentilo    |
 |                                                               | Platform                          |
 +---------------------------------------------------------------+-----------------------------------+
 
