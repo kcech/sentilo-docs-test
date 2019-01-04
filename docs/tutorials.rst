@@ -28,8 +28,12 @@ Sentilo using various existing platforms and languages.
    :height: 157px
    :target: ./tutorials/arduino_client.html
 
+.. |logo1| image:: _static/images/tutorials/java_logo.jpg
+   :scale: 100%
+
+
 +-----------------------------------+-----------------------------------+
-| |java_logo.jpg|                   | `Java Client`_                    |
+| |logo1|                           | `Java Client`_                    |
 |                                   | Java 1.6 library that allows      |
 |                                   | access to Sentilo Platform        |
 |                                   | through its REST API Client       |
