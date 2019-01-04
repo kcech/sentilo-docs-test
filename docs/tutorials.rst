@@ -14,17 +14,19 @@ On this page you will find several tutorials about how to connect to
 Sentilo using various existing platforms and languages.
 
 .. |java_logo.jpg| image:: _static/images/tutorials/java_logo.jpg
-:width: 202px
-:height: 113px
-:target: tutorials/java_client.html
+   :width: 202px
+   :height: 113px
+   :target: tutorials/java_client.html
+
 .. |raspberrypi.jpeg| image:: _static/images/tutorials/raspberrypi.jpeg
-:width: 215px
-:height: 122px
-:target: ./tutorials/raspberrypi_client.html
+   :width: 215px
+   :height: 122px
+   :target: ./tutorials/raspberrypi_client.html
+
 .. |arduino-mega-2560-r3.jpg| image:: _static/images/tutorials/arduino-mega-2560-r3.jpg
-:width: 216px
-:height: 157px
-:target: ./tutorials/arduino_client.html
+   :width: 216px
+   :height: 157px
+   :target: ./tutorials/arduino_client.html
 
 +-----------------------------------+-----------------------------------+
 | |java_logo.jpg|                   | `Java Client`_                    |
