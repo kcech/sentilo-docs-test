@@ -44,7 +44,7 @@ Sentilo using various existing platforms and languages.
 +-----------------------------------+-----------------------------------+
 | |logo1|                           | `Java Client`_                    |
 |                                   | Java 1.6 library that allows      |
-|                                   | access to Sentilo Platform        |
+| aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | access to Sentilo Platform        |
 |                                   | through its REST API Client       |
 +-----------------------------------+-----------------------------------+
 | |raspberrypi.jpeg|                | `RaspberryPi Client`_             |
