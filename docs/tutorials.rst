@@ -42,12 +42,12 @@ Sentilo using various existing platforms and languages.
      - Row 2, column 3
 
 +-----------------------------------+-----------------------------------+
-| |logo1|                           | `Java Client`_                    |
+| |logo1|                     `  `  | `Java Client`_                    |
 |                                   | Java 1.6 library that allows      |
-| `                              `  | access to Sentilo Platform        |
+|                                   | access to Sentilo Platform        |
 |                                   | through its REST API Client       |
 +-----------------------------------+-----------------------------------+
-| |raspberrypi.jpeg|                | `RaspberryPi Client`_             |
+| |raspberrypi.jpeg|          `  `  | `RaspberryPi Client`_             |
 |                                   | Independent platform library      |
 |                                   | created with NodeJS that allows   |
 |                                   | embedded architectures, such as   |
@@ -55,7 +55,7 @@ Sentilo using various existing platforms and languages.
 |                                   | Sentilo Platform through its REST |
 |                                   | API Client                        |
 +-----------------------------------+-----------------------------------+
-| |arduino-mega-2560-r3.jpg|        | `Arduino Client`_                 |
+| |arduino-mega-2560-r3.jpg|  `  `  | `Arduino Client`_                 |
 |                                   | A simple Arduino library that     |
 |                                   | allows connect with the Official  |
 |                                   | Ethernet Shield to the Sentilo    |
