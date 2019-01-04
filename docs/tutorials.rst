@@ -31,6 +31,8 @@ Sentilo using various existing platforms and languages.
 .. |logo1| image:: _static/images/tutorials/java_logo.jpg
    :scale: 100%
 
+.. table:: This is my table
+   :widths: 30 70
 
 +-----------------------------------+-----------------------------------+
 | |logo1|                           | `Java Client`_                    |
