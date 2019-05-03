@@ -27,10 +27,9 @@ Sentilo uses Maven as a mechanism for building and managing the
 dependencies of the platform. In order to build **Sentilo**, it is
 necessary to ensure the next set of prerequisites:
 
--  JDK 1.6.x + (Sentilo has been tested on JDK/JRE versions 1.6, 1.7 and
-   1.8)
+-  JDK 1.8.x +
 -  Git **(optional)**
--  Maven 2.2.1 +
+-  Maven 3 +
 -  Ensure that the the Java SDK and Maven executables are accessible
    using your PATH environment variable.
 
@@ -87,30 +86,13 @@ If you want modify the code before to build it, you should import it
 into an Eclipse workspace with maven plug-in installed. Below we explain
 how to do it by using the M2E plugin.
 
-**For M2E plugin version lower than 1.0.0**
-
-Go to the root directoy (./sentilo) and execute:
-
-::
-
-   mvn clean install
-   mvn eclipse:clean eclipse:eclipse
-
-Open the Eclipse workspace to import the code:
-
--  Go to **File > Import > Existing Maven Projects**
--  Select **./sentilo** as the root directory
--  Select all projects and import
-
-**For M2E plugin version equal/greather than 1.0.0**
-
 -  Open the Eclipse workspace to import the code:
 
    -  Go to **File> Import> Existing Maven Projects**
    -  Select **./sentilo** as the root directory
    -  Select all projects and import
 
-**Warning**: be sure that JDK 1.6, or later, is correctly configured in
+**Warning**: be sure that JDK 1.8, or later, is correctly configured in
 your Eclipse environment.
 
 After modifying the code, to compile and build the artifacts, our
@@ -127,20 +109,18 @@ into two categories):
 
 -  Mandatory
 
-   -  Redis 2.6.11 + (Sentilo has been tested on versions 2.6.11 and
-      2.8.6)
-   -  MongoDB 2.2.x or 2.4.x (Sentilo has been tested on versions 2.2.3,
-      2.4.8 and 2.4.13)
-   -  Tomcat 7.0.37 +
+   -  Redis 4.0.11
+   -  MongoDB 4.0.1
+   -  Tomcat 8.5.32 +
 
 -  Optional
 
    -  MySQL 5.5.x (Sentilo has been tested on MySQL 5.5.34 but you could
       use your favourite RDBMS) **It is only necessary if you want to
       install the relational agent**
-   -  Elasticsearch 2.3.x **It is only necessary if you want to install
+   -  Elasticsearch 5+ **It is only necessary if you want to install
       the activity-monitor agent**.
-   -  openTSDB 2.2.0 **It is only necessary if you want to install the
+   -  openTSDB 2.2.0 + **It is only necessary if you want to install the
       historian agent**
 
 You must ensure that you have all these elements installed properly (you

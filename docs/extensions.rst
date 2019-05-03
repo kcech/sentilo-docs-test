@@ -96,9 +96,6 @@ repository.
 Activity Monitor agent
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Monitorization
-~~~~~~~~~~~~~~
-
 **Background on Activity Monitor Agent**
 
 Sentilo is a publication-subscription platform. The amount of data held
@@ -201,9 +198,7 @@ pages.
 Sentilo has been successfully used in with these versions of ELK (which
 does not mean other versions shouldn’t work as well):
 
--  Elasticsearch 2.3.1
--  Kibana 4.5.3
--  Logstash 2.3.2
+-  ELK 5+
 
 
 Historian agent
@@ -290,8 +285,8 @@ Sentilo has been successfully used in with these versions:
 
 -  Hadoop 2.7.2
 -  HBase 1.2.1
--  Opentsdb 2.2.0
--  Grafana 3.0.4
+-  Opentsdb 2.2.0, 2.3.0
+-  Grafana 3 +
 
 
 
@@ -300,47 +295,69 @@ Federation agent
 
 **Description**
 
-The federation agent is a module that allows to synchronize two independent instances on Sentilo.
+The federation agent is a module that permits to share events between two independent instances of Sentilo.
+The sharing is unilateral - one Sentilo instance is emitting events and the other is receiving.
+The agent is installed at the side of the receiving instance:
+
+.. image:: _static/images/extensions/sentilo_federation.png
+
+The administrator of the emmitting Sentilo instance only needs to create a new application and provide the token the
+administrator of the receiving instance.
+As with any Sentilo application, the administrator is in control of which provider's data are readable by the remote federation agent.
+
+Providers, components and sensors are created automatically in the catalog of the receiving instance by the federation agent.
+The agent uses its application token to query the emitting catalog API to obtain remote objects, and uses the local catalog
+application id to replicate the locally.
+
+The federation agent creates subsriptions on data it has permission. It creates a HTTP endpoint and tells the emitting instance
+to forward the events to this endpoint URL.
 
 
 **Configuration**
 
 Federation Agent's configuration is in file
-sentilo/sentilo-agent-federation/src/main/resources/properties/app.properties.
+sentilo/sentilo-agent-federation/src/main/resources/properties/application.properties.
 
-+---------------------------------------------+----------+----------+
-| Property                                    | Property | Comments |
-+---------------------------------------------+----------+----------+
-| server.port                                 |          |          |
-+---------------------------------------------+----------+----------+
-| rest.client.local.host                      |          |          |
-+---------------------------------------------+----------+----------+
-| sentilo.master.application.id               |          |          |
-+---------------------------------------------+----------+----------+
-| catalog.mongodb.host                        |          |          |
-+---------------------------------------------+----------+----------+
-| catalog.mongodb.port                        |          |          |
-+---------------------------------------------+----------+----------+
-| catalog.mongodb.database                    |          |          |
-+---------------------------------------------+----------+----------+
-| catalog.mongodb.user                        |          |          |
-+---------------------------------------------+----------+----------+
-| catalog.mongodb.password                    |          |          |
-+---------------------------------------------+----------+----------+
-| federation.subscription.endpoint            |          |          |
-+---------------------------------------------+----------+----------+
-| federation.subscription.secret.key.callback |          |          |
-+---------------------------------------------+----------+----------+
-| federation.subscription.max.retries         |          |          |
-+---------------------------------------------+----------+----------+
-| federation.subscription.max.delay           |          |          |
-+---------------------------------------------+----------+----------+
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| Property                                    | Default Value                         | Description                                                                                              |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| server.port                                 | 8082                                  | Agent's HTTP port                                                                                        |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| rest.client.local.host                      | http://127.0.0.1:8081                 | Local Sentilo API endpoint                                                                               |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| sentilo.master.application.id               | sentilo-catalog                       | Local Sentilo application Id. The agent will use the token of the application to make changes in catalog |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| catalog.mongodb.host                        | 127.0.0.1                             | Local MongoDB host                                                                                       |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| catalog.mongodb.port                        | 27017                                 | Local MongoDB port                                                                                       |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| catalog.mongodb.database                    | sentilo                               | Local MongoDB database name                                                                              |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| catalog.mongodb.user                        | sentilo                               | Local MongoDB user                                                                                       |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| catalog.mongodb.password                    | sentilo                               | Local MongoDB password                                                                                   |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| federation.subscription.endpoint            | http://localhost:8082/data/federated/ | Agent URL that will be used in subscriptions in the remote Sentilo instance.                             |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| federation.subscription.secret.key.callback | secret-callback-key-change-it         | HMAC secret used for incoming subscription.                                                              |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| federation.subscription.max.retries         | 3                                     | Number of retries used for subcription                                                                   |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
+| federation.subscription.max.delay           | 5                                     | Delay used for subcription                                                                               |
++---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
 
+Further configuration of the agent is available in the "Federation services" menu.
 
-Configuration of HDFS, HBase, OpenTSDB and is beyond the scope of this
-document and can be easily followed on their respective web pages.
+The menu is available when running Tomcat with the option:
 
-**Compatible versions**
+::
+
+   -Dsentilo.federation.enabled=true
+
+The "Client application token" input is the token created in the emitting Sentilo instance:
+
+.. image:: _static/images/extensions/catalog-federation-config.png
+
 
 
 Kafka agent
@@ -349,6 +366,50 @@ Kafka agent
 **Description**
 
 The Kafka agent publishes Sentilo events to Kafka.
+
+
+**Configuration**
+
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| Property                 | Default Value  | Description                                                                                         |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.bootstrap.servers  | localhost:9092 | Comma-separated list of Kafka brokers                                                               |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.topic.prefix       | sentilo        |                                                                                                     |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| zookeeper.nodes          | localhost:2181 | Comma-separated list of Zookeeper nodes                                                             |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| batch.workers.size       | 10             | Number of worker threads                                                                            |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| batch.max.retries        | 1              | How many times will the agent try to resend the message to Kafka until it gives up                  |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.request.timeout.ms | 30000          |                                                                                                     |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.linger.ms          | 100            | Milliseconds before the contents of buffer are sent or until batch fills up, whichever comes first. |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.batch.size         | 20000          | Number of bytes of internal buffer. If the size fills up before , contents are sent to Kafka, .     |
+|                          |                |                                                                                                     |
+|                          |                | Otherwise contents are sent once kafka.linger.ms passed.                                            |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.topicPrefix        | sentilo        | Topics in Kafka will start with following prefix. May be left blank                                 |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.topicSeparator     | .              | The compound name of topic in Kafka will be separated with this string.                             |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+| kafka.topicNameMode      | topicPerSensor | Possible values of topicNameMode for the "data" event type:                                         |
+|                          |                | * topicPerSensor: sentilo.data.providerName.sensorName                                              |
+|                          |                | * topicPerProvider: sentilo.data.providerName                                                       |
+|                          |                | * topicPerSensorType: sentilo.data.temperature                                                      |
+|                          |                | * topicPerMessageType: sentilo.data                                                                 |
+|                          |                | * singleTopic: sentilo                                                                              |
+|                          |                |                                                                                                     |
++--------------------------+----------------+-----------------------------------------------------------------------------------------------------+
+
+
+**Compatible versions**
+
+Sentilo has been successfully used in with these versions:
+
+-  Kafka 0.11.0
 
 
 Node-red
