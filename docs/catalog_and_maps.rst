@@ -1086,10 +1086,10 @@ This integer indicates how many measures will be show in the observation chart o
 Additional information tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The meaning of this tab is the same as for the `components <#additional-information`__.
+The meaning of this tab is the same as for the `components <#additional-information>`__.
 
 This tab displays the set of additional properties related to the
-component See the parameter `additionalInfo <./api_docs/services/create_sensors.html#parameters>`__
+component See the parameter `additionalInfo <./api_docs/services/catalog/create_sensors.html#parameters>`__
 of the API docs.
 
 These fields are not categorized, i.e., here you could stored any device
