@@ -366,7 +366,6 @@ applications registered into the Catalog:
 -  **testApp**: as the name suggest, this application is used for
    testing the platform status.
 
-
 .. _applications-list:
 
 List
