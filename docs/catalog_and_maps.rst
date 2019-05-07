@@ -995,7 +995,8 @@ The main properties of the *Details* tab are the following:
 +-----------------------+-----------------------+-----------------------+
 | Data type             | Type of data          | Mandatory. Possible   |
 |                       | published by the      | values are:           |
-|                       | sensor                | -  Audio Link         |
+|                       | sensor                |                       |
+|                       |                       | -  Audio Link         |
 |                       |                       | -  Boolean            |
 |                       |                       | -  File link          |
 |                       |                       | -  Image link         |
@@ -1004,7 +1005,6 @@ The main properties of the *Details* tab are the following:
 |                       |                       | -  Numerical          |
 |                       |                       | -  Text               |
 |                       |                       | -  Video Link         |
-|                       |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | Unit                  | Measurement unit      |                       |
 +-----------------------+-----------------------+-----------------------+
