@@ -944,8 +944,8 @@ respectively).
 
 .. _details-3:
 
-Details
-^^^^^^^
+Details Tab
+^^^^^^^^^^^
 
 The detail page of a sensor is structured into four tabs:
 
@@ -993,9 +993,18 @@ The main properties of the *Details* tab are the following:
 |                       |                       | from a list of        |
 |                       |                       | available types       |
 +-----------------------+-----------------------+-----------------------+
-| Data type             | Type of data          | Mandatory. Numeric,   |
-|                       | published by the      | text or boolean       |
-|                       | sensor                |                       |
+| Data type             | Type of data          | Mandatory. Possible   |
+|                       | published by the      | values are:           |
+|                       | sensor                | - Audio Link          |
+|                       |                       | - Boolean             |
+|                       |                       | - File link           |
+|                       |                       | - Image link          |
+|                       |                       | - JSON                |
+|                       |                       | - Link                |
+|                       |                       | - Numerical           |
+|                       |                       | - Text                |
+|                       |                       | - Video Link          |
+|                       |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | Unit                  | Measurement unit      |                       |
 +-----------------------+-----------------------+-----------------------+
@@ -1036,11 +1045,22 @@ The main properties of the *Details* tab are the following:
 |                       |                       | mongoDB. No default   |
 |                       |                       | value.                |
 +-----------------------+-----------------------+-----------------------+
+| TTL (min)             | Time of expitation of | This value can be     |
+|                       | the sensor in minutes | configured only       |
+|                       |                       | from the catalog,     |
+|                       |                       | Only admin should     |
+|                       |                       | control this value.   |
+|                       |                       | The default value is  |
+|                       |                       | redis.expire.data.seco|
+|                       |                       | nds from the plantform|
+|                       |                       | server jedis-config.pr|
+|                       |                       | operties.             |
++-----------------------+-----------------------+-----------------------+
 
 .. _technical-details-1:
 
-Technical details
-^^^^^^^^^^^^^^^^^
+Technical details tab
+^^^^^^^^^^^^^^^^^^^^^
 
 As noted above, this tab displays a set of properties related to the
 technical details of the sensor ( such as the *manufacturer*, the
@@ -1051,14 +1071,24 @@ described in the component section) as shown in the following picture:
 
 .. _additional-information-1:
 
-Additional information
-^^^^^^^^^^^^^^^^^^^^^^
+
+Visual configuration tab
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The only configurable option in this tab is "Chart values number".
+This integer indicates how many measures will be show in the observation chart of the sensor.
+
+
+
+
+Additional information tab
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As mentioned early, the meaning of this tab is the same as described for
 the components.
 
-Latest data
-'''''''''''
+Latest data tab
+'''''''''''''''
 
 This tab, as shown in the following picture:
 
