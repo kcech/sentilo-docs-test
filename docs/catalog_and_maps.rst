@@ -366,6 +366,9 @@ applications registered into the Catalog:
 -  **testApp**: as the name suggest, this application is used for
    testing the platform status.
 
+
+.. _applications-list:
+
 List
 ^^^^
 
@@ -386,6 +389,8 @@ and a number of extra ones from internal database use.
 Use the button panel at the bottom right to navigate through the list
 (first page, previous page, page number, next page and last page,
 respectively).
+
+.. _applications-details-tab:
 
 Details tab
 ^^^^^^^^^^^
@@ -479,6 +484,8 @@ How users that has not ADMIN role see the detail section:
 
 .. image:: _static/images/catalog_and_maps/applications_170_002.jpg
 
+.. _applications-permissions-tab:
+
 Permissions tab
 ^^^^^^^^^^^^^^^
 
@@ -512,6 +519,8 @@ We will see the following:
 -  The application *testApp* could read any data from the entity
    *testApp_provider*.
 
+.. _applications-active-subscriptions-tab:
+
 Active subscriptions tab
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -542,7 +551,7 @@ careful with this command**.
 
 .. image:: _static/images/catalog_and_maps/providers_170_000.jpg
 
-.. _list-1:
+.. _providers-list:
 
 List
 ^^^^
@@ -566,7 +575,7 @@ and a number of extra ones from internal database use.
 
    Use the button panel at the bottom right to navigate through the list (first page, previous page, page number, next page and last page, respectively).
 
-.. _details-1:
+.. _providers-details-tab:
 
 Details tab
 ^^^^^^^^^^^
@@ -669,6 +678,8 @@ How users that has not ADMIN role see the detail section:
 
 .. image:: _static/images/catalog_and_maps/providers_170_002.jpg
 
+.. _providers-sensors-actuators-tab:
+
 Sensors/Actuators tab
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -681,18 +692,22 @@ where the sensors of the provider CINERGIA are listed:
 You could filter, page and order the list but you cannot access to the
 sensor detail: it must be done from the sensor list administration.
 
+.. _providers-components-tab:
+
 Components tab
 ^^^^^^^^^^^^^^
 
 As explained early, this list is very similar to the previous one but
 with components.
 
-.. _active-subscriptions-1:
+.. _providers-active-subscriptions-tab:
 
 Active subscriptions tab
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The meaning of this tab is the same as described for the applications.
+
+.. _providers-documentation-tab:
 
 Documentation tab
 ^^^^^^^^^^^^^^^^^
@@ -700,8 +715,6 @@ Documentation tab
 In this tab you can upload any files relevant to provider (up to 4MB
 each). The documents in total should not surpass ~16MB, which the `limit
 of MongoDb <https://docs.mongodb.com/manual/reference/limits>`__.
-
-.. _components-1:
 
 Components
 ~~~~~~~~~~
@@ -730,7 +743,7 @@ in the following picture:
 
 .. image:: _static/images/catalog_and_maps/provider-component-sensor.png
 
-.. _list-2:
+.. _components-list:
 
 List
 ^^^^
@@ -758,7 +771,7 @@ and a number of extra ones from internal database use.
 
    Use the button panel at the bottom right to navigate through the list (first page, previous page, page number, next page and last page, respectively).
 
-.. _details-2:
+.. _components-details-tab:
 
 Details tab
 ^^^^^^^^^^^
@@ -851,6 +864,8 @@ The main properties of the *Details* tab are the following:
 |                       |                       | location composition. |
 +-----------------------+-----------------------+-----------------------+
 
+.. _components-technical-details-tab:
+
 Technical details tab
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -883,6 +898,8 @@ where:
 |                       |                       | the API for details)  |
 +-----------------------+-----------------------+-----------------------+
 
+.. _components-additional-information-tab:
+
 Additional information tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -902,13 +919,13 @@ the value, as shown in the following picture:
 where the following map, stored on the backend, has been rendered
 *{“Comarca”:“Alt Empordà”,“Terme municipal”:“COLERA”,“Provincia”:“Girona”}*
 
-.. _sensorsactuators-1:
+.. _components-sensors-actuators-tab:
 
 Sensors/actuators tab
 ^^^^^^^^^^^^^^^^^^^^^
 
 The meaning of this tab is the same as
-described for the providers but restricted to the current component.
+for the providers, but restricted to the current component.
 
 Sensors
 ~~~~~~~
@@ -921,7 +938,7 @@ The sensors list page follows the same structure as described for
 components (you could change the public/private visibility or delete
 sensors massively through the list).
 
-.. _list-3:
+.. _sensors-list:
 
 List
 ^^^^
@@ -945,7 +962,7 @@ Use the button panel at the bottom right to navigate through the list
 (first page, previous page, page number, next page and last page,
 respectively).
 
-.. _details-3:
+.. _sensors-details-tab:
 
 Details Tab
 ^^^^^^^^^^^
@@ -1059,7 +1076,7 @@ The main properties of the *Details* tab are the following:
 |                       |                       | jedis-config.properties     |
 +-----------------------+-----------------------+-----------------------------+
 
-.. _technical-details-1:
+.. _sensors-technical-details-tab:
 
 Technical details tab
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1071,8 +1088,7 @@ described in the component section) as shown in the following picture:
 
 .. image:: _static/images/catalog_and_maps/sensors_170_001.jpg
 
-.. _additional-information-1:
-
+.. _sensors-visual-configuration-tab:
 
 Visual configuration tab
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1080,8 +1096,7 @@ Visual configuration tab
 The only configurable option in this tab is "Chart values number".
 This integer indicates how many measures will be show in the observation chart of the sensor.
 
-
-
+.. _sensors-additional-information-tab:
 
 Additional information tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1098,6 +1113,8 @@ information which will be of interest.
 For each property, it will be displayed as a *label-value* entry where
 the property’s key will be the label and the property’s value will be
 the value.
+
+.. _sensors-latest-data-tab:
 
 Latest data tab
 '''''''''''''''
@@ -1227,7 +1244,7 @@ It’s also possible to delete the items massively from the alerts list.
 |                       | evaluated             | alerts                |
 +-----------------------+-----------------------+-----------------------+
 
-.. _list-4:
+.. _alerts-list:
 
 List
 ^^^^
@@ -1270,7 +1287,7 @@ It is possible to bulk-create alerts for a group of sensors. For
 example, attach a rain alert rule to all pluviometers of certain
 provider.
 
-.. _list-5:
+.. _alerts-creation-rules--list:
 
 List
 ^^^^
@@ -1355,7 +1372,7 @@ available roles:
 | Role                  | Related role          | Value list            |
 +-----------------------+-----------------------+-----------------------+
 
-.. _list-6:
+.. _users-list:
 
 List
 ^^^^
@@ -1389,7 +1406,7 @@ It’s possible to delete elements massively through the sensor list.
 | Update date   | Last update date | Automatically generated              |
 +---------------+------------------+--------------------------------------+
 
-.. _list-7:
+.. _sensor-types-list:
 
 List
 ^^^^
@@ -1462,7 +1479,7 @@ It’s possible to delete elements massively through the component list.
 |                       |                       | component             |
 +-----------------------+-----------------------+-----------------------+
 
-.. _list-8:
+.. _component-types-list:
 
 List
 ^^^^
