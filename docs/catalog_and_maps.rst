@@ -774,7 +774,7 @@ where:
    of the component.
 -  The *Additional information* tab displays custom properties of the
    component which are not predefined by Sentilo. See the parameter
-   `additionalInfo <./api_docs/services/create_sensors.html#parameters>`__
+   `additionalInfo <./api_docs/services/catalog/create_sensors.html#parameters>`__
    of the API docs
 -  The *Related components* tab shows other components linked with the
    current component .
@@ -887,7 +887,7 @@ Additional information tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This tab displays the set of additional properties related to the
-component See the parameter `additionalInfo <./api_docs/services/create_sensors.html#parameters>`__
+component See the parameter `additionalInfo <./api_docs/services/catalog/create_sensors.html#parameters>`__
 of the API docs.
 
 These fields are not categorized, i.e., here you could stored any device
