@@ -387,8 +387,8 @@ Use the button panel at the bottom right to navigate through the list
 (first page, previous page, page number, next page and last page,
 respectively).
 
-Details
-^^^^^^^
+Details tab
+^^^^^^^^^^^
 
 The detail page is structured into three tabs:
 
@@ -479,8 +479,8 @@ How users that has not ADMIN role see the detail section:
 
 .. image:: _static/images/catalog_and_maps/applications_170_002.jpg
 
-Permissions
-^^^^^^^^^^^
+Permissions tab
+^^^^^^^^^^^^^^^
 
 As commented before, the *Permissions* tab allows you to define and
 manage the authorization privileges that are granted to an application
@@ -512,8 +512,8 @@ We will see the following:
 -  The application *testApp* could read any data from the entity
    *testApp_provider*.
 
-Active subscriptions
-^^^^^^^^^^^^^^^^^^^^
+Active subscriptions tab
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 This tab allows you to inspect the subscriptions that an application has
 registered on the platform (remember that subscriptions are [created
@@ -568,8 +568,8 @@ and a number of extra ones from internal database use.
 
 .. _details-1:
 
-Details
-^^^^^^^
+Details tab
+^^^^^^^^^^^
 
 The detail page of a provider is structured into five tabs:
 
@@ -669,8 +669,8 @@ How users that has not ADMIN role see the detail section:
 
 .. image:: _static/images/catalog_and_maps/providers_170_002.jpg
 
-Sensors/Actuators
-^^^^^^^^^^^^^^^^^
+Sensors/Actuators tab
+^^^^^^^^^^^^^^^^^^^^^
 
 As mentioned before, this tab displays a list with all sensors
 associated with the current provider, as shown in the picture below
@@ -681,21 +681,21 @@ where the sensors of the provider CINERGIA are listed:
 You could filter, page and order the list but you cannot access to the
 sensor detail: it must be done from the sensor list administration.
 
-Components
-^^^^^^^^^^
+Components tab
+^^^^^^^^^^^^^^
 
 As explained early, this list is very similar to the previous one but
 with components.
 
 .. _active-subscriptions-1:
 
-Active subscriptions
-^^^^^^^^^^^^^^^^^^^^
+Active subscriptions tab
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The meaning of this tab is the same as described for the applications.
 
-Documentation
-^^^^^^^^^^^^^
+Documentation tab
+^^^^^^^^^^^^^^^^^
 
 In this tab you can upload any files relevant to provider (up to 4MB
 each). The documents in total should not surpass ~16MB, which the `limit
