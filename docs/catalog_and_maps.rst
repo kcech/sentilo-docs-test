@@ -536,7 +536,7 @@ registered into the Catalog:
 
 One singularity of the providers list is the *Delete* action: **if you
 remove a provider, not only the provider will be deleted from the
-backend, but also all its related resources**\ such as components,
+backend, but also all its related resources** such as components,
 sensors, alerts … and any data published by its sensors, **so be very
 careful with this command**.
 
