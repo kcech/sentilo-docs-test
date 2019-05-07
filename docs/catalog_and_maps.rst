@@ -760,8 +760,8 @@ and a number of extra ones from internal database use.
 
 .. _details-2:
 
-Details
-^^^^^^^
+Details tab
+^^^^^^^^^^^
 
 The detail page of a component is structured into five tabs:
 
@@ -773,7 +773,9 @@ where:
 -  The *Technical details* tab displays several categorized properties
    of the component.
 -  The *Additional information* tab displays custom properties of the
-   component which are not predefined by Sentilo.
+   component which are not predefined by Sentilo. See the parameter
+   `additionalInfo <./api_docs/services/create_sensors.html#parameters>`__
+   of the API docs
 -  The *Related components* tab shows other components linked with the
    current component .
 -  The *Sensors/Actuators* tab shows the sensor element located in the
@@ -849,8 +851,8 @@ The main properties of the *Details* tab are the following:
 |                       |                       | location composition. |
 +-----------------------+-----------------------+-----------------------+
 
-Technical details
-^^^^^^^^^^^^^^^^^
+Technical details tab
+^^^^^^^^^^^^^^^^^^^^^
 
 As noted above, this tab displays a set of properties related to the
 technical details of the component such as manufacturer, serial number,
@@ -881,12 +883,14 @@ where:
 |                       |                       | the API for details)  |
 +-----------------------+-----------------------+-----------------------+
 
-Additional information
-^^^^^^^^^^^^^^^^^^^^^^
+Additional information tab
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This tab displays the set of additional properties related to the
-component (see API to see how filled-in these properties). Remember that
-these fields are not categorized, i.e., here you could stored any device
+component See the parameter `additionalInfo <./api_docs/services/create_sensors.html#parameters>`__
+of the API docs.
+
+These fields are not categorized, i.e., here you could stored any device
 information which will be of interest.
 
 For each property, it will be displayed as a *label-value* entry where
@@ -896,15 +900,14 @@ the value, as shown in the following picture:
 .. image:: _static/images/catalog_and_maps/comp_add_info.png
 
 where the following map, stored on the backend, has been rendered
-*{“Comarca”:“Alt Empordà”,“Terme
-municipal”:“COLERA”,“Provincia”:“Girona”}*
+*{“Comarca”:“Alt Empordà”,“Terme municipal”:“COLERA”,“Provincia”:“Girona”}*
 
 .. _sensorsactuators-1:
 
-Sensors/actuators
-^^^^^^^^^^^^^^^^^
+Sensors/actuators tab
+^^^^^^^^^^^^^^^^^^^^^
 
-As mentioned previously, the meaning of this tab is the same as
+The meaning of this tab is the same as
 described for the providers but restricted to the current component.
 
 Sensors
@@ -1083,8 +1086,18 @@ This integer indicates how many measures will be show in the observation chart o
 Additional information tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As mentioned early, the meaning of this tab is the same as described for
-the components.
+The meaning of this tab is the same as for the `components <#additional-information`__.
+
+This tab displays the set of additional properties related to the
+component See the parameter `additionalInfo <./api_docs/services/create_sensors.html#parameters>`__
+of the API docs.
+
+These fields are not categorized, i.e., here you could stored any device
+information which will be of interest.
+
+For each property, it will be displayed as a *label-value* entry where
+the property’s key will be the label and the property’s value will be
+the value.
 
 Latest data tab
 '''''''''''''''
