@@ -14,32 +14,33 @@ On this page you will find several tutorials about how to connect to
 Sentilo using various existing platforms and languages.
 
 
+`Java Client`_
+|java_logo.jpg|
 
-+-----------------------------------+-----------------------------------+
-| |java_logo.jpg| `Java Client`_    |                                   |
-|                                   |                                   |
-|                                   | Java library that allows          |
-|                                   | access to Sentilo Platform        |
-|                                   | through its REST API Client       |
-+-----------------------------------+-----------------------------------+
-| |raspberrypi.jpeg|                |                                   |
-|                                   |                                   |
-| `RaspberryPi Client`_             |                                   |
-|                                   | Independent platform library      |
-|                                   | created with NodeJS that allows   |
-|                                   | embedded architectures, such as   |
-|                                   | Raspberry Pi, to communicate with |
-|                                   | Sentilo Platform through its REST |
-|                                   | API Client                        |
-|                                   |                                   |
-+-----------------------------------+-----------------------------------+
-| |arduino-mega-2560-r3.jpg|        |                                   |
-|                                   |                                   |
-| `Arduino Client`_                 | A simple Arduino library that     |
-|                                   | allows connect with the Official  |
-|                                   | Ethernet Shield to the Sentilo    |
-|                                   | Platform                          |
-+-----------------------------------+-----------------------------------+
+Java library that allows
+access to Sentilo Platform
+through its REST API Client
+
+
+`RaspberryPi Client`_
+|raspberrypi.jpeg|
+
+Independent platform library
+created with NodeJS that allows
+embedded architectures, such as
+Raspberry Pi, to communicate with
+Sentilo Platform through its REST
+API Client
+
+
+`Arduino Client`_
+|arduino-mega-2560-r3.jpg|
+
+A simple Arduino library that
+allows connect with the Official
+Ethernet Shield to the Sentilo
+Platform
+
 
 .. _Java Client: ./clients/java_client.html
 .. _RaspberryPi Client: ./clients/raspberrypi_client.html
