@@ -1,7 +1,7 @@
 Arduino Client
 ==============
 
-.. figure:: _static/images/clients/arduino-mega-2560-r3.jpg
+.. figure:: /_static/images/tutorials/arduino-mega-2560-r3.jpg
    :alt: Arduino
 
 The **SentiloClient Library** for Arduino offers a basic C++ library
@@ -109,10 +109,10 @@ You must have configured this information in the Sentilo catalog:
 
 	::
 
-	   sensor = sample-sensor-arduino-01  
-	   type = status  
-	   dataType = TEXT  
-	   component = sample-component  
+	   sensor = sample-sensor-arduino-01
+	   type = status
+	   dataType = TEXT
+	   component = sample-component
 	   componentType = generic
 
 Then, you must replace the client connection data code (next section)
@@ -179,11 +179,11 @@ You’ll should see this code in the editor:
            observation.value = "This is a sample observation";
 
            Serial.println("[loop] Publishing a sample observation...");
-    
+
            // Publish the observation to Sentilo Platform
            statusCode = sentiloClient.publishObservation(providerId, sensorId, observation, apiKey, response);
 
-           // Read response status and show an error if it is necessary 
+           // Read response status and show an error if it is necessary
            if (statusCode !## 200) {
                    Serial.print("[loop] [ERROR] Status code from server after publish the observations: ");
                    Serial.println(statusCode);
@@ -193,7 +193,7 @@ You’ll should see this code in the editor:
 
            Serial.println("[loop] Sample observation published!");
            Serial.println("[loop] Program ended");
-    
+
            // The example has ended, so we are going to execute an infinite loop
            while (true) {}
    }
@@ -343,16 +343,16 @@ You should see this code in the editor:
    }
 
    void loop() {
-           // Get the LDR value  
+           // Get the LDR value
            int ldrValue = getLdrValue();
 
            // Get the LM35 value
            float lm35Value = getLM35Value();
 
            // Create the observation input message like this: {"ldr":"234","lm35":"24.5"}
-           String obsInputMsg = 
-                   "{\\\"ldr\\\":\\\"" + String(ldrValue) + 
-                   "\\\",\\\"lm35\\\":\\\"" + String(lm35Value) + 
+           String obsInputMsg =
+                   "{\\\"ldr\\\":\\\"" + String(ldrValue) +
+                   "\\\",\\\"lm35\\\":\\\"" + String(lm35Value) +
                    "\\\"}";
            int bufLength = obsInputMsg.length() + 1;
            char obsMsgBuffer[bufLength];
@@ -365,7 +365,7 @@ You should see this code in the editor:
            // Debug on Serial the observations value. Note that we must scape special characters
            Serial.print("[loop] Publishing actual sensors values as observations: ");
            Serial.println(obsMsgBuffer);
-    
+
            // Publish the observation to Sentilo Platform
            statusCode = sentiloClient.publishObservation(providerId, sensorId, observation, apiKey, response);
 
@@ -444,7 +444,7 @@ the first example.
    -  Once we’ve retrieved the sensors data, we’re mounting the new
       observation message, with value:
       ``{"ldr":"{ldrValue}","lm35":"{lm35Value}"}``
-	  
+
    -  The SentiloClient library gets the value and transforms it on a
       complete **observation message** using the **publishObservation**
       method (see below)
@@ -556,11 +556,11 @@ You should see this code in the editor:
            // Setup the LM35 sensor
            setupLM35();
 
-           // Setup the Sentilo Client 
+           // Setup the Sentilo Client
            // and network connection
            setupSetiloClient();
 
-           // Setup the Sentilo sensor 
+           // Setup the Sentilo sensor
            // and create it if doesn't exists
            setupSentiloSensor();
 
@@ -570,10 +570,10 @@ You should see this code in the editor:
 
    void loop() {
            if (existsSensor) {
-                   // If the sensor exists, 
+                   // If the sensor exists,
                    // we can start publishing observations
-     
-                   // Get the LDR value  
+
+                   // Get the LDR value
                    int ldrValue = getLdrValue();
 
                    // Get the LM35 value
@@ -581,9 +581,9 @@ You should see this code in the editor:
 
                    // Create the observation input message
                    // like this: {"ldr":"234","lm35":"24.5"}
-                   String obsInputMsg = 
-                           "{\\\"ldr\\\":\\\"" + String(ldrValue) + 
-                           "\\\",\\\"lm35\\\":\\\"" + String(lm35Value) + 
+                   String obsInputMsg =
+                           "{\\\"ldr\\\":\\\"" + String(ldrValue) +
+                           "\\\",\\\"lm35\\\":\\\"" + String(lm35Value) +
                            "\\\"}";
                    int bufLength = obsInputMsg.length() + 1;
                    char obsMsgBuffer[bufLength];
@@ -597,7 +597,7 @@ You should see this code in the editor:
                    // Note that the message includes slashes (\) because we must scape special characters as "
                    Serial.print("[loop] Publishing actual sensors values as observations: ");
                    Serial.println(obsMsgBuffer);
-     
+
                    // Publish the observation to Sentilo Platform
                    statusCode = sentiloClient.publishObservation(providerId, sensorId, observation, apiKey, response);
 
@@ -610,11 +610,11 @@ You should see this code in the editor:
                    } else {
                            Serial.println("[loop] Sensors observations published!");
             }
-     
+
            // Waiting for the next loop
            delay(loopTimeout);
            } else {
-                   // If the sensor does not exist and it could 
+                   // If the sensor does not exist and it could
                    // not be created in the catalog, we must stop running
                    Serial.println("[loop] [ERROR] Oops! The sensor doesn't exists, so I can't publish data to it...");
                    Serial.println("[loop] [ERROR] I'm sorry with you, but now I'm going to halt...");
@@ -781,14 +781,14 @@ library tansforms this object in a JSON message like this:
    {"sensors":[{
            "sensor":"sample-sensor-arduino-03",
            "description":"",
-           "type":"status", 
+           "type":"status",
            "dataType":"TEXT",
            "unit":"",
-           "component":"sample-component", 
+           "component":"sample-component",
            "componentType":"generic",
            "componentDesc":"",
            "location":"41,385063 2,1734034",
-           "timeZone":"CET" 
+           "timeZone":"CET"
       }]
    }
 
@@ -796,4 +796,4 @@ As you can see, the type is generic and the data type is text, because
 this is the best way to publish any data without any format problem.
 
 
-.. |arduino_sensors_board.png| image:: ../_static/images/clients/arduino_sensors_board.png
+.. |arduino_sensors_board.png| image:: ../_static/images/tutorials/arduino_sensors_board.png

@@ -24,6 +24,7 @@ Sentilo using various existing platforms and languages.
 +-----------------------------------+
 | |raspberrypi.jpeg|                |
 | `RaspberryPi Client`_             |
+|                                   |
 | .. raw:: html                     |
 |                                   |
 | </div>                            |
