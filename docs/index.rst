@@ -15,7 +15,7 @@ Contents:
    quickstart
    api_docs
    architecture
-   extensions
+   integrations
    monitorization
    catalog_and_maps
    multitenant

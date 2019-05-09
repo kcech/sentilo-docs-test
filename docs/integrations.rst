@@ -1,5 +1,5 @@
-Extensions
-==========
+Integrations
+============
 
 Agents
 ------
@@ -17,7 +17,7 @@ database, process alarms, generate statistics, …)
 
 The following diagram shows the design that every agent should follow:
 
-.. image:: _static/images/extensions/arch6.jpg
+.. image:: _static/images/integrations/arch6.jpg
 
 1. When agent is started, it subscribes as client to Redis for the event
    that wants to receive notifications.
@@ -299,7 +299,7 @@ The federation agent is a module that permits to share events between two indepe
 The sharing is unilateral - one Sentilo instance is emitting events and the other is receiving.
 The agent is installed at the side of the receiving instance:
 
-.. image:: _static/images/extensions/sentilo_federation.png
+.. image:: _static/images/integrations/sentilo_federation.png
 
 The administrator of the emmitting Sentilo instance only needs to create a new application and provide the token the
 administrator of the receiving instance.
@@ -356,7 +356,7 @@ The menu is available when running Tomcat with the option:
 
 The "Client application token" input is the token created in the emitting Sentilo instance:
 
-.. image:: _static/images/extensions/catalog-federation-config.png
+.. image:: _static/images/integrations/catalog-federation-config.png
 
 
 
@@ -436,8 +436,8 @@ NodeJS node_modules.
 
 Then, following nodes should appear in the nodes palette:
 
-.. image:: _static/images/extensions/sentilo-nodered.png
+.. image:: _static/images/integrations/sentilo-nodered.png
 
 Now, you should be able to use Sentilo from Node-RED:
 
-.. image:: _static/images/extensions/sentilo-nodered2.png
+.. image:: _static/images/integrations/sentilo-nodered2.png

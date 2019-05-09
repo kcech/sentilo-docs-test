@@ -281,7 +281,7 @@ MySQL settings
 
 **This software is mandatory only if you want to export the published
 events to a relational database using the specific agent. Otherwise, you
-can skip this step.** Please, check `this <./extensions.html>`__ out for
+can skip this step.** Please, check `this <./integrations.html#relational-database-agent>`__ out for
 more info.
 
 Sentilo default settings consider MySQL server will be listening on
@@ -380,7 +380,7 @@ openTSDB settings
 
 **It is only necessary if you want to store into openTSDB all the
 published events using the specific agent. Otherwise, you can skip this
-step.** Please, check `this <./historian_agent.html>`__ out for more
+step.** Please, check `this <./integrations.html#historian-agent>`__ out for more
 info.
 
 Sentilo default settings consider openTSDB server will be listening on
@@ -489,10 +489,10 @@ As have been mentioned previously, all agents are optional and you are
 free to choose which of them will be deployed, depending on your
 specific needs. Agents are internal modules oriented to expand the
 platform functionality without having to alter its core. You will find
-more information about them in the `Extensions <./extensions.html>`__
+more information about them in the `Integrations <./integrations.html#agents>`__
 section of our documentation.
 
-We have currently *five core* agents:
+We have currently *seven core* agents:
 
 -  **Alarms agent** is responsible for processing each internal alert
    defined in the catalog and publish a notification (a.k.a. *alarm*)
@@ -514,6 +514,9 @@ We have currently *five core* agents:
    received from the PubSub server into a search engine server. You need
    this agent if you want to store data published in Sentilo into
    Elasticsearch too.
+-  **Kafka agent** Publishes events to Kafka.
+-  **Federation agent** Synchronizes two independent Sentilo instances,
+   publishing selected observations from a set of providers to another Sentilo.
 
 **Remember:** As mentioned before, Sentilo always store all published
 events into Redis.

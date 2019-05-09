@@ -70,14 +70,14 @@ Services offered by the API can be classified into five main groups:
 By default, the information is transmitted using JSON format. Please,
 check this out fore more `info <./api_docs/web_home.html>`__.
 
-Agent
-^^^^^
+Agents
+^^^^^^
 
 Agents are Java processes that expand the core functionality of the
 platform through a Plug & Play system using the Redis publish and
 subscribe mechanism.
 
-Sentilo currently provides several `agents <./extensions.html>`__:
+Sentilo currently provides several `agents <./integrations.html#agents>`__:
 
 -  **Relational database agent**: used to export historical data to a
    relational database.
