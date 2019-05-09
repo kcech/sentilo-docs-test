@@ -1,7 +1,7 @@
 Java Client
 ===========
 
-.. figure:: ../_static/images/tutorials/java_logo.jpg
+.. figure:: ../_static/images/clients/java_logo.jpg
    :alt: Java
 
 The Sentilo Java Client is a library developed for working with webapps
@@ -25,12 +25,12 @@ Software
 You’ll need some software packages, as you’re developing in Java
 environment:
 
--  Java SE 1.6
+-  Java SE 1.8
 -  Eclipse IDE or STS Spring IDE
 -  The **Sentilo Client Java Library**, which you can download and
    install it as a *Maven dependency* into your project (please, see the
    **pom file** in the project form more information)
--  Tomcat 7
+-  Tomcat 7+
 -  Some other Maven dependencies(you can see them in the **pom file** of
    the example project):
 
@@ -409,4 +409,4 @@ As you can see, there’s a button named *Send observations*. You can use
 to re-send observations and reload the page. Every page reload send the
 observatios to the Sentilo Platform Client.
 
-.. |java_sample_4.jpg| image:: ../_static/images/tutorials/java_sample_4.jpg
+.. |java_sample_4.jpg| image:: ../_static/images/clients/java_sample_4.jpg

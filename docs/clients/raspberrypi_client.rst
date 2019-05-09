@@ -1,7 +1,7 @@
 RaspberryPi Client
 ==================
 
-.. figure:: ../_static/images/tutorials/raspberrypi.jpeg
+.. figure:: ../_static/images/clients/raspberrypi.jpeg
    :alt: RaspberryPi
 
 The **SentiloClientNodej** is a library written in javascript that
@@ -816,4 +816,4 @@ properties, as you need:
 For our purpose, we only have DEBUG, INFO and ERROR logs. Try tu use
 **true** or **false** for each one.
 
-.. |raspi3.png| image:: ../_static/images/tutorials/raspi3.png
+.. |raspi3.png| image:: ../_static/images/clients/raspi3.png

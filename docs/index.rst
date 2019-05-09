@@ -19,7 +19,7 @@ Contents:
    monitorization
    catalog_and_maps
    multitenant
-   tutorials
+   clients
    technical_faq
    platform_testing
    use_a_virtual_machine

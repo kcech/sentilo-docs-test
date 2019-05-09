@@ -1,7 +1,7 @@
 Arduino Client
 ==============
 
-.. figure:: ../_static/images/tutorials/arduino-mega-2560-r3.jpg
+.. figure:: ../_static/images/clients/arduino-mega-2560-r3.jpg
    :alt: Arduino
 
 The **SentiloClient Library** for Arduino offers a basic C++ library
@@ -796,4 +796,4 @@ As you can see, the type is generic and the data type is text, because
 this is the best way to publish any data without any format problem.
 
 
-.. |arduino_sensors_board.png| image:: ../_static/images/tutorials/arduino_sensors_board.png
+.. |arduino_sensors_board.png| image:: ../_static/images/clients/arduino_sensors_board.png
