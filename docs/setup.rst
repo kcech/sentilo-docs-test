@@ -445,43 +445,6 @@ platform functionality without having to alter its core. You will find
 more information about them in the `Integrations <./integrations.html#agents>`__
 section of our documentation.
 
-We have currently *seven core* agents:
-
--  **Alarms agent** is responsible for processing each internal alert
-   defined in the catalog and publish a notification (a.k.a. *alarm*)
-   when any of the configured integrity rules are not met. You need this
-   agent if you want to make use of the internal alerts functionality
-   provided by Sentilo.
--  **Relational agent** is responsible for store all information
-   received from the PubSub server into a set of relational databases.
-   You need this agent if you want to persist data published in Sentilo
-   in a relational database too.
--  **Location updater agent** is responsible for updating automatically
-   the component location according to the location of the published
-   observations.
--  **Historian agent** is responsible for store all information received
-   from the PubSub server into a time series database. You need this
-   agent if you want to persist data published in Sentilo in openTSDB
-   too.
--  **Activity monitor agent** is responsible for index all information
-   received from the PubSub server into a search engine server. You need
-   this agent if you want to store data published in Sentilo into
-   Elasticsearch too.
--  **Kafka agent** Publishes events to Kafka.
--  **Federation agent** Synchronizes two independent Sentilo instances,
-   publishing selected observations from a set of providers to another Sentilo.
-
-.. note::
-
-   As mentioned before, Sentilo always store all published events into Redis.
-
-
-All the agents are installed in a similar manner to the PubSub server,
-as described below.
-
-Installing agents
-^^^^^^^^^^^^^^^^^
-
 The *buildSentilo* script build also all agents. If you decide to install some of them,
 you just have to copy the contents of the appassembler directory to the path you want the
 agent to be installed.
@@ -507,8 +470,12 @@ c. Once copied, for starting the process you just need to run the
      <path-to-agent-alert>/bin/sentilo-agent-alert-server
 
 All other agents follow the exact same directory structure.
-The configuration of the agents has to be done before compilation
-and is documented in their `respective page <./integrations.html#agents>`__
+
+.. note::
+
+   The configuration of the agents has to be done before compilation
+   and is documented in their `respective page <./integrations.html#agents>`__
+
 
 
 Enable multi-tenant instance
