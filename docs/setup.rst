@@ -233,9 +233,9 @@ command from the directory where the file is located:
 
    Please keep in mind that data defined in the previous file contains
    default passwords and tokens (which are recommended for run Sentilo in a
-   test environment). In order to avoid compromissing your platform, **we
+   test environment). In order to avoid compromissing your platform, we
    recommend to change them before installing Sentilo in a production
-   environment**.
+   environment.
 
 After change their values in the *init_data.js* and load them on
 MongoDB, and before compiling and building Sentilo, you will have to
@@ -277,12 +277,12 @@ it:
 MySQL settings
 ~~~~~~~~~~~~~~
 
-**Remember**:
+.. note::
 
-**This software is mandatory only if you want to export the published
-events to a relational database using the specific agent. Otherwise, you
-can skip this step.** Please, check `this <./integrations.html#relational-database-agent>`__ out for
-more info.
+   This software is mandatory only if you want to export the published
+   events to a relational database using the specific agent. Otherwise, you
+   can skip this step. Please, check `this <./integrations.html#relational-database-agent>`__ out for
+   more info.
 
 Sentilo default settings consider MySQL server will be listening on
 127.0.0.1:3306, and requires an existing database named *sentilo*,
@@ -352,12 +352,12 @@ code:
 Elastisearch settings
 ~~~~~~~~~~~~~~~~~~~~~
 
-**Remember**:
+.. note::
 
-**It is only necessary if you want to index into Elasticsearch all the
-published events using the specific agent. Otherwise, you can skip this
-step.** Please, check `this <./integrations.html#activity-monitor-agent>`__ out for more
-info.
+   It is only necessary if you want to index into Elasticsearch all the
+   published events using the specific agent. Otherwise, you can skip this
+   step. Please, check `this <./integrations.html#activity-monitor-agent>`__ out for more
+   info.
 
 Sentilo default settings consider Elasticsearch server will be listening
 on localhost:9200. If you change this behaviour, you need to modify the
@@ -376,12 +376,12 @@ configured in the following file:
 openTSDB settings
 ~~~~~~~~~~~~~~~~~
 
-**Remember**:
+.. note::
 
-**It is only necessary if you want to store into openTSDB all the
-published events using the specific agent. Otherwise, you can skip this
-step.** Please, check `this <./integrations.html#historian-agent>`__ out for more
-info.
+   It is only necessary if you want to store into openTSDB all the
+   published events using the specific agent. Otherwise, you can skip this
+   step. Please, check `this <./integrations.html#historian-agent>`__ out for more
+   info.
 
 Sentilo default settings consider openTSDB server will be listening on
 127.0.0.1:4242. If you change this behaviour, you need to modify the
@@ -518,8 +518,10 @@ We have currently *seven core* agents:
 -  **Federation agent** Synchronizes two independent Sentilo instances,
    publishing selected observations from a set of providers to another Sentilo.
 
-**Remember:** As mentioned before, Sentilo always store all published
-events into Redis.
+.. note::
+
+   As mentioned before, Sentilo always store all published events into Redis.
+
 
 All the agents are installed in a similar manner to the PubSub server,
 as described below.

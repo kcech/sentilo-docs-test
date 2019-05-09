@@ -114,9 +114,11 @@ This request will register a new external alert with ID REC_ALERT_001
 and associated to rec entity (i.e. rec entity is who will publish alarms
 associated to this alert).
 
-Remember, the external alerts are defined by third party
-entities(providers or applications), which will be the responsibles of
-calculating their logic and throw the related alarms when applies.
+.. note::
+
+   External alerts are defined by third party
+   entities(providers or applications), which will be the responsibles of
+   calculating their logic and throw the related alarms when applies.
 
 Adding one internal alert
 ~~~~~~~~~~~~~~~~~~~~~~~~~

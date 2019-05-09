@@ -94,9 +94,12 @@ and in the body message:
 This request will update the external alert with REC_ALERT_001
 identifier updating its name to REC_EXTERNAL_ALERT_001.
 
-Remember, the external alerts are defined by third party
-entities(providers or applications), which will be the responsibles of
-calculating their logic and throw the related alarms when applies.
+.. note::
+
+   External alerts are defined by third party
+   entities(providers or applications), which will be the responsibles of
+   calculating their logic and throw the related alarms when applies.
+
 
 Update one internal alert
 ~~~~~~~~~~~~~~~~~~~~~~~~~
