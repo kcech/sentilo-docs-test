@@ -231,22 +231,22 @@ command from the directory where the file is located:
 
 .. note::
 
-   Please keep in mind that data defined in the previous file contains
-   default passwords and tokens (which are recommended for run Sentilo in a
-   test environment). In order to avoid compromissing your platform, we
+   The file init_data.js contains
+   default passwords and tokens (which are ok for run Sentilo in a
+   test environment). In order to avoid compromising your platform, we
    recommend to change them before installing Sentilo in a production
    environment.
 
-After change their values in the *init_data.js* and load them on
-MongoDB, and before compiling and building Sentilo, you will have to
-modify the following properties:
+If you change default values in the *init_data.js* and load them to
+MongoDB, you will have to modify the following properties before compiling
+and building Sentilo,
 
 .. code:: properties
 
    rest.client.identity.key=c956c302086a042dd0426b4e62652273e05a6ce74d0b77f8b5602e0811025066
    catalog.rest.credentials=platform_user:sentilo
 
-configured in the following files:
+These properties are in following files:
 
 ::
 
@@ -280,7 +280,7 @@ MySQL settings
 .. note::
 
    This software is mandatory only if you want to export the published
-   events to a relational database using the specific agent. Otherwise, you
+   events to a relational database using the Relational Database Agent. Otherwise, you
    can skip this step. Please, check `this <./integrations.html#relational-database-agent>`__ out for
    more info.
 
@@ -349,53 +349,6 @@ code:
 
    -Duser.timezone=UTC
 
-Elastisearch settings
-~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-
-   It is only necessary if you want to index into Elasticsearch all the
-   published events using the specific agent. Otherwise, you can skip this
-   step. Please, check `this <./integrations.html#activity-monitor-agent>`__ out for more
-   info.
-
-Sentilo default settings consider Elasticsearch server will be listening
-on localhost:9200. If you change this behaviour, you need to modify the
-following property:
-
-.. code:: properties
-
-   elasticsearch.url=http://localhost:9200
-
-configured in the following file:
-
-::
-
-   sentilo-agent-activity-monitor/src/main/resources/properties/monitor-config.properties
-
-openTSDB settings
-~~~~~~~~~~~~~~~~~
-
-.. note::
-
-   It is only necessary if you want to store into openTSDB all the
-   published events using the specific agent. Otherwise, you can skip this
-   step. Please, check `this <./integrations.html#historian-agent>`__ out for more
-   info.
-
-Sentilo default settings consider openTSDB server will be listening on
-127.0.0.1:4242. If you change this behaviour, you need to modify the
-following property:
-
-.. code:: properties
-
-   opentsdb.url=http://127.0.0.1:4242
-
-configured in the following file:
-
-::
-
-   sentilo-agent-historian/src/main/resources/properties/historian-config.properties
 
 Subscription/publication platform settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -526,13 +479,16 @@ We have currently *seven core* agents:
 All the agents are installed in a similar manner to the PubSub server,
 as described below.
 
-Installing alarms agent
-^^^^^^^^^^^^^^^^^^^^^^^
+Installing agents
+^^^^^^^^^^^^^^^^^
 
-After build Sentilo, to install the alarms agent, you need to follow the
-following steps:
+The *buildSentilo* script build also all agents. If you decide to install some of them,
+you just have to copy the contents of the appassembler directory to the path you want the
+agent to be installed.
 
-a. Into the directory *./sentilo-agent-alert/target/appassembler* you’ll
+For example, Alert agent would be installed like this:
+
+a. In the directory *./sentilo-agent-alert/target/appassembler* you’ll
    find two subdirectories named **repo** and **bin**:
 
 -  **repo** directory contains all libraries needed to run the process
@@ -548,189 +504,12 @@ c. Once copied, for starting the process you just need to run the
 
 ::
 
-     $sentilo-agent-alert/bin/sentilo-agent-alert-server
+     <path-to-agent-alert>/bin/sentilo-agent-alert-server
 
-Installing relational agent
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All other agents follow the exact same directory structure.
+The configuration of the agents has to be done before compilation
+and is documented in their `respective page <./integrations.html#agents>`__
 
-As mentioned before, this agent exports all the received data, orders
-and alarms to a database named *sentilo* and located in the MySQL
-server.
-
-These configuration settings are defined in the files:
-
-::
-
-   ./sentilo-agent-relational/src/main/resources/properties/subscription.properties
-   ./sentilo-agent-relational/src/main/resources/properties/relational-client-config.properties
-
-To modify this behavior, just follow the instructions given in the
-properties files.
-
-Additionally, with the purpose of optimizing the persistence process,
-insert process is done in batch mode and uses a *retries* parameter
-aimed to minimize any error. By default, the *batch size* is fixed to 10
-records and the *retries* parameter is defined to 1.
-
-This behaviour can be changed editing the file:
-
-::
-
-   ./sentilo-agent-relational/src/main/resources/properties/relational-client-config.properties
-
-and updating the following lines:
-
-.. code:: properties
-
-   # Properties to configure the batch update process
-   relational.batch.size=10
-   relational.batch.workers.size=3
-   relational.batch.max.retries=1
-
-After building Sentilo, to install the relational agent, you only need
-to follow the following steps:
-
-a. Into the directory *./sentilo-agent-relational/target/appassembler*
-   you’ll find two subdirectories named **repo** and **bin**:
-
--  **repo** directory contains all libraries needed to run the process
--  **bin** directory contains the script
-   (*sentilo-agent-relational-server*) needed to initialize the process
-   (there are two scripts, one for Linux systems and one for Windows)
-
-b. Copy these two directories in the root directory where you want to
-   install this component (for example: /opt/sentilo-agent-relational).
-
-c. Once copied, for starting the process you just need to run the
-   script:
-
-::
-
-     $sentilo-agent-relational/bin/sentilo-agent-relational-server
-
-Installing location updater agent
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-After building Sentilo, to install the location updater agent, you need
-to follow the following steps:
-
-a. Into the directory
-   *./sentilo-agent-location-updater/target/appassembler* you’ll find
-   two subdirectories named **repo** and **bin**:
-
--  **repo** directory contains all libraries needed to run the process
--  **bin** directory contains the script
-   (*sentilo-agent-location-updater-server*) needed to initialize the
-   process (there are two scripts, one for Linux systems and one for
-   Windows)
-
-b. Copy these two directories in the root directory where you want to
-   install this component (for example:
-   /opt/sentilo-agent-location-updater).
-
-c. Once copied, for starting the process you just need to run the
-   script:
-
-::
-
-     $sentilo-agent-location-updater/bin/sentilo-agent-location-updater-server
-
-Installing historian agent
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-As mentioned before, this agent exports all the received events to a
-openTSDB server.
-
-This agent works in a similar way to the relational agent: insert
-process is done in batch mode and uses a *retries* parameter aimed to
-minimize any error. By default, the *batch size* is fixed to 10 records
-and the *retries* parameter is defined to 1.
-
-This behaviour can be changed editing the file:
-
-::
-
-   ./sentilo-agent-historian/src/main/resources/properties/historian-config.properties
-
-and updating the following lines:
-
-.. code:: properties
-
-   # Properties to configure the batch update process
-   batch.size=10
-   batch.workers.size=3
-   batch.max.retries=1
-
-After building Sentilo, to install the historian agent, you only need to
-follow the following steps:
-
-a. Into the directory *./sentilo-agent-historian/target/appassembler*
-   you’ll find two subdirectories named **repo** and **bin**:
-
--  **repo** directory contains all libraries needed to run the process
--  **bin** directory contains the script
-   (*sentilo-agent-historian-server*) needed to initialize the process
-   (there are two scripts, one for Linux systems and one for Windows)
-
-b. Copy these two directories in the root directory where you want to
-   install this component (for example: /opt/sentilo-agent-historian).
-
-c. Once copied, for starting the process you just need to run the
-   script:
-
-::
-
-     $sentilo-agent-historian/bin/sentilo-agent-historian-server
-
-Installing activity-monitor agent
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-As mentioned before, this agent exports all the received events to
-elasticsearch server.
-
-This agent works in a similar way to the relational agent: insert
-process is done in batch mode and uses a *retries* parameter aimed to
-minimize any error. By default, the *batch size* is fixed to 10 records
-and the *retries* parameter is defined to 1.
-
-This behaviour can be changed editing the file:
-
-::
-
-   ./sentilo-agent-historian/src/main/resources/properties/monitor-config.properties
-
-and updating the following lines:
-
-.. code:: properties
-
-   # Properties to configure the batch update process
-   batch.size=10
-   batch.workers.size=3
-   batch.max.retries=1
-
-After building Sentilo, to install the activity-monitor agent, you only
-need to follow the following steps:
-
-a. Into the directory
-   *./sentilo-agent-activity-monitor/target/appassembler* you’ll find
-   two subdirectories named **repo** and **bin**:
-
--  **repo** directory contains all libraries needed to run the process
--  **bin** directory contains the script
-   (*sentilo-agent-activity-monitor-server*) needed to initialize the
-   process (there are two scripts, one for Linux systems and one for
-   Windows)
-
-b. Copy these two directories in the root directory where you want to
-   install this component (for example:
-   /opt/sentilo-agent-activity-monitor).
-
-c. Once copied, for starting the process you just need to run the
-   script:
-
-::
-
-     $sentilo-agent-activity-monitor/bin/sentilo-agent-activity-monitor-server
 
 Enable multi-tenant instance
 ----------------------------
