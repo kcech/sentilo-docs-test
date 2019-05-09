@@ -16,9 +16,9 @@ Sentilo using various existing platforms and languages.
 
 
 +-----------------------------------+-----------------------------------+
-| |java_logo.jpg|                   |                                   |
+| |java_logo.jpg| `Java Client`_    |                                   |
 |                                   |                                   |
-| `Java Client`_                    | Java library that allows          |
+|                                   | Java library that allows          |
 |                                   | access to Sentilo Platform        |
 |                                   | through its REST API Client       |
 +-----------------------------------+-----------------------------------+
