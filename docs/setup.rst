@@ -356,7 +356,7 @@ Elastisearch settings
 
 **It is only necessary if you want to index into Elasticsearch all the
 published events using the specific agent. Otherwise, you can skip this
-step.** Please, check `this <./monitorization.html>`__ out for more
+step.** Please, check `this <./integrations.html#activity-monitor-agent>`__ out for more
 info.
 
 Sentilo default settings consider Elasticsearch server will be listening
