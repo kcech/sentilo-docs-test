@@ -179,7 +179,7 @@ MongoDB settings
 Sentilo default settings consider MongoDB will be listening on
 127.0.0.1:27017, and requires an existing database named *sentilo*,
 created before starting the platform, with `authentication
-enabled <http://docs.mongodb.org/v2.4/core/access-control/>`__ and with
+enabled <http://docs.mongodb.org/v4.0/core/access-control/>`__ and with
 login credentials preconfigured as sentilo/sentilo (username~:*sentilo*,
 password~:\ *sentilo*).
 
