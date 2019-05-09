@@ -1,7 +1,7 @@
 Java Client
 ===========
 
-.. figure:: ../_static/images/clients/java_logo.jpg
+.. figure:: ./_static/images/clients/java_logo.jpg
    :alt: Java
 
 The Sentilo Java Client is a library developed for working with webapps

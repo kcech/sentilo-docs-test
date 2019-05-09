@@ -4,8 +4,8 @@ Quickstart
 Prequisites
 -----------
 
-After checking the [Sentilo Setup](./setup.html). No need to setup any
-agents, Elastic Search nor OpenTSDB.
+After checking the `Sentilo Setup <./setup.html>`__. No need to setup any
+agents or other optional components such as Elasticsearch or OpenTSDB.
 
 You should have 4 components up & running:
 
@@ -74,4 +74,4 @@ appear your value, in this case, a 42.0.
 What next?
 ----------
 
-Check the `API documentation <./api_docs/web_home.html>`__ here.
+Check the `API documentation <./api_docs.html>`__ here.
