@@ -1,7 +1,7 @@
 Arduino Client
 ==============
 
-.. figure:: ../_static/images/clients/arduino-mega-2560-r3.jpg
+.. figure:: _static/images/clients/arduino-mega-2560-r3.jpg
    :alt: Arduino
 
 The **SentiloClient Library** for Arduino offers a basic C++ library
