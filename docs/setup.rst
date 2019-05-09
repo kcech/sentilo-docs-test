@@ -553,14 +553,14 @@ Once you have uncomment the above lines, you should recompile the
 Catalog webapp module and redeploy it into your Tomcat server.
 
 You will find more information about this feature in the
-`Multi-Tenant <./multi_tenant.html>`__ section of our documentation.
+`Multi-Tenant <./multitenant.html>`__ section of our documentation.
 
 Enable anonymous access to REST API
 -----------------------------------
 
 By default, anonymous access to REST API is disabled which means that
 all requests to REST API must be identified with the
-`identity_key <./api_docs/security.hml>`__ header.
+`identity_key <./api_docs/security.html>`__ header.
 
 From version 1.5, we provide a new feature that allows anonymous access
 to REST API but only for read *authorized* data of your Sentilo instance
