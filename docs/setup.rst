@@ -229,13 +229,13 @@ command from the directory where the file is located:
 
    mongo -u sentilo -p sentilo sentilo init_data.js
 
-**Remember:**
+.. note::
 
-Please keep in mind that data defined in the previous file contains
-default passwords and tokens (which are recommended for run Sentilo in a
-test environment). In order to avoid compromissing your platform, **we
-recommend to change them before installing Sentilo in a production
-environment**.
+   Please keep in mind that data defined in the previous file contains
+   default passwords and tokens (which are recommended for run Sentilo in a
+   test environment). In order to avoid compromissing your platform, **we
+   recommend to change them before installing Sentilo in a production
+   environment**.
 
 After change their values in the *init_data.js* and load them on
 MongoDB, and before compiling and building Sentilo, you will have to
