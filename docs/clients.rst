@@ -25,10 +25,6 @@ Sentilo using various existing platforms and languages.
 | |raspberrypi.jpeg|                |
 | `RaspberryPi Client`_             |
 |                                   |
-| .. raw:: html                     |
-|                                   |
-| </div>                            |
-| <div>                             |
 | Independent platform library      |
 | created with NodeJS that allows   |
 | embedded architectures, such as   |
