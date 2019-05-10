@@ -79,9 +79,18 @@ Each list element **(sensor)** will have the following structure.
 +-----------------------+-----------------------+-----------------------+
 | description           | sensor description    | Yes                   |
 +-----------------------+-----------------------+-----------------------+
-| dataType              | Data sensor type      | No                    |
-|                       | (NUMBER, BOOLEAN or   |                       |
-|                       | TEXT)                 |                       |
+| dataType              | Data sensor type:     | No                    |
+|                       |                       |                       |
+|                       | -  AUIDO_LINK         |                       |
+|                       | -  BOOLEAN            |                       |
+|                       | -  FILE_LINK          |                       |
+|                       | -  IMAGE_LINK         |                       |
+|                       | -  JSON               |                       |
+|                       | -  LINK               |                       |
+|                       | -  NUMBER             |                       |
+|                       | -  TEXT               |                       |
+|                       | -  VIDEO_LINK         |                       |
+|                       |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | location              | Location where de     | Yes                   |
 |                       | sensor is             |                       |

@@ -441,3 +441,29 @@ Then, following nodes should appear in the nodes palette:
 Now, you should be able to use Sentilo from Node-RED:
 
 .. image:: _static/images/integrations/sentilo-nodered2.png
+
+
+AWS S3
+------
+
+The `AWS S3 <https://aws.amazon.com/s3/>`__ can be used together with Sentilo, if your solution needs
+to upload files such as audio snippets, images or files in general.
+
+
+
+In this case,
+
+
+
+
+.. note::
+
+   Sentilo is is currently using path-style API requests.
+
+
+.. note::
+
+   Sentilo is probably compatible with a variety of S3-like platforms on the market that implement the S3 interface.
+
+
+`see more <./services/subscription/subscription.html>`__

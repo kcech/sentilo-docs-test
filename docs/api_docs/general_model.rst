@@ -176,6 +176,8 @@ This payload is returned when JSON payload could not be read as JSON:
 
 .. code:: json
 
-   {"code":400,
-    "message":"SIE03-1398350628224  Bad request data: could not read JSON payload. Please review the following error and try again",
-    "errorDetails":["org.sentilo.common.exception.MessageNotReadableException: Unexpected character ('o' (code 111)): ....."]}
+   {
+        "code":400,
+        "message":"SIE03-1398350628224  Bad request data: could not read JSON payload. Please review the following error and try again",
+        "errorDetails": ["org.sentilo.common.exception.MessageNotReadableException: Unexpected character ('o' (code 111)): ....."]
+   }

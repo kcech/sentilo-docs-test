@@ -5,7 +5,7 @@ Securing API requests
 ---------------------
 
 The platform will validate any request received by the system following
-the terminology AAA (*Authentication,*\ Authorization, \*Accounting):
+the terminology AAA (*Authentication, Authorization, Accounting*):
 
 -  **Authentication**: Identifying who is doing the request.
 -  **Authorization**: Validating that the action requested on the
