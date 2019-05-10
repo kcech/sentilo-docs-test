@@ -414,33 +414,21 @@ Node-red
 --------
 
 `Node-RED <https://nodered.org>`__ offers a fast integration and
-prototyping ecosystem for Sentilo. There’s a Sentilo ad-hoc node in
-/sentilo-node-red. In order to activate it to your local Node-RED
-installaction procede with two simple steps:
+prototyping ecosystem for Sentilo.
 
-1. From the directory /sentilo-node-red, type:
+Sentilo plugin is available in Node-RED's marketplace. Simply search in Palette configuration:
 
-::
+.. image:: _static/images/integrations/sentilo-nodered-installation.png
 
-   npm link
-
-This command registers the package node-red-contrib-sentilo to the
-NodeJS node_modules.
-
-2. In order to add the module to your NOdeRED installation, type:
-
-::
-
-   cd ~/.node-red
-   npm link node-red-contrib-sentilo
-
-Then, following nodes should appear in the nodes palette:
+Following nodes should appear in the nodes palette:
 
 .. image:: _static/images/integrations/sentilo-nodered.png
 
-Now, you should be able to use Sentilo from Node-RED:
+Now, you should be able to use Sentilo from Node-RED. For example:
 
 .. image:: _static/images/integrations/sentilo-nodered2.png
+
+There a independent documentation on how to use Sentilo nodes.
 
 
 AWS S3
@@ -477,5 +465,7 @@ If these media links are private and managed by S3, catalog needs these properti
    Sentilo is probably compatible with variety of S3-like platforms on the market that implement the S3 interface.
 
 .. image:: _static/images/integrations/catalog-s3-audio-preview.png
+
+In the end, you will be able to visualize private links in S3, for example:
 
 `see more <./services/subscription/subscription.html>`__
