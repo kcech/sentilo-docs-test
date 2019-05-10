@@ -4,7 +4,7 @@ Multi Tenant
 Introduction
 ------------
 
-The new **Sentilo Multi Tenant** release provides the capacity of
+The Multi Tenant feature provides the capacity of
 creating and managing virtual Sentilo instances related with different
 organizations(e.g. cities). Every organization has its own context,
 entities and data, and it can share information with third parties at
@@ -13,11 +13,11 @@ tenant.
 
 Above all the tenants, a new role emerges for administer the platform,
 manage the organizations and create the necessary users for administer
-each one. Additionally, the platform can provide addional services to
+each one. Additionally, the platform can provide additional services to
 its organizations, like common integrations and offer a single map
 showing the public information of all its organization.
 
-The Sentilo multi-tennancy model implements level 3 of SAAS maturity
+The Sentilo multi-tenancy model implements level 3 of SAAS maturity
 model, which offers a good levels of efficiency and scalability balanced
 with a complexity and a reasonable operational costs:
 
