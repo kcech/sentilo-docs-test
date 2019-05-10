@@ -5,7 +5,7 @@ Java Client
    :alt: Java
 
 The Sentilo Java Client is a library developed for working with webapps
-or standalone java applications. You can download the source code from
+or standalone java applications. You can download an example of a client from
 https://github.com/sentilo/sentilo-client-sample-java.
 
 For this example, we’ll use a basic maven based web application, that
