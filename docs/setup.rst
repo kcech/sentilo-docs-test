@@ -391,11 +391,11 @@ artifacts:
 
 -  Web Application Catalog (is **mandatory**)
 -  Server publication and subscription (is **mandatory**)
--  Internal agents (are **optional**):
+-  Alarms agent is not strictly mandatory, however you'll need it if you want to provide alerts.
+-  Location updater agent is not strictly mandatory, however you'll need it if you want to update locations
+   in case you have mobile components.
+-  All other agents (are **optional**):
 
-   -  alarms agent
-   -  relational database agent
-   -  location updater agent
 
 Installing the Web App Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -445,7 +445,7 @@ platform functionality without having to alter its core. You will find
 more information about them in the `Integrations <./integrations.html#agents>`__
 section of our documentation.
 
-The *buildSentilo* script build also all agents. If you decide to install some of them,
+The *buildSentilo* script builds also all agents. If you decide to install some of them,
 you just have to copy the contents of the appassembler directory to the path you want the
 agent to be installed.
 

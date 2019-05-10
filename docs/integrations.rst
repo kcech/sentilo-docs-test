@@ -450,11 +450,23 @@ The `AWS S3 <https://aws.amazon.com/s3/>`__ can be used together with Sentilo, i
 to upload files such as audio snippets, images or files in general.
 
 
+Sensor can publish links to multimedia files. If these links are always public, catalog will preview them without any additional configuration.
 
-In this case,
+If these media links are private and managed by S3, catalog needs these properties in the file catalog-config.properties:
 
-
-
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property                 | Default Value    | Description                                                                                                                                                                                                                                                           |
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| s3.endpoints             | empty            | Base URL that is managed by Sentilo. All links uploaded to Sentilo that begin with this URL will be treated as private links and the Catalog will try to login with its credentials to provide a preview of the file. For example: https://s3-eu-west-3.amazonaws.com |
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| s3.signing.region        | eu-west-3        | AWS signing region                                                                                                                                                                                                                                                    |
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| s3.url.ttl               | 3600000          | Catalog will create a pre-signed URL for the links using this TTL in seconds                                                                                                                                                                                          |
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| s3.aws.access.key.id     | connecta-catalog | Catalog will autheticate with this credential. Has to be equal as catalog.app.id. Obviously, this credential has to exist in s3 and has to in all ACLs of all buckets used by providers. Otherwise, Catalog would not have right create the pre-signed URL.           |
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| s3.aws.secret.access.key | empty            | Catalog will autheticate with this token.                                                                                                                                                                                                                             |
++--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
 
@@ -463,7 +475,7 @@ In this case,
 
 .. note::
 
-   Sentilo is probably compatible with a variety of S3-like platforms on the market that implement the S3 interface.
+   Sentilo is probably compatible with variety of S3-like platforms on the market that implement the S3 interface.
 
 
 `see more <./services/subscription/subscription.html>`__
