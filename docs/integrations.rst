@@ -416,7 +416,7 @@ Node-red
 `Node-RED <https://nodered.org>`__ offers a fast integration and
 prototyping ecosystem for Sentilo.
 
-Sentilo plugin is available in Node-RED's marketplace. Simply search in Palette configuration:
+Sentilo plugin is available in Node-RED's marketplace. Simply search for "sentilo" in Palette configuration:
 
 .. image:: _static/images/integrations/sentilo-nodered-installation.png
 
