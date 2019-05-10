@@ -449,7 +449,6 @@ AWS S3
 The `AWS S3 <https://aws.amazon.com/s3/>`__ can be used together with Sentilo, if your solution needs
 to upload files such as audio snippets, images or files in general.
 
-
 Sensor can publish links to multimedia files. If these links are always public, catalog will preview them without any additional configuration.
 
 If these media links are private and managed by S3, catalog needs these properties in the file catalog-config.properties:
@@ -477,5 +476,6 @@ If these media links are private and managed by S3, catalog needs these properti
 
    Sentilo is probably compatible with variety of S3-like platforms on the market that implement the S3 interface.
 
+.. image:: _static/images/integrations/catalog-s3-audio-preview.png
 
 `see more <./services/subscription/subscription.html>`__
