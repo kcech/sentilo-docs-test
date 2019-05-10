@@ -464,8 +464,9 @@ If these media links are private and managed by S3, catalog needs these properti
 
    Sentilo is probably compatible with variety of S3-like platforms on the market that implement the S3 interface.
 
+In the end, you will be able to visualize private links in S3, for example:
+
 .. image:: _static/images/integrations/catalog-s3-audio-preview.png
 
-In the end, you will be able to visualize private links in S3, for example:
 
 `see more <./services/subscription/subscription.html>`__
