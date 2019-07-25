@@ -43,8 +43,7 @@ Recently Google changed it policy regarding Maps key. Please go to
 https://developers.google.com/maps/documentation/javascript/get-api-key
 and create one.
 
-If you are using the last release of Sentilo(1.6) you can define the API
-key inside the sentilo/sentilo-catalog-web/src/main/resources/properties/catalog-config.properties configuration file:
+You can define the API key inside the sentilo/sentilo-catalog-web/src/main/resources/properties/catalog-config.properties configuration file:
 
 .. code:: properties
 
