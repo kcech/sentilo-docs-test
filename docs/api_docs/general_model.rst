@@ -135,7 +135,7 @@ are:
 used and by the service, provider or sensor specified in the URL
 invoked.**
 
-Reply
+Response
 -----
 
 The response to a request to the platform is managed through the
