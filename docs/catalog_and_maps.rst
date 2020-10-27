@@ -1050,7 +1050,7 @@ The main properties of the *Details* tab are the following:
 |                       |                       | value is online.            |
 +-----------------------+-----------------------+-----------------------------+
 | Substate              | Substate of the       | The list of possible        |
-|                       | sensor                | values that that have       |
+|                       | sensor                | values that have            |
 |                       |                       | informational purpose       |
 |                       |                       | and are specific for        |
 |                       |                       | every deployment. You       |
@@ -1063,9 +1063,9 @@ The main properties of the *Details* tab are the following:
 |                       |                       | mongoDB. No default         |
 |                       |                       | value.                      |
 +-----------------------+-----------------------+-----------------------------+
-| TTL (min)             | Time of expitation of | This value can be           |
-|                       | the sensor in minutes | configured only             |
-|                       |                       | from the catalog,           |
+| TTL (min)             | Time of expiration of | This value can be           |
+|                       | sensor's data in      | configured only             |
+|                       | minutes               | from the catalog,           |
 |                       |                       | Only admin should           |
 |                       |                       | control this value.         |
 |                       |                       | The default value is        |
@@ -1330,17 +1330,22 @@ select the item from the Alert Rule list and press Delete.
 Users
 ~~~~~
 
-Used for creating, updating or deleting console users. It’s possible to
-delete users massively through the elements list. There are three
-available roles:
+The "Users" section is for managing users of the catalog application. It’s possible to
+A catalog user can be one of these three roles:
 
 -  **Admin**: role for administration purposes.
 -  **Platform**: platform role for internal use.
 -  **User**: visualisation role, they could access to the administration
    console and read all the data, but they haven’t permission for
-   changing anything.
+   changing anything, except own contact details and password.
 
-**Properties**
+.. image:: _static/images/catalog_and_maps/users_170_001.jpg
+
+.. note::
+
+   A non-admin account will only see a menu "User" with his/her own details. A User role cannot see list other users.
+
+**User properties editable by administrator**
 
 +-----------------------+-----------------------+-----------------------+
 | Id                    | Name                  | Description           |
@@ -1348,7 +1353,9 @@ available roles:
 | Id                    | User identifier       | After its creation    |
 |                       |                       | can't be modified     |
 +-----------------------+-----------------------+-----------------------+
-| Password              | Password              |                       |
+| Password              | Password              | Admin user can        |
+|                       |                       | rewrite user's        |
+|                       |                       | password              |
 +-----------------------+-----------------------+-----------------------+
 | Repeat                | Password check        |                       |
 +-----------------------+-----------------------+-----------------------+
@@ -1370,14 +1377,18 @@ available roles:
 | Role                  | Related role          | Value list            |
 +-----------------------+-----------------------+-----------------------+
 
-.. _users-list:
 
-List
-^^^^
+.. _users-edit-a-user:
 
-.. image:: _static/images/catalog_and_maps/users_170_001.jpg
+Edit a User
+^^^^^^^^^^^
 
 .. image:: _static/images/catalog_and_maps/users_170_002.jpg
+
+
+.. note::
+
+   A password has to have 8-10 characters, and have at least 1 uppercase, 1 lowercase and 1 digit.
 
 Sensor types
 ~~~~~~~~~~~~
