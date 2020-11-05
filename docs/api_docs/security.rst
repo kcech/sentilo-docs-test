@@ -19,8 +19,12 @@ actions:
 -  Check that it can do the requested action on the resource indicated.
 -  Register the performed action.
 
-When necessary, the platform will check the integrity and
-confidentiality of communications is ensured using **HTTPS** protocol.
+.. note::
+
+   Sentilo itself does not provide a mechanism to SSL/TLS http protocol (inbound https requests).
+   That's because we don't need to duplicate the work of others - Sentilo is typically deployed
+   behind a reverse proxy or an API manager, which already handle the encrypted connections very well.
+
 
 Authentication
 ~~~~~~~~~~~~~~

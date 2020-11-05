@@ -159,6 +159,9 @@ response **HTTP status codes.**
 | 403                   | Forbidden             | Not authorized for    |
 |                       |                       | the requested action  |
 +-----------------------+-----------------------+-----------------------+
+| 429                   | Too Many Requests     | Global quota or       |
+|                       |                       | entity quota exceed   |
++-----------------------+-----------------------+-----------------------+
 | 5xx                   | Server Error          | Error processing the  |
 |                       |                       | request               |
 +-----------------------+-----------------------+-----------------------+
