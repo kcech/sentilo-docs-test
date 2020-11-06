@@ -1,9 +1,6 @@
 Catalog and Maps
 ================
 
-Introduction
-------------
-
 The Catalog is a web application that enables you to administer, rule
 and monitor the Sentilo platform resources and activity. In this section,
 you will learn how to manage Sentilo resources and how to monitor its activity.

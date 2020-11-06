@@ -23,7 +23,7 @@ existing resource selecting the corresponding checkbox and clicking the
 corresponding button and you could edit anyone clicking over the
 corresponding row.
 
-.. image:: _static/images/catalog_and_maps/ComponentsTypes.png
+.. image:: ../_static/images/catalog_and_maps/ComponentsTypes.png
 
 When you select to add a new resource, a traditional form page is
 displayed. Here, you must have filled in the mandatory fields before
@@ -31,30 +31,30 @@ clicking the *Save* button. If some mandatory field is not fiiled in or
 it have a no valid value, the page shows you information about what is
 wrong:
 
-.. image:: _static/images/catalog_and_maps/new_provider_2.png
+.. image:: ../_static/images/catalog_and_maps/new_provider_2.png
 
 Otherwise, the resource will be registered into the Catalog and you will
 be redirect to the list page (at the top right corner you will see a
 confirmation message that the resource have been succesfully created):
 
-.. image:: _static/images/catalog_and_maps/ComponentsTypes_create.png
+.. image:: ../_static/images/catalog_and_maps/ComponentsTypes_create.png
 
 The same applies when you try to delete a resource, but with the
 peculiarity that the browser will always ask for your confirmation
 before deleting it:
 
-.. image:: _static/images/catalog_and_maps/ComponentsTypes_delete.png
+.. image:: ../_static/images/catalog_and_maps/ComponentsTypes_delete.png
 
 If the resource has been succesfully removed, the list is reloaded and a
 confirmation message is displayed at the top right corner:
 
-.. image:: _static/images/catalog_and_maps/ComponentsTypes_deleted.png
+.. image:: ../_static/images/catalog_and_maps/ComponentsTypes_deleted.png
 
 Otherwise, you will see an error page with a description about what is
 wrong. For example, if you try to delete a component type that is
 associated with an existing component the response will be :
 
-.. image:: _static/images/catalog_and_maps/delete_error.png
+.. image:: ../_static/images/catalog_and_maps/delete_error.png
 
 
 Organization
@@ -68,7 +68,7 @@ Detail
 By default, this organization is created and its identifier is
 **sentilo**.
 
-.. image:: _static/images/catalog_and_maps/Organitzation_detail.png
+.. image:: ../_static/images/catalog_and_maps/Organitzation_detail.png
 
 We can also edit the organization's name other contact details, except the.
 
@@ -78,7 +78,7 @@ Config params
 In addition, we can edit the visualization formats and public map
 settings, using the **Config params** tab:
 
-.. image:: _static/images/catalog_and_maps/organization_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/organization_170_001.jpg
 
 There we can configure the Visual configuration and the Map
 configuration.
@@ -154,11 +154,11 @@ These params configure the universal map visualization.
 
 For example, set the map background color to #ffc900:
 
-.. image:: _static/images/catalog_and_maps/organization_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/organization_170_002.jpg
 
 will result in:
 
-.. image:: _static/images/catalog_and_maps/Changing_map_color.png
+.. image:: ../_static/images/catalog_and_maps/Changing_map_color.png
 
 Applications
 ~~~~~~~~~~~~
@@ -183,7 +183,7 @@ Access the Application list. This is the main Application page. From
 here you’ll can access to the desired application to show its details by
 click on it.
 
-.. image:: _static/images/catalog_and_maps/applications_170_000.jpg
+.. image:: ../_static/images/catalog_and_maps/applications_170_000.jpg
 
 You’ll be able to list, filter, show application details, create (*New
 application* button) and delete selected applications (select from left
@@ -204,7 +204,7 @@ Details tab
 
 The detail page is structured into three tabs:
 
-.. image:: _static/images/catalog_and_maps/applications_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/applications_170_001.jpg
 
 where:
 
@@ -289,7 +289,7 @@ The main properties of the *Details* tab are the following:
 
 How users that has not ADMIN role see the detail section:
 
-.. image:: _static/images/catalog_and_maps/applications_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/applications_170_002.jpg
 
 .. _applications-permissions-tab:
 
@@ -317,7 +317,7 @@ and, as you would expect, an application has full control over itself .
 For example, at the following case where the permissions of the
 application *testApp* are displayed:
 
-.. image:: _static/images/catalog_and_maps/applications_170_003.jpg
+.. image:: ../_static/images/catalog_and_maps/applications_170_003.jpg
 
 We will see the following:
 
@@ -337,7 +337,7 @@ with the API
 REST](./api_docs/services/subscription/subscription.html)),
 as shown in the following picture:
 
-.. image:: _static/images/catalog_and_maps/application_subscriptionsl.png
+.. image:: ../_static/images/catalog_and_maps/application_subscriptionsl.png
 
 Providers
 ~~~~~~~~~
@@ -356,7 +356,7 @@ backend, but also all its related resources** such as components,
 sensors, alerts … and any data published by its sensors, **so be very
 careful with this command**.
 
-.. image:: _static/images/catalog_and_maps/providers_170_000.jpg
+.. image:: ../_static/images/catalog_and_maps/providers_170_000.jpg
 
 .. _providers-list:
 
@@ -367,7 +367,7 @@ Access the Providers list. This is the main Provider page. From here
 you’ll can access to the desired provider to show its details by click
 on it.
 
-.. image:: _static/images/catalog_and_maps/providers_170_0000.jpg
+.. image:: ../_static/images/catalog_and_maps/providers_170_0000.jpg
 
 
 You’ll be able to list, filter, show provider details, create (*New
@@ -389,7 +389,7 @@ Details tab
 
 The detail page of a provider is structured into five tabs:
 
-.. image:: _static/images/catalog_and_maps/providers_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/providers_170_001.jpg
 
 where
 
@@ -483,7 +483,7 @@ The main properties of the *Details* tab are the following:
 
 How users that has not ADMIN role see the detail section:
 
-.. image:: _static/images/catalog_and_maps/providers_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/providers_170_002.jpg
 
 .. _providers-sensors-actuators-tab:
 
@@ -494,7 +494,7 @@ As mentioned before, this tab displays a list with all sensors
 associated with the current provider, as shown in the picture below
 where the sensors of the provider CINERGIA are listed:
 
-.. image:: _static/images/catalog_and_maps/providers_170_003.jpg
+.. image:: ../_static/images/catalog_and_maps/providers_170_003.jpg
 
 You could filter, page and order the list but you cannot access to the
 sensor detail: it must be done from the sensor list administration.
@@ -548,7 +548,7 @@ In short: into Sentilo, a sensor always need to be related to a
 component and providers have its sensors grouped by components, as shown
 in the following picture:
 
-.. image:: _static/images/catalog_and_maps/provider-component-sensor.png
+.. image:: ../_static/images/catalog_and_maps/provider-component-sensor.png
 
 .. _components-list:
 
@@ -559,7 +559,7 @@ One singularity of the components list page are the two buttons that
 allows us to change the visibility of a set of components from *public*
 to *private* and vice versa. These buttons apply on the selected rows.
 
-.. image:: _static/images/catalog_and_maps/components_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/components_170_001.jpg
 
 
 You’ll be able to list, filter, show components details and create (*New
@@ -585,7 +585,7 @@ Details tab
 
 The detail page of a component is structured into five tabs:
 
-.. image:: _static/images/catalog_and_maps/components_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/components_170_002.jpg
 
 where:
 
@@ -680,7 +680,7 @@ As noted above, this tab displays a set of properties related to the
 technical details of the component such as manufacturer, serial number,
 ….
 
-.. image:: _static/images/catalog_and_maps/comp_tech_details.png
+.. image:: ../_static/images/catalog_and_maps/comp_tech_details.png
 
 where:
 
@@ -721,7 +721,7 @@ For each property, it will be displayed as a *label-value* entry where
 the property’s key will be the label and the property’s value will be
 the value, as shown in the following picture:
 
-.. image:: _static/images/catalog_and_maps/comp_add_info.png
+.. image:: ../_static/images/catalog_and_maps/comp_add_info.png
 
 where the following map, stored on the backend, has been rendered
 *{“Comarca”:“Alt Empordà”,“Terme municipal”:“COLERA”,“Provincia”:“Girona”}*
@@ -755,7 +755,7 @@ filter works for all filter attributes except the creation date. The
 Filter field is case-sensitive. Only search by the substate’s code is
 possible at the moment.
 
-.. image:: _static/images/catalog_and_maps/sensors_170_000.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_000.jpg
 
 You’ll be able to list, filter, show sensors details, and create (*New
 application* button) and delete selected sensors (select from left
@@ -776,7 +776,7 @@ Details Tab
 
 The detail page of a sensor is structured into four tabs:
 
-.. image:: _static/images/catalog_and_maps/sensor_detail.png
+.. image:: ../_static/images/catalog_and_maps/sensor_detail.png
 
 where
 
@@ -893,7 +893,7 @@ technical details of the sensor ( such as the *manufacturer*, the
 *model*, the *serial number* and the *power type* , all of which are
 described in the component section) as shown in the following picture:
 
-.. image:: _static/images/catalog_and_maps/sensors_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_001.jpg
 
 .. _sensors-visual-configuration-tab:
 
@@ -928,7 +928,7 @@ Latest data tab
 
 This tab, as shown in the following picture:
 
-.. image:: _static/images/catalog_and_maps/sensors_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_002.jpg
 
 displays both the latest observation published by the sensor and a graph
 with its last activity.
@@ -940,7 +940,7 @@ Navigate the last data chart
 You can navigate along the dates of the graph by using the buttons
 located in the lower right corner of it:
 
-.. image:: _static/images/catalog_and_maps/chart_controls.png
+.. image:: ../_static/images/catalog_and_maps/chart_controls.png
 
 -  **left arrow**: navigate to the past (only if there are older data)
 -  **reload data (center button)**: reload last data / reset chart data
@@ -954,7 +954,7 @@ You can change the number of values shown in the graph. To do this,
 within the sensor editing tabs, go to **“Visual configuration”**, and
 there edit the value of the **“Chart values number”** field
 
-.. image:: _static/images/catalog_and_maps/sensors_170_003.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_003.jpg
 
 You must inform a positive value number. If blank, then default value
 shall be applied as that has been configured in the organization visual
@@ -966,24 +966,24 @@ Showing complex data
 If your sensor data type is text, and it contains a complex data in json
 format, Sentilo will show it as a prettified value:
 
-.. image:: _static/images/catalog_and_maps/sensors_170_004.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_004.jpg
 
 in this case you will have the possibility to inspect, expand or
 contract the json map shown as a value using the navigation buttons:
 
 **Collapse data:** the json map will be collapsed at all
 
-.. image:: _static/images/catalog_and_maps/sensors_170_005.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_005.jpg
 
 **Expand data:** the json map will be expanded at all (default view)
 
-.. image:: _static/images/catalog_and_maps/sensors_170_006.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_006.jpg
 
 **Collapse to level X:** insert a correct value for the X, and click the
 button to collapse to the specified level (default level is 0, first
 level)
 
-.. image:: _static/images/catalog_and_maps/sensors_170_007.jpg
+.. image:: ../_static/images/catalog_and_maps/sensors_170_007.jpg
 
 Alerts
 ~~~~~~
@@ -1059,7 +1059,7 @@ List
 Access the Alerts list. This is the main Alert page. From here you’ll
 can access to the desired alert to show its details by click on it.
 
-.. image:: _static/images/catalog_and_maps/alerts_170_000.jpg
+.. image:: ../_static/images/catalog_and_maps/alerts_170_000.jpg
 
 You’ll be able to list, filter, show alerts details, create (*New alert*
 button) and delete selected alerts (select from left checkbox, and apply
@@ -1083,9 +1083,9 @@ If you want to search for certain trigger type, currently only searching
 by trigger type’s code is possible (e.g. a search for “GT” would return
 results in the above screen, whereas a search for “GT(40)” wouldn’t).
 
-.. image:: _static/images/catalog_and_maps/alert_list.png
+.. image:: ../_static/images/catalog_and_maps/alert_list.png
 
-.. image:: _static/images/catalog_and_maps/alert_edit2.png
+.. image:: ../_static/images/catalog_and_maps/alert_edit2.png
 
 Alerts creation rules
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1102,7 +1102,7 @@ List
 Accessing “Alert creation rules” menu option opens a list of existing
 Alert Rules.
 
-.. image:: _static/images/catalog_and_maps/alertsrules_170_000.jpg
+.. image:: ../_static/images/catalog_and_maps/alertsrules_170_000.jpg
 
 You’ll be able to list, filter, show alert rules details, create (*New
 rules* button) and delete selected rules group (select from left
@@ -1121,13 +1121,13 @@ Create rules
 
 To create new alerts, use the “New Rules” button.
 
-.. image:: _static/images/catalog_and_maps/alerts_massive_creation.png
+.. image:: ../_static/images/catalog_and_maps/alerts_massive_creation.png
 
 After pressing the “Confirm” button, a modal window will inform on how
 many alerts will be created for given combination of provider, component
 type and sensor type.
 
-.. image:: _static/images/catalog_and_maps/alerts_massive_creation_confirm.png
+.. image:: ../_static/images/catalog_and_maps/alerts_massive_creation_confirm.png
 
 Subsequently, alerts are created, all having the same rule. At the
 moment it is not possible to bulk-create alerts without specifying the
@@ -1148,7 +1148,7 @@ A catalog user can be one of these three roles:
    console and read all the data, but they haven’t permission for
    changing anything, except own contact details and password.
 
-.. image:: _static/images/catalog_and_maps/users_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/users_170_001.jpg
 
 .. note::
 
@@ -1192,7 +1192,7 @@ A catalog user can be one of these three roles:
 Edit a User
 ^^^^^^^^^^^
 
-.. image:: _static/images/catalog_and_maps/users_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/users_170_002.jpg
 
 
 .. note::
@@ -1232,7 +1232,7 @@ List
 Access the main Type of Sensors / Actuators list page, will show you a
 complete list of type of sensors.
 
-.. image:: _static/images/catalog_and_maps/sensorstypes_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/sensorstypes_170_001.jpg
 
 You’ll be able to list, filter, show typologies details, create (*New
 typology* button) and delete selected typology (select from left
@@ -1253,7 +1253,7 @@ Access to create new typology pressing *New typology* button. You must
 inform an identifier, name and description (optional) for the new
 typology.
 
-.. image:: _static/images/catalog_and_maps/sensorstypes_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/sensorstypes_170_002.jpg
 
 
 Component types
@@ -1305,7 +1305,7 @@ List
 Access the main Component’s typology list page, will show you a complete
 list of available type of components.
 
-.. image:: _static/images/catalog_and_maps/componenttypes_170_001.jpg
+.. image:: ../_static/images/catalog_and_maps/componenttypes_170_001.jpg
 
 You’ll be able to list, filter, show typology details, create (*New
 application* button) and delete selected typologies (select from left
@@ -1328,5 +1328,5 @@ Access to create new typology pressing *New typology* button. You must
 inform an identifier, name, description (optional), photo (optional) and
 icon for the new typology.
 
-.. image:: _static/images/catalog_and_maps/componenttypes_170_002.jpg
+.. image:: ../_static/images/catalog_and_maps/componenttypes_170_002.jpg
 
