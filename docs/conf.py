@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 #
 # Sentilo documentation build configuration file, created by
 # sphinx-quickstart.
@@ -17,6 +18,8 @@
 # -- General configuration -----------------------------------------------------
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+TESTENV = os.environ.get('TESTENV')
+
 extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
@@ -193,3 +196,5 @@ def setup(app):
     app.add_stylesheet('css/custom.css')
     app.add_stylesheet('css/font-awesome.min.css')
     app.add_javascript("js/scripts.js")
+    if TESTENV:
+        app.add_javascript("js/alert_test.js")
