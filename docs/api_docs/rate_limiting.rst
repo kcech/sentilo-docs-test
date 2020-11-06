@@ -39,7 +39,8 @@ If global rate limiting is set, every response of the API contains following hea
 |                                      | requests again. Otherwise is 0.                     |
 +--------------------------------------+-----------------------------------------------------+
 
-In case the input quota is exceed, the server will reject the request and return a HTTP error code 429.
+In case the global rate limit is exceed, the server will reject the request and return a HTTP error code 429.
+
 In case the maximum payload size is exceed, the server responses with HTTP error code 400.
 
 
@@ -91,6 +92,10 @@ For example, consider the following case:
 
 We can see that this entity that is subscribed to Sentilo data has a output quota set to  5 notifications/hour,
 that it can still receive 1 more notification and that the current window is still valid during next 58 minutes.
+
+As with the global limit,if the entity's input quota is exceed, the server will reject the request and return
+a HTTP error code 429. Global rate limit is prevalent to entity's quota, so the request is rejected when the lowest of
+the two is met.
 
 
 
