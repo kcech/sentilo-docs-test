@@ -12,18 +12,18 @@ all the public components registered at the platform. If the user is
 logged as administrator, all the private components will be displayed as
 well.
 
-.. image:: ../_static/images/catalog_and_maps/universal_viewer_170_001.jpg
+|universal_viewer_170_001.jpg|
 
 On this page, you can filter the components to show by selecting a
 *component type* from the top left select.
 
-.. image:: ../_static/images/catalog_and_maps/universal_viewer_170_002.jpg
+|universal_viewer_170_002.jpg|
 
 Depending on the zoom level, the map will display the elements as
 individuals POIs or grouped in clusters, showing the number of
 components in each group.
 
-.. image:: ../_static/images/catalog_and_maps/universal_viewer_170_003.jpg
+|universal_viewer_170_003.jpg|
 
 Component details
 ^^^^^^^^^^^^^^^^^
@@ -36,7 +36,7 @@ displays the list of sensors related to it with the last activity for
 each one of them (as noted above, the private sensors will be displayed
 only for logged users):
 
-.. image:: ../_static/images/catalog_and_maps/universal_viewer_170_004.jpg
+|universal_viewer_170_004.jpg|
 
 Sensors last activity view
 ''''''''''''''''''''''''''
@@ -45,7 +45,7 @@ If you click into the content area of the popup window, a new page is
 open displaying some basic details about the component, and a
 time-series graph with the last activity of each of its sensors:
 
-.. image:: ../_static/images/catalog_and_maps/universal_viewer_170_005.jpg
+|universal_viewer_170_005.jpg|
 
 .. _navigate-the-last-data-chart-1:
 
@@ -54,7 +54,7 @@ Navigate the last data chart
 You can navigate along the dates of the graph by using the buttons
 located in the lower right corner of it:
 
-.. image:: ../_static/images/catalog_and_maps/chart_controls.png
+|chart_controls.png|
 
 -  **left arrow**: navigate to the past (only if there are older data)
 -  **reload data (center button)**: reload last data / reset chart data
@@ -113,7 +113,7 @@ on Sentilo, such like a large json object. For these cases, Sentilo will
 detect that the text is a json object and then it will be shown to you
 as a prettyfied json value:
 
-.. image:: ../_static/images/catalog_and_maps/complex_data_170_001.jpg
+|complex_data_170_001.jpg|
 
 You can expand or compress the prettified json with the bottom buttons
 under the status field,
@@ -125,12 +125,22 @@ As the name suggest, the route viewer is a specific map that shows the
 routes followed by the mobile components (keep in mind that only the
 last 20 points are displayed for each route):
 
-.. image:: ../_static/images/catalog_and_maps/route_viewer_170_001.jpg
+|route_viewer_170_001.jpg|
 
 The same features described previously apply on this map and its markers
 (popup window, … ), but with the particularity that if you click over a
 *route point* then the popup window displays sensor activity related to
 the time instant in which component was at that location.
 
-.. image:: ../_static/images/catalog_and_maps/route_viewer_170_002.jpg
+|route_viewer_170_002.jpg|
 
+
+.. |universal_viewer_170_001.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_001.jpg
+.. |universal_viewer_170_002.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_002.jpg
+.. |universal_viewer_170_003.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_003.jpg
+.. |universal_viewer_170_004.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_004.jpg
+.. |universal_viewer_170_005.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_005.jpg
+.. |chart_controls.png| image:: .. image:: ../_static/images/catalog_and_maps/chart_controls.png
+.. |complex_data_170_001.jpg| image:: .. image:: ../_static/images/catalog_and_maps/complex_data_170_001.jpg
+.. |route_viewer_170_001.jpg| image:: .. image:: ../_static/images/catalog_and_maps/route_viewer_170_001.jpg
+.. |route_viewer_170_002.jpg| image:: .. image:: ../_static/images/catalog_and_maps/route_viewer_170_002.jpg
