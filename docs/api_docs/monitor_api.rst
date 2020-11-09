@@ -1,0 +1,40 @@
+Monitor API (Beta)
+==================
+
+Since v1.9, Sentilo offers a internal monitor API that enables direct access to
+useful real-time information of the API server. It can be also to remotely restart API server.
+
+Monitor API run on a different port then public API. The default port number is *7081* and is configured in
+/sentilo/sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties
+by property *monitor.port*:
+
+..
+
+    monitor.port=7081
+
+This API currently works with the Catalog Application token. You can find the catalog token in the Application
+section of the Catalog.
+
+.. note::
+
+   The catalog application token is very sensitive information, since it is used for admin operations. Make sure
+   you do store it in a private repository. Also make sure calls to the monitoring API are encrypted. See more in the
+   `Security section <./api_docs/services/security.html>`__
+
+
+List of API resources in the monitoring API:
+
++--------------------------+--------+-----------------------------------------------------------------------------------+
+|         Resource         | Method |                                    Description                                    |
++==========================+========+===================================================================================+
+| /monitor/ping            | GET    | Simple service that responds with http code 200  if the server is up and running. |
++--------------------------+--------+-----------------------------------------------------------------------------------+
+| /monitor/rl_input_status | GET    | Returns values of global rate limiting (incoming requests), for the last hour.    |
++--------------------------+--------+-----------------------------------------------------------------------------------+
+| /monitor/metrics         | GET    | Returns a list of components with their metrics                                   |
++--------------------------+--------+-----------------------------------------------------------------------------------+
+| /monitor/restart         | POST   | Gracefully restarts the API server. No body needed.                               |
++--------------------------+--------+-----------------------------------------------------------------------------------+
+| /monitor/force-restart   | POST   | Forces a restart of the API server. No body needed.                               |
++--------------------------+--------+-----------------------------------------------------------------------------------+
+
