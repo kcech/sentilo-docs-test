@@ -68,49 +68,6 @@ located in the lower right corner of it:
 -  **right arrow**: navigate to the future (only if you have navigated
    or gone into the past before)
 
-Default configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The initial map settings are configured in the file:
-
-::
-
-   sentilo-catalog-web/src/main/webapp/WEB-INF/jsp/common/include_script_maps.jsp
-
-and includes settings such as the default map center, the default zoom,
-….
-
-.. code:: javascript
-
-    // the initial map center (Barcelona city)
-    var defaultMapCenter = [41.5667, 2.0167];
-    var defaultZoomLevel = 14;
-	var defaultInputLocationZoomLevel = 17;
-	// the maximum zoom level beyond which pois are not grouped into clusters
-	var defaultMaxZoomCluster = 13;
-    // flag for control if routes must be displayed or no on the current map
-    var showRoutes = false;
-    // flag for control if only components that fit into bounds's map must be searched on the server
-    var filterByBounds = true;
-   ...
-
-You could change these configuration parameters or customize the look
-and feel to meet your requirements, but instead of overwrite the
-existing values you could add the new values to the file:
-
-::
-
-   sentilo-catalog-web/src/main/webapp/WEB-INF/jsp/common/include_script_maps_config.jsp
-
-For example, add the following line to the *include_script_maps_config*
-file if you would change the initial map center to London:
-
-::
-
-   var defaultMapCenter [ 51.4991257, -0.11325074];
-
-When Catalog starts, properties in this file overwrites existing ones
-having the same name in the file *include_script_maps.jsp*
 
 Displaying complex data
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -124,6 +81,8 @@ as a prettyfied json value:
 
 You can expand or compress the prettified json with the bottom buttons
 under the status field,
+
+
 
 Route viewer
 ~~~~~~~~~~~~
@@ -140,6 +99,44 @@ The same features described previously apply on this map and its markers
 the time instant in which component was at that location.
 
 |route_viewer_170_002.jpg|
+
+
+Background map configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Center and Zoom
+^^^^^^^^^^^^^^^
+
+Each Organization can have it's own map center and zoom level.
+Please refer to corresponding part in the Administration Console section:
+`Organization Map configuration <../administration_console.html#map-configuration>`_
+
+Map Providers
+^^^^^^^^^^^^^
+
+For all background maps, you can use either Google or Leaflet map provider. Through the latter you can consume
+any OGC WMS/WMTS service that provides a EPSG 3857 SRID.
+
+The configuration of both is in in /sentilo-catalog-web/src/main/resources/properties/catalog-config.properties.
+
+Example of a Google maps configuration
+
+::
+
+   catalog.map.provider=gmaps
+   catalog.map.google.key=AIza...
+
+Example of a Leaflet maps configuration, using a public Terrestris WMS service:
+
+::
+
+   catalog.map.provider=leaflet
+   catalog.map.wms.url=https://ows.terrestris.de/osm/service?
+   catalog.map.wms.layers=OSM-WMS
+   catalog.map.wms.version=1.3.0
+   catalog.map.wms.format=image/jpeg
+   catalog.map.wms.attribution=Terrestris
+   catalog.map.wms.styles=
 
 
 .. |universal_viewer_170_001.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_001.jpg
