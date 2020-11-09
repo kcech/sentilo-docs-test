@@ -1,6 +1,13 @@
 Map Viewers
 -----------
 
+In the publicly accessible section of the Catalog, Sentilo offers 2 different map viewers that display
+data in real-time, as they arrive to the system.
+
+Both viewers are accessible from the *Explore* item
+at the top menu bar (*Universal viewer* and *Route viewer*).
+
+
 Universal viewer
 ~~~~~~~~~~~~~~~~
 
