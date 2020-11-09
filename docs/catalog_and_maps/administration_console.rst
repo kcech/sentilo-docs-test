@@ -1357,8 +1357,7 @@ New internal monitor API runs on different port that the Sentilo API. It's port 
 
    monitor.port=7081
 
-
-The agent *sentilo-agent-metrics-monitor* gathers these metrics and persists them in Elasticsearch.
+The agent `Metrics Monitor Agent <./integrations.html#metrics-monitor-agent>`__ gathers these metrics and persists them in Elasticsearch.
 
 
 .. |ComponentsTypes.png| image:: ../_static/images/catalog_and_maps/ComponentsTypes.png

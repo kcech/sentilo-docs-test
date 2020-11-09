@@ -1,12 +1,9 @@
-Sentilo monitoring
-------------------
+Statistics page
+---------------
 
 The public section of the Catalog allows us to display some Sentilo statistics through a set
 of features/pages which allow us to inspect the current platform
 activity and to display the components/sensors over a map.
-
-Statistics
-~~~~~~~~~~
 
 The statistic dashboard, which is accessible from the top menu bar,
 displays some basic use indicators, like total requests processed,
@@ -27,14 +24,15 @@ graph is automatically updated every 5 minutes.
 Navigate the last data chart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can navigate along the dates of the graph by using the buttons
-located in the lower right corner of it:
 
-|chart_controls.png|
+.. note::
 
--  **left arrow**: navigate to the past (only if there are older data)
--  **reload data (center button)**: reload last data / reset chart data
--  **right arrow**: navigate to the future (only if you have navigated
+   You can navigate along the dates of the graph by using the buttons located in the lower right corner of it:
+   |chart_controls.png|
+
+   -  **left arrow**: navigate to the past (only if there are older data)
+   -  **reload data (center button)**: reload last data / reset chart data
+   -  **right arrow**: navigate to the future (only if you have navigated
    or gone into the past before)
 
 .. |stats_001.jpg| image:: ../_static/images/catalog_and_maps/stats_001.jpg
