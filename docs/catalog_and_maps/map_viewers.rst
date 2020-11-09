@@ -135,12 +135,13 @@ the time instant in which component was at that location.
 |route_viewer_170_002.jpg|
 
 
-.. |universal_viewer_170_001.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_001.jpg
-.. |universal_viewer_170_002.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_002.jpg
-.. |universal_viewer_170_003.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_003.jpg
-.. |universal_viewer_170_004.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_004.jpg
-.. |universal_viewer_170_005.jpg| image:: .. image:: ../_static/images/catalog_and_maps/universal_viewer_170_005.jpg
-.. |chart_controls.png| image:: .. image:: ../_static/images/catalog_and_maps/chart_controls.png
-.. |complex_data_170_001.jpg| image:: .. image:: ../_static/images/catalog_and_maps/complex_data_170_001.jpg
-.. |route_viewer_170_001.jpg| image:: .. image:: ../_static/images/catalog_and_maps/route_viewer_170_001.jpg
-.. |route_viewer_170_002.jpg| image:: .. image:: ../_static/images/catalog_and_maps/route_viewer_170_002.jpg
+.. |universal_viewer_170_001.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_001.jpg
+.. |universal_viewer_170_002.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_002.jpg
+.. |universal_viewer_170_003.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_003.jpg
+.. |universal_viewer_170_004.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_004.jpg
+.. |universal_viewer_170_005.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_005.jpg
+.. |chart_controls.png| image:: ../_static/images/catalog_and_maps/chart_controls.png
+.. |complex_data_170_001.jpg| image:: ../_static/images/catalog_and_maps/complex_data_170_001.jpg
+.. |route_viewer_170_001.jpg| image:: ../_static/images/catalog_and_maps/route_viewer_170_001.jpg
+.. |route_viewer_170_002.jpg| image:: ../_static/images/catalog_and_maps/route_viewer_170_002.jpg
+
