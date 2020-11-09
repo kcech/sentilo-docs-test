@@ -119,14 +119,14 @@ any OGC WMS/WMTS service that provides a EPSG 3857 SRID.
 
 The configuration of both is in in /sentilo-catalog-web/src/main/resources/properties/catalog-config.properties.
 
-Example of a Google maps configuration
+Example of Google Maps configuration
 
 ::
 
    catalog.map.provider=gmaps
    catalog.map.google.key=AIza...
 
-Example of a Leaflet maps configuration, using a public Terrestris WMS service:
+Example of Leaflet maps configuration, using a public Terrestris WMS service:
 
 ::
 
@@ -138,6 +138,10 @@ Example of a Leaflet maps configuration, using a public Terrestris WMS service:
    catalog.map.wms.attribution=Terrestris
    catalog.map.wms.styles=
 
+.. note::
+
+   If you insert multiple layers in the *catalog.map.wms.layers* property, a layer selector
+   in the bottom-right corner of the map will appear.
 
 .. |universal_viewer_170_001.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_001.jpg
 .. |universal_viewer_170_002.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_002.jpg

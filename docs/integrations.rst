@@ -291,7 +291,7 @@ Sentilo has been successfully used in with these versions:
 
 
 Federation agent
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 **Description**
 
@@ -361,7 +361,7 @@ The "Client application token" input is the token created in the emitting Sentil
 
 
 Kafka agent
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 **Description**
 
@@ -470,3 +470,34 @@ In the end, you will be able to visualize private links in S3, for example:
 
 
 `see more <./services/subscription/subscription.html>`__
+
+
+Metrics Monitor Agent
+---------------------
+
+The agent persists internal Sentilo metrics, such as memory usage or number of threads and persists them in Elasticsearch.
+
+Elasticsearch template definition for this agent is located in
+/sentilo-agent-metrics-monitor/src/main/resources/elasticsearch. The template name is *sentilo-metrics* and the index pattern
+created by the agent is *sentilo-metrics**.
+
+The configuration /sentilo/sentilo-agent-metrics-monitor/src/main/resources/properties/monitor-config.properties
+and it's same as for the `Activity Monitor Agent`_. Example configuration:
+
+..
+
+   # Endpoint for elasticsearch
+   elasticsearch.url=http://localhost:9200
+
+   # Properties to configure the index process
+   batch.size=1
+   batch.workers.size=3
+   batch.max.retries=1
+
+
+The difference with the Activity Monitor agent is the Redis topic in subscription.properties:
+
+..
+
+   batch.max.retries=/metrics/*
+

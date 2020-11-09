@@ -1330,6 +1330,35 @@ icon for the new typology.
 
 |componenttypes_170_002.jpg|
 
+Metrics
+~~~~~~~
+
+The new *Metrics* section provides a real-time monitoring of all Sentilo modules, including agents.
+This information is useful when you want to rapidly assess the state of the service. However, for
+production monitoring, we recommend to also setup some process watcher and alerting system.
+
+Example of the timeline:
+
+|metrics_190_001.png|
+
+Example of dashboard:
+
+|metrics_190_002.png|
+
+.. note::
+
+   Since the metrics are in real-time only, no history is shown unless you leave the Metrics page open for a while.
+   The page will show graphics for this time. If you reload the page, the history will be reset.
+
+New internal monitor API runs on different port that the Sentilo API. It's port number is configured in
+/sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties. The default value is 7081.
+
+..
+
+   monitor.port=7081
+
+
+The agent *sentilo-agent-metrics-monitor* gathers these metrics and persists them in Elasticsearch.
 
 
 .. |ComponentsTypes.png| image:: ../_static/images/catalog_and_maps/ComponentsTypes.png
@@ -1379,3 +1408,5 @@ icon for the new typology.
 .. |sensorstypes_170_002.jpg| image:: ../_static/images/catalog_and_maps/sensorstypes_170_002.jpg
 .. |componenttypes_170_001.jpg| image:: ../_static/images/catalog_and_maps/componenttypes_170_001.jpg
 .. |componenttypes_170_002.jpg| image:: ../_static/images/catalog_and_maps/componenttypes_170_002.jpg
+.. |metrics_190_001.png| image:: ../_static/images/catalog_and_maps/metrics_190_001.png
+.. |metrics_190_002.png| image:: ../_static/images/catalog_and_maps/metrics_190_002.png
