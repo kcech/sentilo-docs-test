@@ -3,17 +3,17 @@ Rate Limiting
 
 Since v1.9, Sentilo offers rate limiting features for the REST API.
 
-Rest limiting prevents the Sentilo instance from request flooding and also protects
-subscribed external systems by limiting outbound requests.
+Rate limiting prevents the Sentilo instance from request flooding. Also, protects
+ external systems that are subscribed to Sentilo by limiting outcoming requests.
 
 Setting global limits
 ---------------------
 
-You can set global incoming quota `api.global_rate_limit.quota` in file
-sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties.
-If left unset or set to 0, Sentilo won't apply no global limit.
+You can set global incoming quota :literal:`api.global_rate_limit.quota` in file
+:literal:`sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties`.
+If left unset or set to 0, Sentilo won't apply any global limit.
 
-Also, global body length can be set using `api.body.max_length` variable.
+The maximum body length can also be set globally with :literal:`api.body.max_length` property.
 
 ::
 
@@ -84,7 +84,7 @@ subscription endpoint will contain following headers:
 |                                      | entity will be reset. Otherwise is 0.               |
 +--------------------------------------+-----------------------------------------------------+
 
-For example, consider the following case:
+For example, consider that the subscribed system receives a message, together with these headers:
 
 -  X-RateLimit-Outbound-Limit: 5
 -  X-RateLimit-Outbound-Remaining: 1
@@ -99,4 +99,4 @@ the two is met.
 
 
 
-.. |rl_entity_190.png| image:: _static/images/api_docs/rl_entity_190.png
+.. |rl_entity_190.png| image:: /_static/images/api_docs/rl_entity_190.png
