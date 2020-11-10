@@ -55,7 +55,7 @@ time-series graph with the last activity of each of its sensors:
 |universal_viewer_190_005.png|
 
 You may also click the bottom-right corner icon |universal_viewer_190_006.png|
-and get a page with more bigger detail. The URL of this page is shareable, i.e. it is possible to send it by email.
+and get a page with bigger detail. The URL of this page is shareable, i.e. it is possible to send it by email.
 
 |universal_viewer_190_007.png|
 

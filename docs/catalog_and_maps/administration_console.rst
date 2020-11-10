@@ -160,6 +160,72 @@ will result in:
 
 |Changing_map_color.png|
 
+
+Users
+~~~~~
+
+The "Users" section is for managing users of the catalog application. It’s possible to
+A catalog user can be one of these three roles:
+
+-  **Admin**: role for administration purposes.
+-  **Platform**: platform role for internal use.
+-  **User**: visualisation role, they could access to the administration
+   console and read all the data, but they haven’t permission for
+   changing anything, except own contact details and password.
+
+|users_170_001.jpg|
+
+.. note::
+
+   A non-admin account will only see a menu "User" with his/her own details. A User role cannot see list other users.
+
+**User properties editable by administrator**
+
++-----------------------+-----------------------+-----------------------+
+| Id                    | Name                  | Description           |
++=======================+=======================+=======================+
+| Id                    | User identifier       | After its creation    |
+|                       |                       | can't be modified     |
++-----------------------+-----------------------+-----------------------+
+| Password              | Password              | Admin user can        |
+|                       |                       | rewrite user's        |
+|                       |                       | password              |
++-----------------------+-----------------------+-----------------------+
+| Repeat                | Password check        |                       |
++-----------------------+-----------------------+-----------------------+
+| Name                  | User name             |                       |
++-----------------------+-----------------------+-----------------------+
+| Description           | Description           |                       |
++-----------------------+-----------------------+-----------------------+
+| Creation date         | Creation date         | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| Update date           | Last update date      | Automatically         |
+|                       |                       | generated             |
++-----------------------+-----------------------+-----------------------+
+| E-Mail                | User e-mail           |                       |
++-----------------------+-----------------------+-----------------------+
+| Active                | Checkbox for removing |                       |
+|                       | access                |                       |
++-----------------------+-----------------------+-----------------------+
+| Role                  | Related role          | Value list            |
++-----------------------+-----------------------+-----------------------+
+
+
+.. _users-edit-a-user:
+
+Edit a User
+^^^^^^^^^^^
+
+|users_170_002.jpg|
+
+
+.. note::
+
+   A password has to have 8-10 characters, and have at least 1 uppercase, 1 lowercase and 1 digit.
+
+
+
 Applications
 ~~~~~~~~~~~~
 
@@ -530,21 +596,21 @@ Within the context of Sentilo, components have a special meaning: they
 are not linked to the API REST (except for the
 `catalog <./api_docs/services/catalog/catalog.html>`__ service), i.e.,
 components are not required to publish or read data. We use components
-into Catalog to group together sensors sharing a set of properties (such
-as location, provider, power, connectivity, … ).
+in Catalog to group together sensors sharing a set of properties, such
+as location, provider, power or connectivity.
 
 You could think of them as physical devices with a set of sensors, like
 a weather station or a microcontroller, with multiple sensors connected.
-But not neccesarily a component needs to have sensors physically
+But not necessarily a component needs to have sensors physically
 connected to it. A gateway could also be modeled as a component: you
 could have a wireless sensor network
 (`WSN <http://en.wikipedia.org/wiki/Wireless_sensor_network>`__) where
 each sensor sends data to a gateway and then it sends data to Sentilo
 using its Ethernet/WiFi/.. connection . In this case, the gateway will
-be a *component*. And finally, if you have a sensor that connects to
+also be a *component*. And finally, if you have a sensor that connects to
 Sentilo directly then you will have a component with only one sensor.
 
-In short: into Sentilo, a sensor always need to be related to a
+In short: in Sentilo, a sensor always need to be related to a
 component and providers have its sensors grouped by components, as shown
 in the following picture:
 
@@ -1136,68 +1202,17 @@ provider.
 To bulk-delete alerts with associated with a particular rule, just
 select the item from the Alert Rule list and press Delete.
 
-Users
-~~~~~
 
-The "Users" section is for managing users of the catalog application. It’s possible to
-A catalog user can be one of these three roles:
+Active Subscriptions
+~~~~~~~~~~~~~~~~~~~~
 
--  **Admin**: role for administration purposes.
--  **Platform**: platform role for internal use.
--  **User**: visualisation role, they could access to the administration
-   console and read all the data, but they haven’t permission for
-   changing anything, except own contact details and password.
+Active Subscriptions is a handy section that gives a view of situation of the subscriptions to Sentilo.
 
-|users_170_001.jpg|
-
-.. note::
-
-   A non-admin account will only see a menu "User" with his/her own details. A User role cannot see list other users.
-
-**User properties editable by administrator**
-
-+-----------------------+-----------------------+-----------------------+
-| Id                    | Name                  | Description           |
-+=======================+=======================+=======================+
-| Id                    | User identifier       | After its creation    |
-|                       |                       | can't be modified     |
-+-----------------------+-----------------------+-----------------------+
-| Password              | Password              | Admin user can        |
-|                       |                       | rewrite user's        |
-|                       |                       | password              |
-+-----------------------+-----------------------+-----------------------+
-| Repeat                | Password check        |                       |
-+-----------------------+-----------------------+-----------------------+
-| Name                  | User name             |                       |
-+-----------------------+-----------------------+-----------------------+
-| Description           | Description           |                       |
-+-----------------------+-----------------------+-----------------------+
-| Creation date         | Creation date         | Automatically         |
-|                       |                       | generated             |
-+-----------------------+-----------------------+-----------------------+
-| Update date           | Last update date      | Automatically         |
-|                       |                       | generated             |
-+-----------------------+-----------------------+-----------------------+
-| E-Mail                | User e-mail           |                       |
-+-----------------------+-----------------------+-----------------------+
-| Active                | Checkbox for removing |                       |
-|                       | access                |                       |
-+-----------------------+-----------------------+-----------------------+
-| Role                  | Related role          | Value list            |
-+-----------------------+-----------------------+-----------------------+
+The some system subscribes to Sentilo and then is inaccessible for a long time, this creates a unnecessary queue in the system.
 
 
-.. _users-edit-a-user:
+|active_subs_190_001.png|
 
-Edit a User
-^^^^^^^^^^^
-
-|users_170_002.jpg|
-
-
-.. note::
-
-   A password has to have 8-10 characters, and have at least 1 uppercase, 1 lowercase and 1 digit.
 
 Sensor types
 ~~~~~~~~~~~~
@@ -1409,3 +1424,4 @@ The agent `Metrics Monitor Agent <./integrations.html#metrics-monitor-agent>`__ 
 .. |componenttypes_170_002.jpg| image:: ../_static/images/catalog_and_maps/componenttypes_170_002.jpg
 .. |metrics_190_001.png| image:: ../_static/images/catalog_and_maps/metrics_190_001.png
 .. |metrics_190_002.png| image:: ../_static/images/catalog_and_maps/metrics_190_002.png
+.. |active_subs_190_001.png| image:: ../_static/images/catalog_and_maps/active_subs_190_001.png
