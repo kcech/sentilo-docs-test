@@ -1,9 +1,6 @@
 Architecture
 ============
 
-Sentilo platform
-----------------
-
 Sentilo is a platform aimed to isolate and communicate the applications
 that are developed to exploit the information generated from the ground
 by the layer of sensors deployed across to collect and broadcast this
@@ -77,7 +74,7 @@ Agents are Java processes that expand the core functionality of the
 platform through a Plug & Play system using the Redis publish and
 subscribe mechanism.
 
-Sentilo currently provides several `agents <./integrations.html#agents>`__:
+Sentilo currently provides several `agents <./integrations.html#agents>`__, for example:
 
 -  **Relational database agent**: used to export historical data to a
    relational database.
@@ -87,6 +84,8 @@ Sentilo currently provides several `agents <./integrations.html#agents>`__:
 -  **Activity Monitor Agent**: used for upload the events to
    Elasticsearch.
 -  **Historian Agent**: used for upload the events to OpenTSDB.
+
+See the complete list here: `Sentilo Agents <./integrations.html#agents>`__
 
 Authentication Token
 ^^^^^^^^^^^^^^^^^^^^
