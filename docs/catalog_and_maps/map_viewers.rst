@@ -1,8 +1,8 @@
 Map Viewers
 -----------
 
-In the publicly accessible section of the Catalog, Sentilo offers 2 different map viewers that display
-data in real-time, as they arrive to the system.
+In the publicly accessible section of the Catalog, Sentilo offers two different map viewers that display
+data in real-time, as they are being published in the system.
 
 Both viewers are accessible from the *Explore* item
 at the top menu bar (*Universal viewer* and *Route viewer*).
@@ -52,7 +52,12 @@ If you click into the content area of the popup window, a new page is
 open displaying some basic details about the component, and a
 time-series graph with the last activity of each of its sensors:
 
-|universal_viewer_170_005.jpg|
+|universal_viewer_190_005.png|
+
+You may also click the bottom-right corner icon |universal_viewer_190_006.png|
+and get a page with more bigger detail. The URL of this page is shareable, i.e. it is possible to send it by email.
+
+|universal_viewer_190_007.png|
 
 .. _navigate-the-last-data-chart-1:
 
@@ -147,7 +152,9 @@ Example of Leaflet maps configuration, using a public Terrestris WMS service:
 .. |universal_viewer_170_002.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_002.jpg
 .. |universal_viewer_170_003.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_003.jpg
 .. |universal_viewer_170_004.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_004.jpg
-.. |universal_viewer_170_005.jpg| image:: ../_static/images/catalog_and_maps/universal_viewer_170_005.jpg
+.. |universal_viewer_190_005.png| image:: ../_static/images/catalog_and_maps/universal_viewer_190_005.png
+.. |universal_viewer_190_006.png| image:: ../_static/images/catalog_and_maps/universal_viewer_190_006.png
+.. |universal_viewer_190_007.png| image:: ../_static/images/catalog_and_maps/universal_viewer_190_007.png
 .. |chart_controls.png| image:: ../_static/images/catalog_and_maps/chart_controls.png
 .. |complex_data_170_001.jpg| image:: ../_static/images/catalog_and_maps/complex_data_170_001.jpg
 .. |route_viewer_170_001.jpg| image:: ../_static/images/catalog_and_maps/route_viewer_170_001.jpg

@@ -472,7 +472,7 @@ to upload files such as audio snippets, images or files in general.
 
 Sensor can publish links to multimedia files. If these links are always public, catalog will preview them without any additional configuration.
 
-If these media links are private and managed by S3, catalog needs these properties in the file catalog-config.properties:
+If these media links are private and managed by S3, catalog needs these properties in the file :literal:`catalog-config.properties`:
 
 +--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Property                 | Default Value    | Description                                                                                                                                                                                                                                                           |
