@@ -143,6 +143,8 @@ Example of Leaflet maps configuration, using a public Terrestris WMS service:
    catalog.map.wms.attribution=Terrestris
    catalog.map.wms.styles=
 
+|map_provider_190_001.png|
+
 .. note::
 
    If you insert multiple layers in the *catalog.map.wms.layers* property, a layer selector
@@ -159,4 +161,5 @@ Example of Leaflet maps configuration, using a public Terrestris WMS service:
 .. |complex_data_170_001.jpg| image:: ../_static/images/catalog_and_maps/complex_data_170_001.jpg
 .. |route_viewer_170_001.jpg| image:: ../_static/images/catalog_and_maps/route_viewer_170_001.jpg
 .. |route_viewer_170_002.jpg| image:: ../_static/images/catalog_and_maps/route_viewer_170_002.jpg
+.. |map_provider_190_001.png| image:: ../_static/images/catalog_and_maps/map_provider_190_001.png
 
