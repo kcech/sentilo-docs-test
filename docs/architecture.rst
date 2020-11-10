@@ -247,9 +247,9 @@ layer:
 
 -  Redis is responsible for sending the published information to
    ListenerMessageContainer event, who is responsible for managing the
-   subscription in Redis as a client for any type of event. \**(*)*\*
+   subscription in Redis as a client for any type of event.
 -  The container notifies the event to each subscription associated with
-   it sending a request, via HttpCallback \**(*)*\*
+   it sending a request, via :literal:`HttpCallback`
 
 The platform registers a task that runs periodically who is responsible
 for credentials & permissions synchronization, stored in memory in

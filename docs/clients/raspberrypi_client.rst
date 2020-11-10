@@ -798,7 +798,7 @@ Debugging the library
 ^^^^^^^^^^^^^^^^^^^^^
 
 If you need to debug your execution, you can edit the file
-**/sentiloclient/utils/SentiloLogs.js** and edit the logs configuration
+:literal:`/sentiloclient/utils/SentiloLogs.js` and edit the logs configuration
 properties, as you need:
 
 ::

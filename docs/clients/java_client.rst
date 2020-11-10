@@ -61,8 +61,8 @@ Now you can then navigate into the project and edit the source code.
 The properties file
 ^^^^^^^^^^^^^^^^^^^
 
-You must modify the properties file **application.properties** located
-in **src/main/resources/properties** in order to provide your correct
+You must modify the properties file :literal:`application.properties` located
+in :literal:`src/main/resources/properties` in order to provide your correct
 Sentilo Platform Client configurations. There’re some values that are
 for testing purposes, and they may not be changed.
 

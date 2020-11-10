@@ -145,7 +145,7 @@ machine and listening in the following ports:
 -  openTSDB: 4242
 
 All these settings can be found in the subdirectory
-**/src/main/resources/properties** of each platform’s module.
+:literal:`/src/main/resources/properties` of each platform’s module.
 
 Redis settings
 ~~~~~~~~~~~~~~
@@ -237,7 +237,7 @@ command from the directory where the file is located:
    recommend to change them before installing Sentilo in a production
    environment.
 
-If you change default values in the /sentilo/scripts/mongodb/init_data.js file and load them to
+If you change default values in the :literal:`/sentilo/scripts/mongodb/init_data.js` file and load them to
 MongoDB, you will have to modify the following properties before compiling and building Sentilo. So, following
 JS code from *init_data.js* :
 

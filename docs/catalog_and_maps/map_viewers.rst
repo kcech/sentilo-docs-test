@@ -122,7 +122,7 @@ Map Providers
 For all background maps, you can use either Google or Leaflet map provider. Through the latter you can consume
 any OGC WMS/WMTS service that provides a EPSG 3857 SRID.
 
-The configuration of both is in in /sentilo-catalog-web/src/main/resources/properties/catalog-config.properties.
+The configuration of both is in in :literal:`/sentilo-catalog-web/src/main/resources/properties/catalog-config.properties`.
 
 Example of Google Maps configuration
 

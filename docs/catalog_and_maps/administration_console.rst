@@ -279,7 +279,7 @@ where:
 -  the *Permissions*\ tab allows to manage the permissions for other
    entities (applications or providers)
 -  the *Active subscriptions* tab displays a list with all the active
-   subscriptions for the current application (from version 1.5).
+   subscriptions for the current application.
 
 The main properties of the *Details* tab are the following:
 
@@ -464,7 +464,7 @@ where
 -  The *Sensors/Actuators* tab displays a list with all sensors owned by
    the current provider (i.e. associated with this provider).
 -  The *Components* tab displays a list with all components owned by the
-   current provider (from version 1.5).
+   current provider.
 -  The *Active subscriptions* tab displays a list with all the active
    subscriptions for the current provider.
 -  The *Documentation* In this tab you can upload any files relevant to
@@ -1366,13 +1366,13 @@ Example of dashboard:
    The page will show graphics for this time. If you reload the page, the history will be reset.
 
 New internal monitor API runs on different port that the Sentilo API. It's port number is configured in
-/sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties. The default value is 7081.
+:literal:`/sentilo-platform/sentilo-platform-server/src/main/resources/properties/config.properties`. The default value is 7081.
 
 ..
 
-   monitor.port=7081
+    monitor.port=7081
 
-The agent `Metrics Monitor Agent <./integrations.html#metrics-monitor-agent>`__ gathers these metrics and persists them in Elasticsearch.
+The agent `Metrics Monitor Agent </integrations.html#metrics-monitor-agent>`__ gathers these metrics and persists them in Elasticsearch.
 
 
 .. |ComponentsTypes.png| image:: ../_static/images/catalog_and_maps/ComponentsTypes.png

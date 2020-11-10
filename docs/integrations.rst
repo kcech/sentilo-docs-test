@@ -136,7 +136,7 @@ this page.
 **Configuration**
 
 Activity Monitor Agent is configured with a set of .properties files in
-*sentilo/sentilo-agent-activity-monitor/src/main/resources/properties*.
+:literal:`sentilo/sentilo-agent-activity-monitor/src/main/resources/properties`.
 
 **subsription.properties**
 
@@ -224,7 +224,7 @@ datasources.
 **Configuration**
 
 Historian Agent is configured with a set of .properties files in
-sentilo/sentilo-agent-historian/src/main/resources/properties.
+:literal:`sentilo/sentilo-agent-historian/src/main/resources/properties`.
 
 **subsription.properties**
 
@@ -316,7 +316,7 @@ to forward the events to this endpoint URL.
 **Configuration**
 
 Federation Agent's configuration is in file
-sentilo/sentilo-agent-federation/src/main/resources/properties/application.properties.
+:literal:`sentilo/sentilo-agent-federation/src/main/resources/properties/application.properties`.
 
 +---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
 | Property                                    | Default Value                         | Description                                                                                              |
@@ -434,7 +434,7 @@ and it's same as for the `Activity Monitor Agent`_. Example configuration:
     batch.max.retries=1
 
 
-The difference with the Activity Monitor agent is the Redis topic in subscription.properties:
+The difference with the Activity Monitor agent is the Redis topic in :literal:`subscription.properties`:
 
 ..
 
