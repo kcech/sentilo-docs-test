@@ -5,9 +5,9 @@ A Sentilo sample instance is available for testing purposes distributed
 as a Open Virtual Appliance file
 (`OVA <https://en.wikipedia.org/wiki/Open_Virtualization_Format>`__).
 
-The appliance is available for download
-   `here <http://www.sentilo.io/wordpress/download/appliance/view(6).html>`__. It has been
-   tested with **Virtual Box v5 and v6**.
+The appliance is available for download `here <https://drive.google.com/file/d/1pu1GorRtaNC9kY208Obt-9dUNoUlbEnZ/view?usp=sharing>`__.
+
+It has been tested with **Virtual Box v5 and v6**.
 
 .. note::
 
@@ -37,4 +37,4 @@ First steps:
    admin/1234
 -  The API Rest endpoint will be listening for requests in:
    http://localhost:8081
--  SSH server is listening on localhost 2222
+-  SSH server is listening on localhost 2222. Access credentials are sentilo/sentilo
