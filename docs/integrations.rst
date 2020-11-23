@@ -508,7 +508,7 @@ NodeJS
 ------
 .. image:: _static/images/integrations/node-js.png
    :width: 340px
-   :height: 120px
+   :height: 140px
    :target: https://github.com/sentilo/sentilo-client-nodejs
 
 The Sentilo Node.js client library code that brings some Sentilo operations that you can include in your own code.
