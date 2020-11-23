@@ -507,8 +507,19 @@ In the end, you will be able to visualize private links in S3, for example:
 NodeJS
 ------
 
+
+
 Java
 ------
+
+.. image:: _static/images/integrations/spring-framework.png
+   :width: 350px
+   :height: 180px
+   :target: https://github.com/sentilo/sentilo-client-sample-java
+
+This is a sample web application that uses the Sentilo Java platform client using Spring MVC. The application needs to be deployed on a Tomcat.
+
+More information in: https://github.com/sentilo/sentilo-client-sample-java
 
 Arduino
 ------
