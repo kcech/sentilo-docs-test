@@ -1,4 +1,4 @@
-Clients / Tutorials
+Tutorials
 =======
 
 Contents:
