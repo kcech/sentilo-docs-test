@@ -40,7 +40,7 @@ To disable it, you must provide a JVM Tomcat parameter:
 
    -Dsentilo.state_page.enabled=false
 
-Then, the status page will be innaccessible:
+Then, the status page will be inaccessible:
 
 |status_170_003.jpg|
 
@@ -48,7 +48,7 @@ Postman tests
 -------------
 
 To test the API REST services individually, you can also test end-end
-funcionality with `Postman <https://www.getpostman.com>`__, or if you
+functionality with `Postman <https://www.getpostman.com>`__, or if you
 prefer CLI, via
 `Newsman <https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman>`__:
 

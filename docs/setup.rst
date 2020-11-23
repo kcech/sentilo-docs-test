@@ -3,10 +3,10 @@ Setup
 
 This guide describes how to: **download, configure, compile and install
 the last version of Sentilo in your own runtime environment**. Moreover,
-it details which are the infraestructure elements necessary for running
+it details which are the infrastructure elements necessary for running
 Sentilo and how should be their default configuration settings. It’s
-assumed you have the skils to configure and install the necessary
-sofware base(Operating System, Maven,JDK, Mongo DB, Redis, etc).
+assumed you have the skills to configure and install the necessary
+software base(Operating System, Maven,JDK, Mongo DB, Redis, etc).
 
 The main topics are:
 
@@ -14,7 +14,7 @@ The main topics are:
    installed before download the code.
 -  **Download and build**: explains the steps to obtain the Sentilo
    code, to adapt it and how to build the platform artifacts.
--  **Platform infraestructure**: describes the mandatory infraestructure
+-  **Platform infrastructure**: describes the mandatory infrastructure
    components for running Sentilo and its default configuration
    settings.
 -  **Deploy the artifacts**: describes the necessary steps to deploy all
@@ -71,7 +71,7 @@ settings that are defined), we distribute a script named
 command line.
 
 This script compiles the code and build the artifacts from scratch, but
-it doesn’t deploy them in the excution environments. This process must
+it doesn't deploy them in the execution environments. This process must
 be done manually by different reasons, for example:
 
 -  The deployment environment could be distributed in different servers.
@@ -96,7 +96,7 @@ how to do it by using the M2E plugin.
 your Eclipse environment.
 
 After modifying the code, to compile and build the artifacts, our
-recommendation is to use the abovementioned\* buildSentilo\* script.
+recommendation is to use the above mentioned\* buildSentilo\* script.
 
 Platform infrastructure
 -----------------------

@@ -78,7 +78,7 @@ and consists of the following parts:
    (e.g. 8081).
 -  **service:** catalog, data, order, etc..
 
-Every service has a custom URL format as especified for each services.
+Every service has a custom URL format as specified for each services.
 
 Representations
 ---------------

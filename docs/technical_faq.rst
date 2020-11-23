@@ -5,7 +5,7 @@ In which platforms has been Sentilo tested ?
 --------------------------------------------
 
 The first deployment for the Barcelona City Council has been tested in
-the following infraestructure:
+the following infrastructure:
 
 -  Four virtual machines, two for the front-ends and another two for the
    back-end

@@ -80,7 +80,7 @@ Displaying complex data
 In some cases, you may want to inform **complex data** as an observation
 on Sentilo, such like a large json object. For these cases, Sentilo will
 detect that the text is a json object and then it will be shown to you
-as a prettyfied json value:
+as a prettify json value:
 
 |complex_data_170_001.jpg|
 

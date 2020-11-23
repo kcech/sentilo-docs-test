@@ -57,9 +57,9 @@ authorized entity ( provider or application ) is allowed to admin, write
 or read in a resource.
 
 These permissions are defined via the catalog console of the platform
-and, by default, every entity is administrable by its owner.
+and, by default, every entity can be administrated by its owner.
 
-If an action on a resource is done without the appropiate permission,
+If an action on a resource is done without the appropriate permission,
 platform will return an error 403.
 
 Securing Callbacks
@@ -74,7 +74,7 @@ This mechanisms guarantees:
 
 -  That the message was sent by the platform
 -  That the message was not altered after sent
--  That the messege is still active
+-  That the message is still active
 
 As hash algorithm the system uses
 `SHA-512 <http://en.wikipedia.org/wiki/SHA-2>`__. It accepts keys of any

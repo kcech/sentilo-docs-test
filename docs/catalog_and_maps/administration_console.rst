@@ -27,7 +27,7 @@ corresponding row.
 
 When you select to add a new resource, a traditional form page is
 displayed. Here, you must have filled in the mandatory fields before
-clicking the *Save* button. If some mandatory field is not fiiled in or
+clicking the *Save* button. If some mandatory field is not filed in or
 it have a no valid value, the page shows you information about what is
 wrong:
 
@@ -35,7 +35,7 @@ wrong:
 
 Otherwise, the resource will be registered into the Catalog and you will
 be redirect to the list page (at the top right corner you will see a
-confirmation message that the resource have been succesfully created):
+confirmation message that the resource have been successfully created):
 
 |ComponentsTypes_create.png|
 
@@ -45,7 +45,7 @@ before deleting it:
 
 |ComponentsTypes_delete.png|
 
-If the resource has been succesfully removed, the list is reloaded and a
+If the resource has been successfully removed, the list is reloaded and a
 confirmation message is displayed at the top right corner:
 
 |ComponentsTypes_deleted.png|
@@ -851,7 +851,7 @@ where
    of the sensor.
 -  The *Additional information* tab displays the custom properties of
    the sensor.
--  The *Latest data* tab shows the latests observations received from
+-  The *Latest data* tab shows the latest observations received from
    the sensor.
 
 The main properties of the *Details* tab are the following:
@@ -1147,7 +1147,7 @@ field is case-sensitive. That means that you can search for full or
 partial text contained in the identifier, type, trigger or status field.
 If you want to search for certain trigger type, currently only searching
 by trigger type’s code is possible (e.g. a search for “GT” would return
-results in the above screen, whereas a search for “GT(40)” wouldn’t).
+results in the above screen, whereas a search for “GT(40)” wouldn't).
 
 |alert_list.png|
 

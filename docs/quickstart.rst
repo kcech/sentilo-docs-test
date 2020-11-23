@@ -1,7 +1,7 @@
 Quickstart
 ==========
 
-Prequisites
+Perquisites
 -----------
 
 You should have 4 components up & running:

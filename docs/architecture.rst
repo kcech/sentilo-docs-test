@@ -46,7 +46,7 @@ RealTime storage
 
 Primary repository where the platform stores all the information
 received. It is configured to do periodic backups in the file system. It
-is also the Publish/Subscrive engine.
+is also the Publish/Subscribe engine.
 
 REST API
 ^^^^^^^^
@@ -113,7 +113,7 @@ Please, check this out fore more `info <./api_docs/security.hml>`__.
 Notification mechanism
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Sentilo provides two mechanisms for nofitying events:
+Sentilo provides two mechanisms for notifying events:
 
 -  If the client is capable of having an opened socket, the platform
    will send a notification to this socket every time an event is
@@ -141,7 +141,7 @@ Alert
 Sentilo allows to manage sensor-level internal alerts, aimed to control
 the validity of the data received. The set of conditional operators
 available are: **>, >=, <, <=, =, any change, variation, frozen**. When
-the value received from a sensor doesn’t met any of the conditions
+the value received from a sensor doesn't met any of the conditions
 defined, the alert agent publishes an event (alarm) notifying it. These
 alerts are defined through the `console <./catalog_and_maps.html>`__.
 There are also external alerts which can be defined and triggered
@@ -171,7 +171,7 @@ into two layers:
 Transport Layer
 '''''''''''''''
 
-Tthe transport layer is designed following the Thread Pool pattern and
+The transport layer is designed following the Thread Pool pattern and
 is implemented with Apache HttpCore library.
 
 The following diagram shows the main flow for a request within this
@@ -214,7 +214,7 @@ Service Layer
 
 The design of this layer has the main premise of minimizing the request
 processing time, so all the main job is held in memory(Redis). Redis
-stores data in a memory database but also has the posibility of disk
+stores data in a memory database but also has the possibility of disk
 storage to ensure the durability of the data.
 
 The following diagram shows the main flow for a request within this

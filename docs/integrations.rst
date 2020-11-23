@@ -138,7 +138,7 @@ this page.
 Activity Monitor Agent is configured with a set of .properties files in
 :literal:`sentilo/sentilo-agent-activity-monitor/src/main/resources/properties`.
 
-**subsription.properties**
+**subscription.properties**
 
 +-----------------------+-----------------------+-----------------------------------------+
 | Property              | Description           | Comments                                |
@@ -226,7 +226,7 @@ data sources.
 Historian Agent is configured with a set of .properties files in
 :literal:`sentilo/sentilo-agent-historian/src/main/resources/properties`.
 
-**subsription.properties**
+**subscription.properties**
 
 +-----------------------+-----------------------+---------------------------------------+
 | Property              | Description           | Comments                              |
@@ -301,7 +301,7 @@ The agent is installed at the side of the receiving instance:
 
 .. image:: _static/images/integrations/sentilo_federation.png
 
-The administrator of the emmitting Sentilo instance only needs to create a new application and provide the token the
+The administrator of the emitting Sentilo instance only needs to create a new application and provide the token the
 administrator of the receiving instance.
 As with any Sentilo application, the administrator is in control of which provider's data are readable by the remote federation agent.
 
