@@ -4,13 +4,13 @@ RaspberryPi Client
 .. figure:: /_static/images/clients/raspberrypi.jpeg
    :alt: RaspberryPi
 
-The **SentiloClientNodej** is a library written in javascript that
+The **SentiloClientNodeJS** is a library written in javascript that
 brings to you the possibility to connect any device and embedded device
 with Node.js to a Sentilo instance easily.
 
 For this example we’ll use a Raspberry pi device, because its special
 features, like cheap price, small dimensions and the great input-output
-possiblities.
+possibilities.
 
 Hardware
 --------
@@ -131,7 +131,7 @@ Install some library dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need some Node.js modules to work with our library. So you need to
-download and install the throgh *npm*.
+download and install the through *npm*.
 
 You can download via npm update:
 
@@ -160,7 +160,7 @@ Ok, but, what are they?
    link <https://www.npmjs.com/package/tm-onoff>`__ for more
    information)
 
-Now, we can start to debvelop with node in our working directory
+Now, we can start to develop with node in our working directory
 
 Connecting the hardware
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -230,7 +230,7 @@ actuator.js
 This file contains code to control the output LED, that performs a
 simulation of a possible actuator controlled by the Raspberry Pi and
 orders published on the Sentilo platform. In the example, the system is
-being subscribed as enpoint to receive incoming order actuation calls.
+being subscribed as endpoint to receive incoming order actuation calls.
 
 .. code:: javascript
 
@@ -238,7 +238,7 @@ being subscribed as enpoint to receive incoming order actuation calls.
    var led;
 
    /**
-    * Sample module that perfoms operations over the actuator
+    * Sample module that performs operations over the actuator
     */
    module.exports = {
 
@@ -329,7 +329,7 @@ sentilo.js
 ^^^^^^^^^^
 
 This file is a little interface that wraps the general calls to the
-library. Its function is make more easy the interactuation between the
+library. Its function is make more easy the interaction between the
 server and the library. It isn’t really necessary, but is a good method
 to modularize the code.
 
@@ -347,7 +347,7 @@ to modularize the code.
    module.exports = {
 
        /**
-        * Initialize the services with default and cuistom options
+        * Initialize the services with default and custom options
         */
        init : function(initOptions) {
            // Initialize the services
@@ -583,7 +583,7 @@ waiting for incoming calls that apply to the actuator.
    console.log('My ip address is: ' + myIp + ', and my port: ' + myPort);
 
    // Service and example options
-   // You must modify it under your requeriments
+   // You must modify it under your requirements
    var samplesOptions = {
        host : 'YOR_SERVER_HOST',
        port : 'YOUR_SERVER_PORT',
@@ -611,7 +611,7 @@ waiting for incoming calls that apply to the actuator.
    server.use(restify.queryParser());
    server.use(restify.bodyParser());
 
-   // We only need a POST endpoint service to receive ordercs callbacks
+   // We only need a POST endpoint service to receive orders callbacks
    // The path will be [POST] http://localhost:8080/order
    server.post('/order', function(req, res, next) {
        res.send(req.params);
@@ -634,7 +634,7 @@ waiting for incoming calls that apply to the actuator.
    });
 
    // Init Sentilo services for this example
-   // Here you must pass as paramether the specific configuration
+   // Here you must pass as parameter the specific configuration
    sentilo.init(samplesOptions);
 
    // Test if is there the sensor configured in the catalog
@@ -665,7 +665,7 @@ waiting for incoming calls that apply to the actuator.
    console.log('Alarm published: ' + alarmInputMessage.message);
 
    // Subscribe the sensor orders
-   // We'll manage it throught our server on POST service
+   // We'll manage it throughout our server on POST service
    var subscriptionInputMessage = {
        endpoint : myOrderEndoint
    };
@@ -724,12 +724,12 @@ Now, what’s happens in this code?
 -  We’re passing to it our specific services configuration, like the
    sensor id, provider’s token, etc…
 -  Request for the sensor in the Sentilo Catalog platform, and if it
-   doen’t exists, create it
+   doesn't’t exists, create it
 -  Once we have created the sensor, we’re creating an alert, named
    **SYSTEM_STATUS_ALERT**, and publishing an initial alarm that says
    **The system goes up on {date}**. Then, the sensor is up and we’re
    informing it to the system
--  After tgat, retrieve some system and sensor data values and publish
+-  After that, retrieve some system and sensor data values and publish
    them every 60000ms (1 minute) in a infinite loop
 
 Executing the example
@@ -761,7 +761,7 @@ seconds:
 Publishing and accepting orders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The server also is witing for incoming POST calls that responses the
+The server also is writing for incoming POST calls that responses the
 ORDER requests. You can practice with orders, sending a PUT message to
 the Sentilo platform, some like this:
 
