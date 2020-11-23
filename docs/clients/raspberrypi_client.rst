@@ -335,206 +335,190 @@ to modularize the code.
 
 .. code:: javascript
 
-   var servicesConfig = require('./sentiloclient/ServicesConfiguration');
-   var logger = require('./sentiloclient/utils/SentiloLogs');
-   var utils = require('./sentiloclient/utils/SentiloUtils');
+    const logger = require('./utils/SentiloLogs');
+    const utils = require('./utils/SentiloUtils');
 
-   var catalog = require('./sentiloclient/CatalogServiceOperations');
-   var data = require('./sentiloclient/DataServiceOperations');
-   var alarm = require('./sentiloclient/AlarmServiceOperations');
-   var subscribe = require('./sentiloclient/SubscriptionServiceOperations.js');
+    const catalog = require('./CatalogServiceOperations');
+    const data = require('./DataServiceOperations');
+    const alarm = require('./AlarmServiceOperations');
+    const subscribe = require('./SubscriptionServiceOperations.js');
 
-   module.exports = {
+    module.exports = {
 
-       /**
-        * Initialize the services with default and custom options
-        */
-       init : function(initOptions) {
-           // Initialize the services
-           catalog.init(initOptions);
-           data.init(initOptions);
-           alarm.init(initOptions);
-           subscribe.init(initOptions);
+        /**
+         * Initialize the services with default and custom options
+         */
+        init : function(initOptions) {
+            // Initialize the services
+            catalog.init(initOptions);
+            data.init(initOptions);
+            alarm.init(initOptions);
+            subscribe.init(initOptions);
 
-           logger.debug("Samples module initialization successful");
-       },
+            logger.debug("Samples module initialization successful");
+        },
 
-       /**
-        * Search a sensor in the catalog
-        * 
-        * @return boolean
-        */
-       existsSensorInCatalog : function(options) {
-           // Get all sensors from provider
-           var response = catalog.getSensors(options);
+        /**
+         * Search a sensor in the catalog
+         *
+         * @return boolean
+         */
+        existsSensorInCatalog : function(options) {
+            // Get all sensors from provider
+            const response = catalog.getSensors(options);
 
-           // The params os the example
-           var provider = options.provider;
-           var sensor = options.sensor;
+            // The params of the example
+            const providerSearch = options.provider;
+            const sensorSearch = options.sensor;
 
-           // Look the desired sensor in the catalog...
-           var existsSensor = false;
-           if (response && response.providers) {
-               var providers = response.providers;
-               for (var p = 0; p < providers.length; p++) {
-                   var provider = providers[p];
-                   if (provider.sensors && provider.sensors.length > 0) {
-                       var sensors = provider.sensors;
-                       for (var s = 0; s < sensors.length; s++) {
-                           var sensor = sensors[s];
-                           if (sensor === sensor.sensor) {
-                               existsSensor = true;
-                               break;
-                           }
-                       }
-                   }
-               }
-           }
+            // Look the desired sensor in the catalog...
+            if (response && response.providers) {
+                const provider = response.providers.find((provider) => provider.provider === providerSearch);
+                if (!provider) {
+                    logger.error('Provider with name ' + providerSearch + ' not found, exiting');
+                    return false;
+                }
+                return !!provider.sensors.find(sensor => sensor.sensor === sensorSearch);
+            }
+        },
 
-           logger.debug('Exists the \'' + provider + '\' and \'' + sensor + '\' in the catalog? ' + existsSensor);
+        /**
+         * Create a sensor
+         */
+        createSensor : function(options) {
+            logger.debug('Adding the sensor \'' + options.sensor + '\' to the catalog...');
 
-           return existsSensor;
-       },
+            // Create an input message to inform the new sensor data
+            // We are using the sample data, defined in ServicesConfiguration module
+            const inputMessage = {
+                body : {
+                    sensors : [ {
+                        sensor : options.sensor,
+                        description : options.sensorDesc,
+                        type : options.sensorType,
+                        dataType : options.sensorDataType,
+                        unit : options.sensorUnit,
+                        component : options.component,
+                        componentType : options.componentType,
+                        location : options.sensorLocation
+                    } ]
+                }
+            };
 
-       /**
-        * Create a sensor
-        */
-       createSensor : function(options) {
-           logger.debug('Adding the sensor \'' + options.sensor + '\' to the catalog...');
+            logger.debug(inputMessage);
 
-           // Create an input message to inform the new sensor data
-           // We are using the sample data, defined in ServicesConfiguration module
-           var inputMessage = {
-               body : {
-                   sensors : [ {
-                       sensor : options.sensor,
-                       description : options.sensorDesc,
-                       type : options.sensorType,
-                       dataType : options.sensorDataType,
-                       unit : options.sensorUnit,
-                       component : options.component,
-                       componentType : options.componentType,
-                       location : options.sensorLocation
-                   } ]
-               }
-           };
-           
-           logger.debug(inputMessage);
+            const response = catalog.registerSensors(inputMessage);
+            if (utils.isResponseNOK(response)) {
+                logger.error('Error registering the sensors');
+                logger.error(response);
+                return false;
+            }
+            return true;
+        },
 
-           var response = catalog.registerSensors(inputMessage);
-           if (response && response.code && response.code === 400) {
-               logger.error('Error registering the sensors');
-               logger.error(response);
-               return false;
-           } else {
-               return true;
-           }
-       },
+        /**
+         * Publish observations
+         */
+        publishObservations : function(value, options) {
+            let observationsInputMessage = {
+                body : {
+                    observations : [ {
+                        value : value
+                    } ]
+                }
+            };
 
-       /**
-        * Publish observations
-        */
-       publishObservations : function(value, options) {
-           var observationsInputMessage = {
-               body : {
-                   observations : [ {
-                       value : value
-                   } ]
-               }
-           };
+            observationsInputMessage = utils.mergeOptions(observationsInputMessage, options);
 
-           observationsInputMessage = utils.mergeOptions(observationsInputMessage, options);
+            const response = data.sendObservations(observationsInputMessage);
+            if (utils.isResponseNOK(response)) {
+                logger.error('Error publishing observations');
+                logger.error(response);
+                return false;
+            }
+            return true;
+        },
 
-           var response = data.sendObservations(observationsInputMessage);
-           if (response && response.code && response.code === 400) {
-               logger.error('Error publishing observations');
-               logger.error(response);
-               return false;
-           } else {
-               return true;
-           }
-       },
+        /**
+         * Create an alert list
+         */
+        createAlerts : function(alertsList) {
+            const alertsInputMessage = {
+                body : {
+                    alerts : alertsList.alerts
+                }
+            };
 
-       /**
-        * Create an alert list
-        */
-       createAlerts : function(alertsList) {
-           var alertsImputMessage = {
-               body : {
-                   alerts : alertsList.alerts
-               }
-           };
+            const response = catalog.registerAlerts(alertsInputMessage);
+            if (utils.isResponseNOK(response)) {
+                logger.error('Error registering alerts');
+                logger.error(response);
+                return false;
+            } else {
+                return true;
+            }
+        },
 
-           var response = catalog.registerAlerts(alertsImputMessage);
-           if (response && response.code && response.code === 400) {
-               logger.error('Error registering alerts');
-               logger.error(response);
-               return false;
-           } else {
-               return true;
-           }
-       },
+        /**
+         * Publish an alarm
+         */
+        publishAlarm : function(alert, inputMessage) {
+            const alarmInputMessage = {
+                body : {
+                    message : inputMessage.message
+                }
+            };
 
-       /**
-        * Publish an alarm
-        */
-       publishAlarm : function(alert, inputMessage) {
-           var alarmInputMessage = {
-               body : {
-                   message : inputMessage.message
-               }
-           };
+            const response = alarm.publish(alert, alarmInputMessage);
+            if (utils.isResponseNOK(response)) {
+                logger.error('Error publishing alarm');
+                logger.error(response);
+                return false;
+            } else {
+                return true;
+            }
+        },
 
-           var response = alarm.publish(alert, alarmInputMessage);
-           if (response && response.code && response.code === 400) {
-               logger.error('Error publishing alarm');
-               logger.error(response);
-               return false;
-           } else {
-               return true;
-           }
-       },
-       
-       /**
-        * Subscribe to a sensor order
-        */
-       subscribeOrder : function(inputMessage) {
-           var subscriptionInputMessage = {
-               body : {
-                   endpoint : inputMessage.endpoint
-               }
-           };
+        /**
+         * Subscribe to a sensor order
+         */
+        subscribeOrder : function(inputMessage) {
+            const subscriptionInputMessage = {
+                body : {
+                    endpoint : inputMessage.endpoint
+                }
+            };
 
-           var response = subscribe.subscribe(subscriptionInputMessage);
-           if (response && response.code && response.code === 400) {
-               logger.error('Error subscribing order');
-               logger.error(response);
-               return false;
-           } else {
-               return true;
-           }
-       },
-       
-       /**
-        * Subscribe to all sensors orders from a provider
-        */
-       subscribeOrderToAll : function(inputMessage) {
-           var subscriptionInputMessage = {
-               body : {
-                   endpoint : inputMessage.endpoint
-               }
-           };
+            const response = subscribe.subscribe(subscriptionInputMessage);
+            if (utils.isResponseNOK(response)) {
+                logger.error('Error subscribing order');
+                logger.error(response);
+                return false;
+            } else {
+                return true;
+            }
+        },
 
-           var response = subscribe.subscribeToAll(subscriptionInputMessage);
-           if (response && response.code && response.code === 400) {
-               logger.error('Error subscribing order');
-               logger.error(response);
-               return false;
-           } else {
-               return true;
-           }
-       }
-   };
+        /**
+         * Subscribe to all sensors orders from a provider
+         */
+        subscribeOrderToAll : function(inputMessage) {
+            const subscriptionInputMessage = {
+                body : {
+                    endpoint : inputMessage.endpoint
+                }
+            };
+
+            const response = subscribe.subscribeToAll(subscriptionInputMessage);
+            if (utils.isResponseNOK(response)) {
+                logger.error('Error subscribing order');
+                logger.error(response);
+                return false;
+            } else {
+                return true;
+            }
+        }
+    };
 
 Here you can see direct calls to the library, so the only differences
 are several logs and the initialization of some configuration variables.
