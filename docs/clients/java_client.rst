@@ -89,7 +89,7 @@ This settings should be updated:
    *YOUR_SENTILO_PLATFORM_CLIENT_ADDRESS* with it. Needs the protocol and the port. Ex: http://localhost:8081
 -  **rest.client.identityKey**: provide your correct application
    security token, and replace the *YOUR_IDENTITY_KEY* with it
--  *optionally* **rest.client.sensor.type**: you can select a default type (anemometer, humidity, noise) in the catalog or you can create one of your election there.
+-  *optionally* **rest.client.sensor.type**: you can select a default type (anemometer, humidity, noise... etc) in the catalog or you can create one of your election there.
 -  *optionally*, you can provide your component / sensor locations,
    modifying the values **rest.client.component.location** and
    **rest.client.sensor.location**
