@@ -9,7 +9,7 @@ implementation that allows to the developer a quick integration sketch
 with the Sentilo Platform through its API Rest Client.
 
 For these examples we’ll create a new sensor in the Sentilo Platform,
-only if it doesn’t exists, and then we’re going to publish some
+only if it doesn't exists, and then we’re going to publish some
 observations obtained from the local sensors.
 
 Hardware
@@ -37,7 +37,7 @@ We’ll need some hardware materials:
 |                                   | *LDR* brightness sensor           |
 |                                   | (photocell)                       |
 +-----------------------------------+-----------------------------------+
-| **Resistences**                   | Two 1KOhm resistences 1/4W        |
+| **Resistors**                     | Two 1KOhm resistors 1/4W          |
 +-----------------------------------+-----------------------------------+
 | **Breadboard**                    | A breadboard that allow to you    |
 |                                   | the quick connection of the       |
@@ -159,7 +159,7 @@ You’ll should see this code in the editor:
    /***** GLOBAL VARS *************************/
    /*******************************************/
    const int generalCalibrationTimeout = 1000; // Wait after system setup is complete
-   String response = ""; // Rest call response (normaly as JSON message)
+   String response = ""; // Rest call response (normally as JSON message)
    int statusCode = -1; // Rest call return code (the HTTP code)
 
    void setup() {
@@ -167,7 +167,7 @@ You’ll should see this code in the editor:
            Serial.begin(9600);
 
            // Setup the Sentilo Client and the network connection
-           setupSetiloClient();
+           setupSentiloClient();
 
            // Wait time for a general calibration
            delay(generalCalibrationTimeout);
@@ -200,7 +200,7 @@ You’ll should see this code in the editor:
 
 
    /** Setup the Sentilo Client object, this process also configures the network connection **/
-   void setupSetiloClient() {
+   void setupSentiloClient() {
            Serial.print("[setup] Connecting to network via DHCP ");
            sentiloClient.dhcp();
            for (int i = 0; i < networkConnectionTimeout; i++) {
@@ -222,7 +222,7 @@ What can we see in this example?
 
    -  If the publish works properly, the system don’t return any special
       data
-   -  Otherwhise, it will show to you the system return code and
+   -  Otherwise, it will show to you the system return code and
       message, if it is possible
 
 -  The test ends after publish only one observation
@@ -263,7 +263,7 @@ In the upper image, you can see how the components has been located:
       0 from Arduino) with a dupont wire, in this case, the orange color
       wire
    -  Connect the LDR pin that holds the orange wire with a 1KOhm
-      resitor, and the other resistor pin to **Arduino +5V** (red wire)
+      resistor, and the other resistor pin to **Arduino +5V** (red wire)
 
 -  **LM35** temperature sensor:
 
@@ -320,7 +320,7 @@ You should see this code in the editor:
    /*******************************************/
    const int generalCalibrationTimeout = 1000; // Wait after system setup is complete
    const int loopTimeout = 60000; // Loop timeout, time between observations (in ms)
-   String response = ""; // Rest call response (normaly as JSON message)
+   String response = ""; // Rest call response (normally as JSON message)
    int statusCode = -1; // Rest call return code (the HTTP code)
 
    boolean existsSensor = false;
@@ -336,7 +336,7 @@ You should see this code in the editor:
            setupLM35();
 
            // Setup the Sentilo Client and network connection
-           setupSetiloClient();
+           setupSentiloClient();
 
            // Wait time for a general calibration
            delay(generalCalibrationTimeout);
@@ -419,7 +419,7 @@ You should see this code in the editor:
    }
 
    /** Setup the Sentilo Client object. This process also configures the network connection **/
-   void setupSetiloClient() {
+   void setupSentiloClient() {
            // Connect via DHCP
            Serial.print("[setup] Connecting to network via DHCP ");
            sentiloClient.dhcp();
@@ -434,7 +434,7 @@ You should see this code in the editor:
 What can we see in this example? There’re some additions compared with
 the first example.
 
--  Setup Arduino and the SentilClient is the same of the first sample
+-  Setup Arduino and the SentiloClient is the same of the first sample
 -  We’re making a sensors setup, but in this case it isn’t necessary, so
    it only informs us in debug mode what is happening in every moment…
 -  Into the loop
@@ -454,7 +454,7 @@ the first example.
    publication (in this example the sleep time is 60000ms, 1 minute per
    loop / publish)
 
-This is the observation sended by to the Sentilo platform:
+This is the observation sent by to the Sentilo platform:
 
 .. code:: json
 
@@ -463,7 +463,7 @@ This is the observation sended by to the Sentilo platform:
       }]
    }
 
-If you want, you can include the **timestamp** varriable in UTC format
+If you want, you can include the **timestamp** variable in UTC format
 inside the observation object:
 
 .. code:: c
@@ -490,7 +490,7 @@ Third example: initialize sensor, create it in the catalog and publish observati
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this third example we’ll see that how the SentiloClient library can
-create a sensor “on-the-fly” and publish obervations continuously. Next,
+create a sensor “on-the-fly” and publish observations continuously. Next,
 we’ll use the second example, plus a little bit of additional code that
 help us to check if the sensor exists in the catalog, and if not create
 it before publish observations. Open the sample code in **File >
@@ -537,11 +537,11 @@ You should see this code in the editor:
    const int networkConnectionTimeout = 30;
 
    /*******************************************/
-   /***** BGLOBAL VARS ************************/
+   /***** GLOBAL VARS *************************/
    /*******************************************/
    const int generalCalibrationTimeout = 1000; // Wait after system setup is complete
    const int loopTimeout = 60000; // Loop timeout, time between observations publications (in ms)
-   String response = ""; // Rest call response (normaly as JSON message)
+   String response = ""; // Rest call response (normally as JSON message)
    int statusCode = -1; // Rest call return code (the HTTP code)
 
    boolean existsSensor = false;
@@ -558,7 +558,7 @@ You should see this code in the editor:
 
            // Setup the Sentilo Client
            // and network connection
-           setupSetiloClient();
+           setupSentiloClient();
 
            // Setup the Sentilo sensor
            // and create it if doesn't exists
@@ -661,7 +661,7 @@ You should see this code in the editor:
 
    // Setup the Sentilo Client object
    // This process also configures the network connection
-   void setupSetiloClient() {
+   void setupSentiloClient() {
            // Connect via DHCP
            Serial.print("[setup] Connecting to network via DHCP ");
            sentiloClient.dhcp();
@@ -673,7 +673,7 @@ You should see this code in the editor:
            Serial.println("[setup] Connection is now established!");
    }
 
-   // Setup the Sentilo Sentor (this Arduino)
+   // Setup the Sentilo Sensor (this Arduino)
    // If the sensor doesn't exists in the catalog, create it
    void setupSentiloSensor() {
            Serial.println("[setup] Retrieving catalog info from Sentilo and search for the sensor...");
@@ -746,7 +746,7 @@ And finally, in the last example, we can see:
       **sentiloClient.getCatalog** retrieves all the catalog data
       related to the provider, so we can now search for the value of our
       sensor, in this case, **sample-sensor-arduino-03**, and we see
-      that it doesn’t exists in the catalog (you must not create it
+      that it doesn't exists in the catalog (you must not create it
       manually!)
    -  Then, create it with **sentiloClient.registerSensor**, including a
       Sensor object (see values below), if you want to publish its
@@ -774,7 +774,7 @@ values:
    sensor.location = "41,385063 2,1734034";
 
 And before invoking the Sentilo API Rest platform, the SentiloClient
-library tansforms this object in a JSON message like this:
+library transforms this object in a JSON message like this:
 
 .. code:: json
 
