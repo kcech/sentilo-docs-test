@@ -10,7 +10,7 @@ Plug & Play: they are recognized by the system and started automatically
 to be up and running.
 
 Every agent is a process that acts as a subscriber for the
-publish/subcribe platform. These processes will subscribe directly to
+publish/subscribe platform. These processes will subscribe directly to
 Redis as a independent clients. This subscription will provide the input
 data to do the underlying business logic (store in a relational
 database, process alarms, generate statistics, …)
@@ -155,7 +155,7 @@ Activity Monitor Agent is configured with a set of .properties files in
 |                       |                       |    /data/PROVIDER1/*, /data/PROVIDER2/* |
 |                       |                       |                                         |
 |                       |                       |                                         |
-|                       |                       | Subsribe only to data of 2 providers    |
+|                       |                       | Subscribe only to data of 2 providers    |
 |                       |                       |                                         |
 +-----------------------+-----------------------+-----------------------------------------+
 
@@ -219,7 +219,7 @@ use a scalable solution for time series such as
 
 OpenTSDB installs of top of HBase and HDFS. Exposes a HTTP REST API and
 can be used from `Grafana <http://grafana.org/>`__ as one of it’s
-datasources.
+data sources.
 
 **Configuration**
 
@@ -242,7 +242,7 @@ Historian Agent is configured with a set of .properties files in
 |                       |                       |                                       |
 |                       |                       | /data/PROVIDER1/*,/data/PROVIDER2/*   |
 |                       |                       |                                       |
-|                       |                       | Subsribes only to                     |
+|                       |                       | Subscribes only to                     |
 |                       |                       | data of 2 providers                   |
 |                       |                       |                                       |
 +-----------------------+-----------------------+---------------------------------------+
@@ -309,7 +309,7 @@ Providers, components and sensors are created automatically in the catalog of th
 The agent uses its application token to query the emitting catalog API to obtain remote objects, and uses the local catalog
 application id to replicate the locally.
 
-The federation agent creates subsriptions on data it has permission. It creates a HTTP endpoint and tells the emitting instance
+The federation agent creates subscriptions on data it has permission. It creates a HTTP endpoint and tells the emitting instance
 to forward the events to this endpoint URL.
 
 
@@ -341,9 +341,9 @@ Federation Agent's configuration is in file
 +---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
 | federation.subscription.secret.key.callback | secret-callback-key-change-it         | HMAC secret used for incoming subscription.                                                              |
 +---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
-| federation.subscription.max.retries         | 3                                     | Number of retries used for subcription                                                                   |
+| federation.subscription.max.retries         | 3                                     | Number of retries used for subscription                                                                   |
 +---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
-| federation.subscription.max.delay           | 5                                     | Delay used for subcription                                                                               |
+| federation.subscription.max.delay           | 5                                     | Delay used for subscription                                                                               |
 +---------------------------------------------+---------------------------------------+----------------------------------------------------------------------------------------------------------+
 
 Further configuration of the agent is available in the "Federation services" menu.
@@ -483,9 +483,9 @@ If these media links are private and managed by S3, catalog needs these properti
 +--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | s3.url.ttl               | 3600000          | Catalog will create a pre-signed URL for the links using this TTL in seconds                                                                                                                                                                                          |
 +--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| s3.aws.access.key.id     | connecta-catalog | Catalog will autheticate with this credential. Has to be equal as catalog.app.id. Obviously, this credential has to exist in s3 and has to in all ACLs of all buckets used by providers. Otherwise, Catalog would not have right create the pre-signed URL.           |
+| s3.aws.access.key.id     | connecta-catalog | Catalog will authenticate with this credential. Has to be equal as catalog.app.id. Obviously, this credential has to exist in s3 and has to in all ACLs of all buckets used by providers. Otherwise, Catalog would not have right create the pre-signed URL.           |
 +--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| s3.aws.secret.access.key | empty            | Catalog will autheticate with this token.                                                                                                                                                                                                                             |
+| s3.aws.secret.access.key | empty            | Catalog will authenticate with this token.                                                                                                                                                                                                                             |
 +--------------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
