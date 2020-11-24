@@ -221,7 +221,7 @@ hardware. Now we can take a look to the example code.
 The next files was included into the library directory, so you have they
 into your working directory.
 
-Note that you can download these all example files from
+Note that you can download all these files from
 https://github.com/sentilo/sentilo-client-sample-nodejs.
 
 actuator.js

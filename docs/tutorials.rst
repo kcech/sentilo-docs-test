@@ -15,7 +15,6 @@ Sentilo using various existing platforms and languages.
 
 ------------------------------------
 
-`Java Client Tutorial`_
 |spring-framework.png|
 
 Java library that allows
@@ -24,7 +23,6 @@ through its REST API Client
 
 ------------------------------------
 
-`RaspberryPi Client`_
 |raspberrypi.jpeg|
 
 Independent platform library
@@ -36,7 +34,6 @@ API Client
 
 ....................................
 
-`Arduino Client`_
 |arduino-mega-2560-r3.jpg|
 
 A simple Arduino library that
@@ -46,9 +43,6 @@ Platform
 
 ------------------------------------
 
-.. _Java Client Tutorial: ./tutorials/java_client_tutorial.html
-.. _RaspberryPi Client: ./tutorials/raspberrypi_tutorial.html
-.. _Arduino Client: ./tutorials/arduino_tutorial.html
 
 .. |java_logo.jpg| image:: _static/images/tutorials/java_logo.jpg
    :width: 202px

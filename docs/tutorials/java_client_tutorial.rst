@@ -31,12 +31,8 @@ environment:
    install it as a *Maven dependency* into your project (please, see the
    **pom file** in the project form more information)
 -  Tomcat 7+
--  Some other Maven dependencies (you can see them in the **pom file** of
-   the example project):
+-  If you don't have access to a working Sentilo instance, you might as well use our ` Sentilo VM </use_a_virtual_machine.html>`__.
 
-   -  Hibernate
-   -  Spring
-   -  And some other…
 
 The example
 -----------
@@ -44,17 +40,21 @@ The example
 The code
 ~~~~~~~~
 
-You must download the sample webapp project from Git repository:
+Please download this sample webapp project from Git repository:
 https://github.com/sentilo/sentilo-client-sample-java
 
 Once you have the project, open it with Eclipse or another IDE and
 construct it using *Maven* goals: **clean package**, for downloading
 dependencies, compile the code and package it.
 
-After that your project is compiled and packaged, you can deploy it in a
-Tomcat 7 webapp container. We recommend that you use Eclipse or STS
-Spring IDE to develop and open this example, and deploy it with the
-Apache deployment plugins.
+After your project is compiled and packaged, you can deploy it in a
+Tomcat webapp container (standalone or the one your IDE provides).
+
+.. note::
+
+   In case you use our VM on the same machine as Tomcat of this example, you might have a problem with port 8080 already being used.
+   That's because Virtualbox will NAT the VM's Tomcat on 8080 to port 8080 on your host machine. If it's your case,
+   you should change the port of your Tomcat to, for example, 8888.
 
 Now you can then navigate into the project and edit the source code.
 
@@ -63,8 +63,7 @@ The properties file
 
 You must modify the properties file :literal:`application.properties` located
 in :literal:`src/main/resources/properties` in order to provide your correct
-Sentilo Platform Client configurations. There’re some values that are
-for testing purposes, and they may not be changed.
+Sentilo Platform Client configurations.
 
 .. code:: properties
 
@@ -80,7 +79,7 @@ for testing purposes, and they may not be changed.
    rest.client.sensor=sample-sensor-java
    rest.client.sensor.type=status
    rest.client.sensor.dataType=TEXT
-   rest.client.sensor.location=41.387015,2.170047
+   rest.client.sensor.location=41.387015 2.170047
 
 This settings should be updated:
 
@@ -388,7 +387,7 @@ the Tomcat deployments directory, and start it.
 
 You must access to this url (we assume that you’re in your localhost and
 your port is the 8080, the default values):
-http://localhost:8080/sentilo-samples
+http://localhost:8080/sentilo-samples (http://localhost:8888/sentilo-samples if using VM )
 
 And then you must see a result page like this:
 
