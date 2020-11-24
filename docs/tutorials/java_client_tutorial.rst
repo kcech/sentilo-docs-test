@@ -1,7 +1,7 @@
-Java Client
-===========
+Java Client Tutorial
+====================
 
-.. figure:: /_static/images/clients/java_logo.jpg
+.. figure:: /_static/images/tutorials/java_logo.jpg
    :alt: Java
 
 The Sentilo Java Client is a library developed for working with webapps
@@ -398,4 +398,4 @@ As you can see, there’s a button named *Send observations*. You can use
 to re-send observations and reload the page. Every page reload send the
 observations to the Sentilo Platform Client.
 
-.. |java_sample_4.jpg| image:: ../_static/images/clients/java_sample_4.jpg
+.. |java_sample_4.jpg| image:: ../_static/images/tutorials/java_sample_4.jpg

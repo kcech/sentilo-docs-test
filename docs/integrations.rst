@@ -507,19 +507,21 @@ In the end, you will be able to visualize private links in S3, for example:
 NodeJS
 ------
 .. image:: _static/images/integrations/node-js.png
-   :width: 340px
    :height: 140px
    :target: https://github.com/sentilo/sentilo-client-nodejs
 
-The Sentilo Node.js client library code that brings some Sentilo operations that you can include in your own code.
+We provide a `Node.js <https://nodejs.org/es/>`__ client library that facilitate access to the Sentilo API. The library is no yet a npm package,
+but you can still use easily.
 
-More information in: https://github.com/sentilo/sentilo-client-nodejs
+More information is in this repository: https://github.com/sentilo/sentilo-client-nodejs
 
-Java
-------
-.. image:: _static/images/integrations/spring-framework.png
-   :width: 350px
-   :height: 200px
+There is also a `tutorial <./tutorials/raspberrypi_tutorial.html>`__ on how to use this library with Raspberry Pi and GPIO:
+
+Java Client
+-----------
+.. image:: _static/images/integrations/java_logo.jpg
+   :width: 202px
+   :height: 113px
    :target: https://github.com/sentilo/sentilo-client-sample-java
 
 This is a sample web application that uses the Sentilo Java platform client using Spring MVC. The application needs to be deployed on a Tomcat.
@@ -531,8 +533,8 @@ Arduino
 .. image:: _static/images/integrations/arduino.png
    :width: 340px
    :height: 230px
-   :target: https://github.com/sentilo/sentilo-client-sample-arduino
+   :target: https://github.com/sentilo/sentilo-client-arduino
 
 These are some Sentilo client HTTP Request library sample sketches for Arduino and the Ethernet shield.
 
-More information in: https://github.com/sentilo/sentilo-client-sample-arduino
+More information in: https://github.com/sentilo/sentilo-client-arduino

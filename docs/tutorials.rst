@@ -1,22 +1,22 @@
 Tutorials
-=======
+=========
 
 Contents:
 
 .. toctree::
    :maxdepth: 1
    
-   clients/java_client
-   clients/raspberrypi_client
-   clients/arduino_client
+   tutorials/java_client_tutorial
+   tutorials/raspberrypi_tutorial
+   tutorials/arduino_tutorial
 
 On this page you will find several tutorials about how to connect to
 Sentilo using various existing platforms and languages.
 
 ------------------------------------
 
-`Java Client`_
-|java_logo.jpg|
+`Java Client Tutorial`_
+|spring-framework.png|
 
 Java library that allows
 access to Sentilo Platform
@@ -46,21 +46,26 @@ Platform
 
 ------------------------------------
 
-.. _Java Client: ./clients/java_client.html
-.. _RaspberryPi Client: ./clients/raspberrypi_client.html
-.. _Arduino Client: ./clients/arduino_client.html
+.. _Java Client Tutorial: ./tutorials/java_client_tutorial.html
+.. _RaspberryPi Client: ./tutorials/raspberrypi_tutorial.html
+.. _Arduino Client: ./tutorials/arduino_tutorial.html
 
-.. |java_logo.jpg| image:: _static/images/clients/java_logo.jpg
+.. |java_logo.jpg| image:: _static/images/tutorials/java_logo.jpg
    :width: 202px
    :height: 113px
-   :target: clients/java_client.html
+   :target: tutorials/java_client_tutorial.html
 
-.. |raspberrypi.jpeg| image:: _static/images/clients/raspberrypi.jpeg
+.. |spring-framework.png| image:: _static/images/tutorials/spring-framework.png
+   :width: 350px
+   :height: 200px
+   :target: tutorials/java_client_tutorial.html
+
+.. |raspberrypi.jpeg| image:: _static/images/tutorials/raspberrypi.jpeg
    :width: 215px
    :height: 122px
-   :target: ./clients/raspberrypi_client.html
+   :target: ./tutorials/raspberrypi_tutorial.html
 
-.. |arduino-mega-2560-r3.jpg| image:: _static/images/clients/arduino-mega-2560-r3.jpg
+.. |arduino-mega-2560-r3.jpg| image:: _static/images/tutorials/arduino-mega-2560-r3.jpg
    :width: 216px
    :height: 157px
-   :target: ./clients/arduino_client.html
+   :target: ./tutorials/arduino_tutorial.html
