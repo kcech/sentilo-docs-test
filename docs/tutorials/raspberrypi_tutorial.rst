@@ -1,7 +1,7 @@
 RaspberryPi Client
 ==================
 
-.. figure:: /_static/images/clients/raspberrypi.jpeg
+.. figure:: /_static/images/tutorials/raspberrypi.jpeg
    :alt: RaspberryPi
 
 The **SentiloClientNodeJS** is a library written in javascript that

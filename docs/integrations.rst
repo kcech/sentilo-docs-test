@@ -441,12 +441,13 @@ The difference with the Activity Monitor agent is the Redis topic in :literal:`s
     batch.max.retries=/metrics/*
 
 
+Clients
+-------
 
 Node-red
---------
+~~~~~~~~
 
-`Node-RED <https://nodered.org>`__ offers a fast integration and
-prototyping ecosystem for Sentilo.
+`Node-RED <https://nodered.org>`__ is a visual programming platform ideal for non-complex integrations and prototyping.
 
 Sentilo plugin is available in Node-RED's marketplace. Simply search for "sentilo" in Palette configuration:
 
@@ -464,8 +465,59 @@ The package contains documentation on how to use Sentilo nodes.
 More info at the `Sentilo library page at Node-RED website  https://flows.nodered.org/node/node-red-contrib-sentilo`__.
 
 
+
+NodeJS
+~~~~~~
+.. image:: _static/images/integrations/node-js.png
+   :height: 140px
+   :target: https://github.com/sentilo/sentilo-client-nodejs
+
+We provide a `Node.js <https://nodejs.org/es/>`__ client library that facilitate access to the Sentilo API. The library is no yet a npm package,
+but you can still use easily. Lastest version of this library is tested with Node 10 and 12.
+
+More information is in this repository: https://github.com/sentilo/sentilo-client-nodejs
+
+There is also a `tutorial <./tutorials/raspberrypi_tutorial.html>`__ on how to use this library with Raspberry Pi and GPIO with javascript.
+
+
+
+
+Java Client
+~~~~~~~~~~~
+.. image:: _static/images/integrations/java_logo.jpg
+   :width: 202px
+   :height: 113px
+
+Sentilo platform includes a Maven artifact :literal:`sentilo-platform-client-java`.
+Its source code is `here <https://github.com/sentilo/sentilo/tree/master/sentilo-platform-client-java>`__.
+This library is used internally by Sentilo and its agents.
+
+You can check the tutorial of `how to create creating sample web application /tutorials/java_client_tutorial.html`__.
+The example uses Spring MVC and can be deployed on a Tomcat.
+The code of this tutorial is available at https://github.com/sentilo/sentilo-client-sample-java .
+
+Regardless of the example, the library can be used in any Java application.
+Its dependencies are tiny and is framework-agnostic.
+
+
+Arduino
+~~~~~~~
+.. image:: _static/images/integrations/arduino.png
+   :width: 340px
+   :height: 230px
+   :target: https://github.com/sentilo/sentilo-client-arduino
+
+Arduino client HTTP Request library is available here: https://github.com/sentilo/sentilo-client-arduino
+
+There's also `a tutorial on Arduino with Sentilo </tutorials/arduino_tutorial.html>`__.
+The source code for the tutorial is available here: https://github.com/sentilo/sentilo-client-arduino
+
+
+Cloud
+-----
+
 AWS S3
-------
+~~~~~~
 
 The `AWS S3 <https://aws.amazon.com/s3/>`__ can be used together with Sentilo, if your solution needs
 to upload files such as audio snippets, images or files in general.
@@ -504,37 +556,3 @@ In the end, you will be able to visualize private links in S3, for example:
 
 `see more <./services/subscription/subscription.html>`__
 
-NodeJS
-------
-.. image:: _static/images/integrations/node-js.png
-   :height: 140px
-   :target: https://github.com/sentilo/sentilo-client-nodejs
-
-We provide a `Node.js <https://nodejs.org/es/>`__ client library that facilitate access to the Sentilo API. The library is no yet a npm package,
-but you can still use easily.
-
-More information is in this repository: https://github.com/sentilo/sentilo-client-nodejs
-
-There is also a `tutorial <./tutorials/raspberrypi_tutorial.html>`__ on how to use this library with Raspberry Pi and GPIO:
-
-Java Client
------------
-.. image:: _static/images/integrations/java_logo.jpg
-   :width: 202px
-   :height: 113px
-   :target: https://github.com/sentilo/sentilo-client-sample-java
-
-This is a sample web application that uses the Sentilo Java platform client using Spring MVC. The application needs to be deployed on a Tomcat.
-
-More information in: https://github.com/sentilo/sentilo-client-sample-java
-
-Arduino
-------
-.. image:: _static/images/integrations/arduino.png
-   :width: 340px
-   :height: 230px
-   :target: https://github.com/sentilo/sentilo-client-arduino
-
-These are some Sentilo client HTTP Request library sample sketches for Arduino and the Ethernet shield.
-
-More information in: https://github.com/sentilo/sentilo-client-arduino
