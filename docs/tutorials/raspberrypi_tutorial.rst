@@ -455,7 +455,7 @@ Simple type:
 
    pi@raspberrypi ~/sentilo/sentilo-client-nodejs $ node server.js
    Turning OFF the LED
-   My ip address is: 127.0.0.1, and my port: 8080
+   My ip address is: 127.0.0.1, and my port: 8000
    Registering the System Status Alert...
    Alarm published: The system goes up on Thu May 07 2015 13:52:21 GMT+0000 (UTC)
    The sensor is now up, and we'll be sending some observations every 60000 ms
