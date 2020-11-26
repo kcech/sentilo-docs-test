@@ -146,6 +146,7 @@ To simulate a sensor's actuator, we'll use a LED connected to the GPIO
 
 Let see it below:
 
+
 |raspi3.png|
 
 As you can see, we only connect the **LED** **annode** to the **14
@@ -320,7 +321,6 @@ waiting for incoming calls that apply to the actuator.
        sensorType : 'status',
        sensorUnit : '',
        sensorLocation : 'YOUR_SENSOR_LOCATION'
-YOUR_SENSOR_LOCATION
    };
    
    sentilo.init(samplesOptions);
@@ -528,4 +528,4 @@ properties, as you need:
 For our purpose, we only have DEBUG, INFO and ERROR logs. Try tu use
 **true** or **false** for each one.
 
-.. |raspi3.png| image:: ../_static/images/clients/raspi3.png
+.. |raspi3.png| image:: ../_static/images/tutorials/raspi3.png
