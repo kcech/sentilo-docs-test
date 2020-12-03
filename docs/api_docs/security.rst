@@ -130,7 +130,7 @@ A simple NodeJS example that would check the authenticity of the message would b
    let md5body = crypto.createHash('md5').update(message).digest('base64');
    
    
-   // Step 2 - concatenate all necessary the values
+   // Step 2 - concatenate all the necessary values
    let values = ['POST', md5body, 'application/json', headerXSentiloDate, endpoint];
    let contentToSign = values.join('\n');
    
@@ -146,7 +146,7 @@ A simple NodeJS example that would check the authenticity of the message would b
 
 
 
-Alternatively, a another validation example in Java:
+Alternatively, another validation example in Java:
 
 
 .. sourcecode:: java
