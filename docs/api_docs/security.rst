@@ -111,6 +111,9 @@ sample shows:
 The responsibility of validating the headers will be always in the
 target system who is receiving the messages.
 
+Code Samples
+~~~~~~~~~~~~
+
 A simple NodeJS example that would check the authenticity of the message would be:
 
 .. sourcecode:: javascript
@@ -143,7 +146,7 @@ A simple NodeJS example that would check the authenticity of the message would b
 
 
 
-Alternatively, a simple Java code:
+Alternatively, a another validation example in Java:
 
 
 .. sourcecode:: java
@@ -204,11 +207,9 @@ Alternatively, a simple Java code:
          final String signature = calculateHMAC(secretKey, contentToSign);
    
          System.out.println(signature.equals(headerXSentiloContentHmacValue));
-   
-   
+
        } catch (GeneralSecurityException gse) {
          // do something with exception ...
        }
      }
-   
    }
