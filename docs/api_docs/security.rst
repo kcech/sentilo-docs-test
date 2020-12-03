@@ -65,16 +65,28 @@ platform will return an error 403.
 Securing Callbacks
 -------------------
 
-If it’s necessary to secure the push requests sent by the platform,
-Sentilo provides a
-`HMAC <http://en.wikipedia.org/wiki/Hash-based_message_authentication_code>`__
-mechanism for the callbacks.
+If it's necessary to secure the push requests sent by the platform, Sentilo provides a
+`HMAC <http://en.wikipedia.org/wiki/Hash-based_message_authentication_code>`__ mechanism for the callbacks.
 
-This mechanisms guarantees:
+This mechanism guarantees that:
 
--  That the message was sent by the platform
--  That the message was not altered after sent
--  That the message is still active
+-  the message was sent by the platform
+-  the message was not altered after being sent
+-  it was rend to a specific endpoint of the subscription
+
+How does it work?
+~~~~~~~~~~~~~~~~~
+
+The flow is the following:
+
+0. Prerequisite: A `Subscription <./services/subscription/subscription.html>`__ is created via
+   API with a :literal:`secretCallbackKey`. You may subscribe to any event type.
+1. The data/alarm/command event is generated. How the event and by which entity it is created is irrelevant.
+2. If there is a Subscription with a :literal:`secretCallbackKey` for this event, the message will be signed and
+   headers :literal:`X-Sentilo-Content-Hmac` and :literal:`X-Sentilo-Date` will be created.
+3. The external system receives the subscription and may check it's authenticity using a same :literal:`secretCallbackKey`.
+
+
 
 As hash algorithm the system uses
 `SHA-512 <http://en.wikipedia.org/wiki/SHA-2>`__. It accepts keys of any
@@ -86,28 +98,117 @@ more <./services/subscription/subscription.html>`__). This subscription
 **should be done using HTTPs protocol** to avoid compromising the key.
 
 After the subscription has been created, all the related requests will
-include two new headers, one with the hash (**Sentilo-Content-Hmac**)
-and another with the timestamp (**Sentilo-Date**), as the following
+include two new headers, one with the hash (:literal:`X-Sentilo-Content-Hmac`)
+and another with the timestamp (:literal:`X-Sentilo-Date`), as the following
 sample shows:
 
 ::
 
-   Sentilo-Content-Hmac: 
+   X-Sentilo-Content-Hmac:
    j1OQ+fU667GQoHYHWzLBpigRjLJmRvYn53KHZhApTbrcphYWBlRPSBHkntODuqsqx11Vj8rsc7DDziiutTq/5g==
-   Sentilo-Date: 10/06/2014T15:27:22
+   X-Sentilo-Date: 10/06/2019T15:27:22
 
 The responsibility of validating the headers will be always in the
 target system who is receiving the messages.
 
-The pseudo-code to generate the HMAC token is the following:
+A simple NodeJS example that would check the authenticity of the message would be:
 
-::
+.. sourcecode:: javascript
 
-   var md5Body = MD5(body)
-   var endpoint = endpoint_configured_in_subscription
-   var secretKey = secret_key_configured_in_subscription
-   var currentDate = value_http_header_Sentilo-Date
-   var contentToSign = concatenate('POST',md5Body, 'application/json',currentDate, endpoint)
-   var signature = HmacSHA512(contentToSign)
+   const crypto = require('crypto');
+   
+   const message = '{"message":"26","timestamp":"03/12/2020T07:36:27","topic":"/data/TITAN/TITAN-S01","type":"DATA","sensor":"TITAN-S01","provider":"TITAN","time":1606980987614,"publisher":"TITAN","publishedAt":1606980987614,"publisherTenant":"","tenant":"","sender":"TITAN"}'
+   const endpoint = 'http://my.endpoint.com:1880/sentilo';
+   const secretKey = 'my_super_secret_key';
+   const headerXSentiloDate = '03/12/2020T07:36:27';
+   const headerXSentiloContentHmacValue = 'elMiy5BDgDB68UVMonNDCc/BH8YrLWtCP6CdvlB4T//uI87JmMvx+epPUDy8E3Rg4UC2Bm21n4Zj/CLxOEcEZA==';
+   
+   // Step 1 - hash the message and finally base64
+   let md5body = crypto.createHash('md5').update(message).digest('base64');
+   
+   
+   // Step 2 - concatenate all necessary the values
+   let values = ['POST', md5body, 'application/json', headerXSentiloDate, endpoint];
+   let contentToSign = values.join('\n');
+   
+   
+   // Step 3 - HMAC and and finally base64
+   let hmac = crypto.createHmac('sha512', secretKey);
+   hmac.update(contentToSign);
+   let result = hmac.digest('base64')
+   
+   
+   // Compare with the X-Sentilo-Content-Hmac header
+   console.log(result == headerXSentiloContentHmacValue);
 
-   return base64UrlEncode(signature)
+
+
+Alternatively, a simple Java code:
+
+
+.. sourcecode:: java
+
+   import java.security.GeneralSecurityException;
+   import javax.crypto.Mac;
+   import org.apache.commons.codec.binary.Base64;
+   import org.apache.commons.codec.digest.DigestUtils;
+   import org.apache.commons.codec.digest.HmacAlgorithms;
+   import org.apache.commons.codec.digest.HmacUtils;
+   
+   public class HmacHeaderExample {
+   
+     private static String md5Body(final String body) {
+       final byte[] digest = DigestUtils.md5(body);
+       // Note that there is an extra step - the base 64 codification
+       return new String(Base64.encodeBase64(digest));
+     }
+   
+     private static String concatenate(final String... values) {
+       // All values are concatenated with the delimiter "\n"
+       return String.join("\n", values);
+     }
+   
+     private static String calculateHMAC(final String secret, final String data) throws GeneralSecurityException {
+       final Mac mac = HmacUtils.getInitializedMac(HmacAlgorithms.HMAC_SHA_512, secret.getBytes());
+       final byte[] rawHmac = mac.doFinal(data.getBytes());
+       
+       // Again, encode the signed data in Base 64
+       return new String(Base64.encodeBase64(rawHmac));
+     }
+   
+     public static void main(final String[] args) {
+   
+       // Suppose this incoming message:
+       final String body =
+           "{\"message\":\"26\",\"timestamp\":\"03/12/2020T07:36:27\",\"topic\":\"/data/TITAN/TITAN-S01\",\"type\":\"DATA\",\"sensor\":\"TITAN-S01\",\"provider\":\"TITAN\",\"time\":1606980987614,\"publisher\":\"TITAN\",\"publishedAt\":1606980987614,\"publisherTenant\":\"\",\"tenant\":\"\",\"sender\":\"TITAN\"}";
+       // Suppose you're on this endpoint:
+       final String endpoint = "http://my.endpoint.com:1880/sentilo";
+       final String secretKey = "my_super_secret_key";
+       // Value of X-Sentilo-Date
+       final String headerXSentiloDate = "03/12/2020T07:36:27";
+       final String headerXSentiloContentHmacValue = "elMiy5BDgDB68UVMonNDCc/BH8YrLWtCP6CdvlB4T//uI87JmMvx+epPUDy8E3Rg4UC2Bm21n4Zj/CLxOEcEZA==";
+       
+       try {
+   
+         final String md5Body = md5Body(body);
+         // Result expected: cIQCRRWeo0yQQLS8rlOtLQ==
+   
+         final String contentToSign = concatenate("POST", md5Body, "application/json", headerXSentiloDate, endpoint);
+         // Result expected
+         // POST
+         // cIQCRRWeo0yQQLS8rlOtLQ==
+         // application/json
+         // 03/12/2020T07:36:27
+         // http://my.endpoint.com:1880/sentilo
+   
+         final String signature = calculateHMAC(secretKey, contentToSign);
+   
+         System.out.println(signature.equals(headerXSentiloContentHmacValue));
+   
+   
+       } catch (GeneralSecurityException gse) {
+         // do something with exception ...
+       }
+     }
+   
+   }

@@ -44,7 +44,7 @@ Please, check this out fore more
 RealTime storage
 ^^^^^^^^^^^^^^^^
 
-Primary repository where the platform stores all the information
+Redis is the primary repository where the platform stores all the information
 received. It is configured to do periodic backups in the file system. It
 is also the Publish/Subscribe engine.
 
